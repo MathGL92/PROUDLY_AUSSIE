@@ -1,3 +1,14 @@
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# This file is the source Rails uses to define your schema when running `rails
+# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
+#
+# It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2020_09_14_071705) do
 
@@ -7,12 +18,12 @@ ActiveRecord::Schema.define(version: 2020_09_14_071705) do
   create_table "line_items", force: :cascade do |t|
     t.float "price"
     t.integer "amount"
-    t.bigint "products_id", null: false
-    t.bigint "shopping_carts_id", null: false
+    t.bigint "product_id", null: false
+    t.bigint "shopping_cart_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["products_id"], name: "index_line_items_on_products_id"
-    t.index ["shopping_carts_id"], name: "index_line_items_on_shopping_carts_id"
+    t.index ["product_id"], name: "index_line_items_on_product_id"
+    t.index ["shopping_cart_id"], name: "index_line_items_on_shopping_cart_id"
   end
 
   create_table "producers", force: :cascade do |t|
@@ -22,36 +33,36 @@ ActiveRecord::Schema.define(version: 2020_09_14_071705) do
     t.string "ABN"
     t.string "company_name"
     t.boolean "approved"
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_producers_on_users_id"
+    t.index ["user_id"], name: "index_producers_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.float "price"
-    t.bigint "producers_id", null: false
+    t.bigint "producer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["producers_id"], name: "index_products_on_producers_id"
+    t.index ["producer_id"], name: "index_products_on_producer_id"
   end
 
   create_table "shopping_carts", force: :cascade do |t|
     t.boolean "paid"
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_shopping_carts_on_users_id"
+    t.index ["user_id"], name: "index_shopping_carts_on_user_id"
   end
 
   create_table "taggings", force: :cascade do |t|
-    t.bigint "products_id", null: false
-    t.bigint "tags_id", null: false
+    t.bigint "product_id", null: false
+    t.bigint "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["products_id"], name: "index_taggings_on_products_id"
-    t.index ["tags_id"], name: "index_taggings_on_tags_id"
+    t.index ["product_id"], name: "index_taggings_on_product_id"
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -74,11 +85,11 @@ ActiveRecord::Schema.define(version: 2020_09_14_071705) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "line_items", "products", column: "products_id"
-  add_foreign_key "line_items", "shopping_carts", column: "shopping_carts_id"
-  add_foreign_key "producers", "users", column: "users_id"
-  add_foreign_key "products", "producers", column: "producers_id"
-  add_foreign_key "shopping_carts", "users", column: "users_id"
-  add_foreign_key "taggings", "products", column: "products_id"
-  add_foreign_key "taggings", "tags", column: "tags_id"
+  add_foreign_key "line_items", "products"
+  add_foreign_key "line_items", "shopping_carts"
+  add_foreign_key "producers", "users"
+  add_foreign_key "products", "producers"
+  add_foreign_key "shopping_carts", "users"
+  add_foreign_key "taggings", "products"
+  add_foreign_key "taggings", "tags"
 end
