@@ -1,11 +1,53 @@
 <!--  map button outside card  -->
-<%= @product.each do |product | %>
-<div class="card-product">
-  <div class="card-product-infos">
-    <h2><%= producer.name %></h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+<div class="container">
+    <div class="btn-group " role="group">
+        <button type="button" class="display-map btn btn-secondary far fa-map"> </button>
+        <button type="button" class="display-list btn btn-secondary fas fa-list-ul"></i></button>
+    </div>
 </div>
 
+<div class="" id="js-producers">
+    <% @producers.each do |producer | %>
+        <div class="card-container m-3 ">
+            <div class="card-producer">
+            <div class="card-producer-infos">
+                <h2><%= producer.name %></h2>
+                <p><%= producer.introduction  %></p>
+                <p><%= producer.address  %></p>
+            </div>
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<div class="d-none" id="js-map"> <!--display none-->
+    <h1> HI MAP</h1>
+</div>
+        <button type="button" class="btn btn-secondary far fa-map"> </button>
+        <button type="button" class="btn btn-secondary fas fa-list-ul"></i></button>
+    </div>
+       
+
+</div>
+
+
+<% @producers.each do |producer | %>
+    <div class="card-container m-3 ">
+        <div class="card-producer">
+        <div class="card-producer-infos">
+            <h2><%= producer.name %></h2>
+            <p><%= producer.introduction  %></p>
+             <p><%= producer.address  %></p>
+        </div>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        </div>
+    </div>
 <% end %>
+
+  <div class="col-12 col-md-5 px-0 mx-0">
+    <div id="map" style="width: auto; height: 100vh;"
+   data-markers="<%= @markers.to_json %>"
+   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
