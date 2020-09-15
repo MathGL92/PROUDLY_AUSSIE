@@ -1,4 +1,7 @@
 <!--  map button outside card  -->
+<div class="container">
+    <%= link_to <i class="far fa-map"> </i> producers_path %>
+</div>
 <%= @product.each do |product | %>
 <div class="card-product">
   <div class="card-product-infos">
@@ -7,5 +10,4 @@
   </div>
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
 </div>
-
 <% end %>
