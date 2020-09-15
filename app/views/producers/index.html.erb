@@ -1,15 +1,23 @@
 <!--  map button outside card  -->
 <div class="container">
-    <i class="far fa-map"></i>
-    <%= link_to "Map", producers_path %>
+    <div class="btn-group " role="group">
+        <button type="button" class="btn btn-secondary far fa-map"> </button>
+        <button type="button" class="btn btn-secondary fas fa-list-ul"></i></button>
+    </div>
+       
+
 </div>
 
+
 <% @producers.each do |producer | %>
-    <div class="card-product">
-    <div class="card-product-infos">
-        <h2><%= producer.name %></h2>
-        <p><%= producer.introduction  %></p>
-    </div>
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-container m-3 ">
+        <div class="card-producer">
+        <div class="card-producer-infos">
+            <h2><%= producer.name %></h2>
+            <p><%= producer.introduction  %></p>
+             <p><%= producer.address  %></p>
+        </div>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        </div>
     </div>
 <% end %>
