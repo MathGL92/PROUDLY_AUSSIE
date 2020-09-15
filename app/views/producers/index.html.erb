@@ -13,3 +13,10 @@
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
     </div>
 <% end %>
+
+  <div class="col-12 col-md-5 px-0 mx-0">
+    <div id="map" style="width: auto; height: 100vh;"
+   data-markers="<%= @markers.to_json %>"
+   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
