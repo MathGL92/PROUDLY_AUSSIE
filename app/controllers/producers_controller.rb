@@ -9,7 +9,7 @@ class ProducersController < ApplicationController
       {
         lat: producer.latitude,
         lng: producer.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { producer: producer }),
+        # infoWindow: render_to_string(partial: "info_window", locals: { producer: producer }),
         # image_url: helpers.asset_url('logo.png')
       }
     end
