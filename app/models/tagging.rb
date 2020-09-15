@@ -1,4 +1,4 @@
 class Tagging < ApplicationRecord
-  belongs_to :products
-  belongs_to :tags
+  belongs_to :product
+  belongs_to :tag
 end
