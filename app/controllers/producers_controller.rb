@@ -1,10 +1,9 @@
 class ProducersController < ApplicationController
-    before_action :set_producers, only: [:show]
-    skip_before_action :authenticate_user!, only: [:show, :index]
+  before_action :set_producer, only: [:show]
+  skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
     @producers = Producer.all
-
     @markers = @producers.geocoded.map do |producer|
       {
         lat: producer.latitude,
@@ -15,12 +14,15 @@ class ProducersController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
   private
 
-  def set_producers
+  def set_producer
     @producer = Producer.find(params[:id])
+  end
+
+  def producer_params
+    params.require(:producer).permit(:name, :ABN, :address, :company_name, :photo, :bg_photo)
   end
 end

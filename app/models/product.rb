@@ -4,4 +4,5 @@ class Product < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :line_items
   validates :name, :price, presence: true
+  has_one_attached :photo
 end
