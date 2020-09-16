@@ -1,0 +1,10 @@
+$btn_group_color: rgba(0,0,40,0);
+.btn-group{
+ .btn{
+     border-style: none;
+     background-color: rgba(0, 80, 109,0.2)
+ }
+ .btn.active{
+     background-color: rgba(0, 80, 109,0.8) !important;
+ }
+}

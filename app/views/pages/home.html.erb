@@ -23,9 +23,10 @@
         
         <div class="carousel-item <%= 'active' if index == 0 %>">
             
-            <a href="#">
-                <img class="d-block w-100" src="https://images.pexels.com/photos/22823/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="First slide">
-            </a>
+            <%= link_to producers_path do %>
+            <%= image_tag "photo1.jpg", class: "d-block w-100" %>
+            <% end %>
+            
         </div>
         <% end %>
     </div>
