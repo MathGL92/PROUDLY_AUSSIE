@@ -2,6 +2,11 @@ class ProducersController < ApplicationController
   before_action :set_producer, only: [:show]
   skip_before_action :authenticate_user!, only: [:show, :index]
 
+  def new
+    @producer = Producer.new
+  end
+
+
   def index
     @producers = Producer.all
     @markers = @producers.geocoded.map do |producer|

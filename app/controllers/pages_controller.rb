@@ -5,4 +5,6 @@ class PagesController < ApplicationController
     @tags = Tag.all 
   end
 
+  def new_producer; end
+
 end
