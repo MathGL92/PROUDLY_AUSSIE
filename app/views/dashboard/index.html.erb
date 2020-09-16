@@ -1,0 +1,7 @@
+<h1> <%= @user.first_name %>'s Dashboard</h1>
+<h5>My Products:</h5>
+<ul>
+<% @producer.products.each do |product| %>
+<li> <%= product.name %> </li>
+<% end %>
+</ul>

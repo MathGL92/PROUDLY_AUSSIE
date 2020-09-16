@@ -1,1 +1,16 @@
-<h1>new producer form comes here</h1>
+<h1>Enter your business details</h1>
+<p>Please note: you must hold an <a href="https://www.australianmade.com.au/" target="_blank">Australian Made License</a> to register on Proudly Aussie</p>
+   <%= simple_form_for(@producer) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.input :name, label: "Your Seller name:"%>
+      <%= f.input :company_name, label: "Your Company's Name" %>
+      <%= f.input :ABN, label: "ABN" %>
+      <%= f.input :address, label: "Your Address" %>
+      <%= f.input :introduction, label: "Tell us about your Business.", placeholder: "Your story as an Australian producer...What you're selling on Proudly Aussie..."%>
+      <%= f.input :photo, as: :file, label: "Upload Your Profile Picture" %>
+      <%= f.input :bg_photo, as: :file, label: "Upload Your Background Photo" %>
+      <%= f.button :submit, class: "btn btn-primary"%>
+    <% end %>
+
+<%= link_to 'Back', new_producer_path, class:"btn btn-primary" %>
