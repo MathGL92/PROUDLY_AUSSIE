@@ -7,3 +7,4 @@ Rails.application.routes.draw do
   resources :producers, only:[:index, :show, :new]
   get "/new_producer", to: "pages#new_producer"
 end
+
