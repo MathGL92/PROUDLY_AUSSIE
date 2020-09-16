@@ -6,7 +6,6 @@ class ProducersController < ApplicationController
     @producer = Producer.new
   end
 
-
   def index
     @producers = Producer.all
     @markers = @producers.geocoded.map do |producer|
