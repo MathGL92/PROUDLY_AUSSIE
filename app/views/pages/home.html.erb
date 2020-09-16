@@ -1,3 +1,4 @@
+<h1>Hello</h1>
 <div class="banner">
     <div class="banner-content text-center">
 
@@ -19,14 +20,14 @@
         <% end %>
     </ol>
     <div class="carousel-inner">
-        <% @tags.each_with_index do |tag, index| %>     
-        
+        <% @tags.each_with_index do |tag, index| %>
+
         <div class="carousel-item <%= 'active' if index == 0 %>">
-            
+
             <%= link_to producers_path do %>
             <%= image_tag "photo1.jpg", class: "d-block w-100" %>
             <% end %>
-            
+
         </div>
         <% end %>
     </div>

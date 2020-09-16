@@ -1,11 +1,10 @@
 class ProducersController < ApplicationController
   before_action :set_producer, only: [:show]
-  skip_before_action :authenticate_user!, only: [:show, :index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def new
     @producer = Producer.new
   end
-
 
   def index
     @producers = Producer.all
