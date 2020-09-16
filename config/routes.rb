@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-
-  devise_for :users
-
   root to: 'pages#home'
-
-  resources :producers, only:[:index, :show, :new]
+  
+  devise_for :users
+  
+  resources :producers, only:[:index, :show, :new, :create]
   get "/new_producer", to: "pages#new_producer"
+  get "/producer_confirmation", to: "pages#producer_confirmation"
+
+  resources :dashboard, only: [:index]
+
 end
