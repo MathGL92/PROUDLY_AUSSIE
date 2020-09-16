@@ -4,7 +4,20 @@ class ProducersController < ApplicationController
 
   def new
     @producer = Producer.new
+    @producer.user = current_user  
   end
+
+  def create
+    @producer = Producer.new(producer_params)
+    @producer.user = current_user
+    if @producer.save
+      redirect_to producer_confirmation_path
+    else
+      render :new
+    end
+  end
+
+  def producer_confirmation; end
 
 
   def index
@@ -28,6 +41,6 @@ class ProducersController < ApplicationController
   end
 
   def producer_params
-    params.require(:producer).permit(:name, :ABN, :address, :company_name, :photo, :bg_photo)
+    params.require(:producer).permit(:name, :ABN, :address, :company_name, :photo, :bg_photo, :introduction)
   end
 end

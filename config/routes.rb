@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-
-  devise_for :users
-
   root to: 'pages#home'
-  get "/:new_producer", to: "pages#new_producer"
+  
+  devise_for :users
+  
+  resources :producers, only:[:index, :show, :new, :create]
+  get "/new_producer", to: "pages#new_producer"
+  get "/producer_confirmation", to: "pages#producer_confirmation"
 
-
-  resources :producers, only:[:index, :show, :new]
+  resources :dashboard, only: [:index]
 end
