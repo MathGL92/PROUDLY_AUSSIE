@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "/producer_confirmation", to: "pages#producer_confirmation"
 
   resources :dashboard, only: [:index]
+
 end

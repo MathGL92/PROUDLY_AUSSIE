@@ -7,6 +7,7 @@ class ProducersController < ApplicationController
     @producer.user = current_user  
   end
 
+
   def create
     @producer = Producer.new(producer_params)
     @producer.user = current_user
@@ -18,6 +19,7 @@ class ProducersController < ApplicationController
   end
 
   def producer_confirmation; end
+
 
 
   def index
