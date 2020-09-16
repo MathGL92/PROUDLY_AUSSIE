@@ -42,3 +42,13 @@ product4 = Product.create!(name: "Beef jerky" , price: 75.8, producer_id: produc
 product5 = Product.create!(name: "Organic Orange Jam" , price: 15, producer_id: producer2.id)
 product6 = Product.create!(name: "Goat's Cheese" , price: 20, producer_id: producer2.id)
 puts "Created #{Product.count} products"
+
+puts "Creating 4 Categories..."
+
+category1 = Tag.create!(name: "homemade")
+category2 = Tag.create!(name: "organic")
+category3 = Tag.create!(name: "food + drink")
+category4 = Tag.create!(name: "bences special mix")
+
+puts 'Completed'
+
