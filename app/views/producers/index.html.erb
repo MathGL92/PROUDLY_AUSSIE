@@ -8,8 +8,9 @@
 
 <div class="" id="js-producers">
     <% @producers.each do |producer | %>
+     <%= link_to producer_path(producer) do %>
         <div class="card-container m-3 ">
-            <div class="card-producer">
+            <div class="card-producer"> 
             <div class="card-producer-infos">
                 <h2><%= producer.name %></h2>
                 <p><%= producer.address  %></p>
@@ -17,11 +18,11 @@
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
             </div>
         </div>
+     <% end %>
     <% end %>
 </div>
 
 <div class="d-none" id="js-map"> <!--display none-->
-    <h1> MAP PLACEHOLDER </h1>
   <div class="col-12 col-md-5 px-0 mx-0">
     <div id="map" style="width: auto; height: 100vh;"
    data-markers="<%= @markers.to_json %>"
