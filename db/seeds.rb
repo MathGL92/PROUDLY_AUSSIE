@@ -59,7 +59,7 @@ category3 = Tag.create!(name: "Condiments") #spread, Jam
 
 puts "Created #{Tag.count} categories"
 
-puts "Creating 3 Categories..."
+puts "Adding tags to Products..."
 
 tagging1 = Tagging.create!(product_id: product1.id , tag_id: category1.id)
 tagging2 = Tagging.create!(product_id: product3.id , tag_id: category1.id)
@@ -68,6 +68,6 @@ tagging4 = Tagging.create!(product_id: product4.id , tag_id: category2.id)
 tagging5 = Tagging.create!(product_id: product5.id , tag_id: category3.id)
 tagging6 = Tagging.create!(product_id: product6.id , tag_id: category3.id)
 
-puts "Created #{Tagging.count} categories"
+puts "Added tags to Products."
 
-puts "Completed"
+puts "Seed Completed"
