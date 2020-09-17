@@ -1,12 +1,12 @@
 puts "Cleaning the database..."
 
-User.destroy_all
-Producer.destroy_all
-LineItem.destroy_all
-Product.destroy_all
-ShoppingCart.destroy_all
-Tagging.destroy_all
 Tag.destroy_all
+Tagging.destroy_all
+LineItem.destroy_all
+ShoppingCart.destroy_all
+Product.destroy_all
+Producer.destroy_all
+User.destroy_all
 
 puts "Creating 3 users"
 
@@ -46,12 +46,23 @@ product6 = Product.create!(name: "Sweet Red pepper and Goats Cheese Spread" , pr
 ")
 puts "Created #{Product.count} products"
 
-puts "Creating 4 Categories..."
+puts "Creating 3 Categories..."
 
-category1 = Tag.create!(name: "homemade")
-category2 = Tag.create!(name: "organic")
-category3 = Tag.create!(name: "food + drink")
-category4 = Tag.create!(name: "bences special mix")
+category1 = Tag.create!(name: "Organic") #honey, dates
+category2 = Tag.create!(name: "Handmade") #purse, jerkey
+category3 = Tag.create!(name: "Condiments") #spread, Jam
 
-puts 'Completed'
+puts "Created #{Tag.count} categories"
 
+puts "Creating 3 Categories..."
+
+tagging1 = Tagging.create!(product_id: product1.id , tag_id: category1.id)
+tagging2 = Tagging.create!(product_id: product3.id , tag_id: category1.id)
+tagging3 = Tagging.create!(product_id: product2.id , tag_id: category2.id)
+tagging4 = Tagging.create!(product_id: product4.id , tag_id: category2.id)
+tagging5 = Tagging.create!(product_id: product5.id , tag_id: category3.id)
+tagging6 = Tagging.create!(product_id: product6.id , tag_id: category3.id)
+
+puts "Created #{Tagging.count} categories"
+
+puts "Completed"

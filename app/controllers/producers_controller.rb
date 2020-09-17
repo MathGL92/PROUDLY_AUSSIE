@@ -22,7 +22,11 @@ class ProducersController < ApplicationController
 
 
   def index
-    @producers = Producer.all
+    if params[:tag_name].present?
+      @producers = Producer.with_tag(params[:tag_name])
+    else
+      @producers = Producer.all
+    end
     @markers = @producers.geocoded.map do |producer|
       {
         lat: producer.latitude,

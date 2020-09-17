@@ -14,6 +14,12 @@
             <div class="card-producer-infos">
                 <h2><%= producer.name %></h2>
                 <p><%= producer.address  %></p>
+                <% producer.tags.each do |tag| %>
+                <% if params[:tag_name].presence == tag.name %>
+                <span class="badge badge-success"><%= tag.name %></span>
+                <% end %>
+                  <span class="badge badge-secondary"><%= tag.name %></span>
+                <% end %>
             </div>
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
             </div>
