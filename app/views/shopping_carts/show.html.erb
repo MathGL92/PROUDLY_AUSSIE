@@ -1,2 +1,14 @@
-<h1>Welcome to your shopping cart</h1>
-<%= @shopping_cart.id %>
+<div class="container">
+  <h1>Welcome to your shopping cart</h1>
+  <p>Shopping Cart Id: <%= @shopping_cart.id %></p>
+
+
+  <% if @shopping_cart.line_items.blank? %>
+    <p>Your shopping cart is empty</p>
+  <% else %>
+    <% @shopping_cart.line_items.each do |item| %>
+      <li><%= item.product.name %> | Price: $<%= item.price %> | Quantity: <%= item.amount %></li>
+    <% end %>
+  <% end %>
+</div>
+
