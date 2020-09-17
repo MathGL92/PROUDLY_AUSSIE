@@ -12,7 +12,6 @@ class PagesController < ApplicationController
     @producer = Producer.find(@user.producer.id)
 
     redirect_to "/dashboard" if @producer.approved
-  
   end
 
 end

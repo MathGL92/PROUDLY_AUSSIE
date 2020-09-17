@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2020_09_17_024653) do
     t.bigint "producer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "sku"
+    t.text "description"
     t.integer "price_cents", default: 0, null: false
     t.index ["producer_id"], name: "index_products_on_producer_id"
   end

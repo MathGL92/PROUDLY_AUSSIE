@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
 
   def current_shopping_cart
     if login?
-    # if user_signed_in?
       @shopping_cart = @user.shopping_cart
     else
       if session[:shopping_cart]
@@ -25,8 +24,4 @@ class ApplicationController < ActionController::Base
   def login?
     !!user_current
   end
-
-  # def authenticated?
-  #   redirect_to producers_path unless login?
-  # end
 end
