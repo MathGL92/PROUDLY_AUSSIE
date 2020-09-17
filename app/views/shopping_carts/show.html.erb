@@ -3,3 +3,8 @@
 <%= @shopping_cart.id %>
 <!-- display price-->
 <p>Amount: <%= humanized_money_with_symbol(teddy.price) %></p>
+<!--shoppingcart id to order -->
+<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'shopping_cart_id', @shopping_cart.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
