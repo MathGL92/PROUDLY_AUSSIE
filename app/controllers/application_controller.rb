@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
       @shopping_cart = @user.shopping_cart
     else
       if session[:shopping_cart]
-        @shopping_cart = ShoppingCart.find(session[:shopping_cart])
+        # @shopping_cart = ShoppingCart.find(session[:shopping_cart])
       else
         @shopping_cart = ShoppingCart.create
         session[:shopping_cart] = @shopping_cart.id
