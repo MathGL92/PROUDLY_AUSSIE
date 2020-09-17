@@ -1,12 +1,12 @@
 puts "Cleaning the database..."
 
-User.destroy_all
-Producer.destroy_all
-LineItem.destroy_all
-Product.destroy_all
-ShoppingCart.destroy_all
-Tagging.destroy_all
 Tag.destroy_all
+Tagging.destroy_all
+LineItem.destroy_all
+ShoppingCart.destroy_all
+Product.destroy_all
+Producer.destroy_all
+User.destroy_all
 
 puts "Creating 3 users"
 
