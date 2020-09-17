@@ -21,3 +21,15 @@
 .icon-black {
   color: black;
 }
+
+#navbarSupportedContent {
+  background-color: #cccc;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  font-weight: bold;
+  font-size: 20px;
+}
