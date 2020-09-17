@@ -1,7 +1,17 @@
 <h1> <%= @user.first_name %>'s Dashboard</h1>
 <h5>My Products:</h5>
-<ul>
-<% @producer.products.each do |product| %>
-<li> <%= product.name %> </li>
+
+<table style="width:100%">
+  <tr>
+    <th>Product Name</th>
+    <th>Update</th>
+  </tr>
+  <% @producer.products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td>Click to Update</td>
+  </tr>
 <% end %>
-</ul>
+</table>
+
+<%=link_to 'Add a new product', new_producer_product_path(@producer)%>
