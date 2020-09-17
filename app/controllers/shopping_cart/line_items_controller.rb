@@ -1,4 +1,5 @@
 class ShoppingCart::LineItemsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create]
   def create
     @product = Product.find(params[:product_id])
     @line_item = LineItem.new

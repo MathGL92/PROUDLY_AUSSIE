@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resources :line_items, only: :create
     end
   end
-  
+
   resources :producers, only:[:index, :show, :new, :create] do
     resources :products, only: [:new, :create]
   end

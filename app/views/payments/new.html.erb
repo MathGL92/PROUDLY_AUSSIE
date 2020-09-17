@@ -5,9 +5,14 @@
     <div class="col-md-3"> Image of order placeholder</div>
     <div class="col">
       <h1>Checkout summary</h1>
-      <p>Purchase of <%= @order %>for order amount</p>
-      <button id="pay" class="btn btn-primary">Pay</button>
-     
+      <p>Purchase of: </p>
+        <% @order.shopping_cart.line_items.each do |item| %>
+        <span><%= item.product.name %></span>
+        <span> - qty: <%= item.amount %> </span>
+        <% end %>
+
+      <button id="pay" class="btn btn-primary d-block">Pay</button>
+
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
