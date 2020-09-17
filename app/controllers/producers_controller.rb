@@ -18,9 +18,6 @@ class ProducersController < ApplicationController
     end
   end
 
-
-
-
   def index
     if params[:tag_name].present?
       @producers = Producer.with_tag(params[:tag_name])
