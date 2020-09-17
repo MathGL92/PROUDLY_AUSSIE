@@ -6,9 +6,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :producer, dependent: :destroy
   has_one :shopping_cart
-  # after_create :create_shopping_cart
+  has_many :orders
 
-  # def do_something
-  #   puts "Doing something"
-  # end
+  after_create :create_shopping_cart
+  def create_shopping_cart
+    shopping_cart = ShoppingCart.new
+    shopping_cart.user = self
+
+    shopping_cart.save
+  end
+
 end
