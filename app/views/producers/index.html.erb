@@ -17,8 +17,9 @@
                 <% producer.tags.each do |tag| %>
                 <% if params[:tag_name].presence == tag.name %>
                 <span class="badge badge-success"><%= tag.name %></span>
+                <% else %>
+                <span class="badge badge-secondary"><%= tag.name %></span>
                 <% end %>
-                  <span class="badge badge-secondary"><%= tag.name %></span>
                 <% end %>
             </div>
             <% if producer.photo.attached? %>
