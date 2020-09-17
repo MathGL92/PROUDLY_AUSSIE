@@ -5,6 +5,7 @@ const map = document.getElementById("js-map")
 const active = document.querySelector("active");
 
 const initToggleMap = () => { //when list clicked, map d-none
+  if (mapToggle) {
     mapToggle.addEventListener(("click"), () => {
         producerList.classList.add("d-none");
         map.classList.remove("d-none");
@@ -18,7 +19,7 @@ const initToggleMap = () => { //when list clicked, map d-none
        mapToggle.classList.remove("active");
        listToggle.classList.add("active");
     });
-
+  }
 }
 
 

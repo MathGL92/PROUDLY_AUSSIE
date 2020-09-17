@@ -33,6 +33,6 @@ class OrdersController < ApplicationController
     end
 
     def show
-      @order = ShoppingCart.find(params[:id])
+      @order = Order.find(params[:id])
     end
 end
