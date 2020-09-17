@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2020_09_16_053427) do
 
   create_table "shopping_carts", force: :cascade do |t|
     t.boolean "paid"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_shopping_carts_on_user_id"

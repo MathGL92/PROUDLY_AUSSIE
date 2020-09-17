@@ -18,7 +18,6 @@ class ProducersController < ApplicationController
     end
   end
 
-  def producer_confirmation; end
 
 
 
