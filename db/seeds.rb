@@ -1,9 +1,11 @@
+require "open-uri"
+
 puts "Cleaning the database..."
 
 Tag.destroy_all
 Tagging.destroy_all
 LineItem.destroy_all
-ShoppingCart.destroy_all
+#ShoppingCart.destroy_all
 Product.destroy_all
 Producer.destroy_all
 User.destroy_all
@@ -21,12 +23,15 @@ puts "Created #{User.count} users"
 
 puts "Creating two producers"
 
-producer1 = Producer.create!(name: "Kathy", address: "251 Upper King Valley Rd, Cheshunt", introduction: "Boutique vineyard with delicious wine and great service. Wine tastings
+producer1 = Producer.new(name: "Kathy", address: "251 Upper King Valley Rd, Cheshunt", introduction: "Boutique vineyard with delicious wine and great service. Wine tastings
 by appointment Thursdays to Sundays from 12 - 4pm. Also sells
 chemical free olives and oranges/lemons in season. Contact Jeff for
 more info and bookings.", ABN: "123-456-789", company_name: "Roselea Vineyard", approved: true, user_id: producer_kathy.id)
-# producer1.user = producer_kathy
-
+producer1_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer1.photo.attach(io: producer1_photo_file, filename: 'producer1.jpg', content_type: 'image/jpg')
+producer1_bg_photo_file = URI.open('https://images.unsplash.com/photo-1562601579-599dec564e06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer1.bg_photo.attach(io: producer1_bg_photo_file, filename: 'producer1.jpg', content_type: 'image/jpg')
+producer1.save!
 
 producer2 = Producer.create!(name: "Sharon", address: "74 Slaughterhouse Rd, Rutherglen", introduction: "Scion is a producer of artisan wines, handcrafted from vine to bottle. Our vision is to produce premium wines guided by the creative and modern interpretation of traditional Rutherglen varietals. We grow and handcraft wines in small batches – from aromatic whites to elegant reds and delicate dessert wines. Located just 2km south of Rutherglen on our estate vineyard, Scion’s cellar door is nestled in the natural landscape among grey box gums.", ABN: "987-654-321", company_name: "Scion Wine", approved: true, user_id: producer_sharon.id)
 

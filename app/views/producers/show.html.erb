@@ -1,5 +1,6 @@
 <% if @producer.bg_photo.attached? %>
   <div class="bg-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @producer.bg_photo.key%>')">
+  </div>
 <% else %>
   <div class="bg-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1549301019-6013533c514d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1056&q=80')">
   </div>
@@ -55,13 +56,13 @@
             </div>
             <div class="modal-body" id="modal-product-body">
               <h5 class="modal-title text-center mb-3" id="ourProductsTitle"><%= product.name %></h5>
-              <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              <p class="text-justify"><%= product.description %>
               </p>
               <a class="" href="#carouselExampleControls" role="button" data-slide="prev">
                 prev
               </a>
               <a class="" href="#carouselExampleControls" role="button" data-slide="next">
-                next
+                <%= icon('fas', 'arrow-right') %>
               </a>
             </div>
             <div class="modal-footer d-flex justify-content-between">
