@@ -2,8 +2,8 @@ require "open-uri"
 
 puts "Cleaning the database..."
 
-Tag.destroy_all
 Tagging.destroy_all
+Tag.destroy_all
 Order.destroy_all
 LineItem.destroy_all
 ShoppingCart.destroy_all
