@@ -2,14 +2,15 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :current_shopping_cart
 
-  # def current_user
-  #   if session[:user_id]
-  #     @user = User.find(session[:user_id])
-  #   end
-  # end
+  def user_current
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    end
+  end
 
   def current_shopping_cart
     if login?
+    # if user_signed_in?
       @shopping_cart = @user.shopping_cart
     else
       if session[:shopping_cart]
@@ -22,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def login?
-    !!current_user
+    !!user_current
   end
 
   # def authenticated?
