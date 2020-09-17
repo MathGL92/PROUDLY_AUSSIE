@@ -6,11 +6,9 @@ Rails.application.routes.draw do
   resources :shopping_carts, only: [:create]
   resource :shopping_carts, only: [:show]
 
-  resources :producers, only:[:index, :show, :new, :create]
+  resources :producers, only:[:index, :show, :new, :create] 
   get "/new_producer", to: "pages#new_producer"
   get "/producer_confirmation", to: "pages#producer_confirmation"
-
   resources :dashboard, only: [:index]
-  resources :product, only: [:index, :show]
 end
 
