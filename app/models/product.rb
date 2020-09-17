@@ -5,4 +5,5 @@ class Product < ApplicationRecord
   has_many :line_items
   validates :name, :price, presence: true
   has_one_attached :photo
+  monetize :price_cents
 end
