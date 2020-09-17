@@ -1,6 +1,11 @@
 class OrdersController < ApplicationController
     def create
-        shopping_cart = ShoppingCart.find(params[:shopping_cart])
+        if params[:shopping_cart]
+            shopping_cart = ShoppingCart.find(params[:shopping_cart])
+        else 
+            shopping_cart = ShoppingCart.find(params[:shopping_cart_id])
+        end
+
         @total_price = 0
         shopping_cart.line_items.each do |line_item|
             @total_price += line_item.price
