@@ -1,5 +1,5 @@
 <!--  map button outside card  -->
-<div class="container">
+<div class="d-flex justify-content-center my-3">
     <div class="btn-group" role="group">
         <button type="button" class="display-map btn btn-secondary far fa-map"> </button>
         <button type="button" class="display-list active btn btn-secondary fas fa-list-ul"></button>
@@ -10,7 +10,7 @@
     <% @producers.each do |producer | %>
      <%= link_to producer_path(producer) do %>
         <div class="card-container m-3 ">
-            <div class="card-producer"> 
+            <div class="card-producer">
             <div class="card-producer-infos">
                 <h2><%= producer.name %></h2>
                 <p><%= producer.address  %></p>
@@ -22,7 +22,11 @@
                 <% end %>
                 <% end %>
             </div>
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <% if producer.photo.attached? %>
+              <%= cl_image_tag producer.photo.key,crop: :fill %>
+            <% else %>
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <% end %>
             </div>
         </div>
      <% end %>
@@ -37,5 +41,7 @@
     </div>
   </div>
 </div>
+
+
 
 
