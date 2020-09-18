@@ -19,6 +19,8 @@ producer_kathy = User.create!(email: "user2@user.com", password: "password", las
 
 producer_sharon = User.create!(email: "user3@user.com", password: "password", last_name: "Smith", first_name: "Sharon (Producer)")
 
+producer_alan = User.create!(email: "alan@user.com", password: "password", last_name: "Turing", first_name: "Alan (Producer)")
+
 
 puts "Created #{User.count} users"
 
@@ -35,6 +37,16 @@ producer1.bg_photo.attach(io: producer1_bg_photo_file, filename: 'producer1.jpg'
 producer1.save!
 
 producer2 = Producer.create!(name: "Sharon", address: "74 Slaughterhouse Rd, Rutherglen", introduction: "Scion is a producer of artisan wines, handcrafted from vine to bottle. Our vision is to produce premium wines guided by the creative and modern interpretation of traditional Rutherglen varietals. We grow and handcraft wines in small batches – from aromatic whites to elegant reds and delicate dessert wines. Located just 2km south of Rutherglen on our estate vineyard, Scion’s cellar door is nestled in the natural landscape among grey box gums.", ABN: "987-654-321", company_name: "Scion Wine", approved: true, user_id: producer_sharon.id)
+
+producer3 = Producer.new(name: "Alan", address: "Bees of Eden Honey, Rockbank VIC 3335", introduction: "Boutique vineyard with delicious wine and great service. Wine tastings
+by appointment Thursdays to Sundays from 12 - 4pm. Also sells
+chemical free olives and oranges/lemons in season. Contact Jeff for
+more info and bookings.", ABN: "123-456-789", company_name: "Roselea Vineyard", approved: true, user_id: producer_kathy.id)
+producer3_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer3.photo.attach(io: producer3_photo_file, filename: 'producer1.jpg', content_type: 'image/jpg')
+producer3_bg_photo_file = URI.open('https://images.unsplash.com/photo-1562601579-599dec564e06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer3.bg_photo.attach(io: producer3_bg_photo_file, filename: 'producer3.jpg', content_type: 'image/jpg')
+producer3.save!
 
 
 puts "Created #{Producer.count} producers"
