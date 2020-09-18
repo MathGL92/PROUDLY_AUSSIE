@@ -4,9 +4,8 @@ class ProducersController < ApplicationController
 
   def new
     @producer = Producer.new
-    @producer.user = current_user  
+    @producer.user = current_user
   end
-
 
   def create
     @producer = Producer.new(producer_params)
@@ -18,17 +17,18 @@ class ProducersController < ApplicationController
     end
   end
 
-
-
-
   def index
-    @producers = Producer.all
+    if params[:tag_name].present?
+      @producers = Producer.with_tag(params[:tag_name])
+    else
+      @producers = Producer.all
+    end
     @markers = @producers.geocoded.map do |producer|
       {
         lat: producer.latitude,
         lng: producer.longitude,
-        # infoWindow: render_to_string(partial: "info_window", locals: { producer: producer }),
-        # image_url: helpers.asset_url('logo.png')
+        infoWindow: render_to_string(partial: "info_window", locals: { producer: producer }),
+        image_url: helpers.asset_url('logo.png')
       }
     end
   end
