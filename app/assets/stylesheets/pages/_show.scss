@@ -24,12 +24,12 @@
   height: 100vh;
 }
 
-
 .product-img {
   width: 100%;
   height: 50vh;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .cart-icon {
@@ -46,10 +46,9 @@
 }
 
 #modal-header-product {
-  padding: 0;
+  padding: 12px;
 }
 
 .arrow-product-carousel {
   color: rgb(169,169,169);
-
 }
