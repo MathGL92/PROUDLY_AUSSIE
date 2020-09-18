@@ -14,7 +14,11 @@
         <li><strong>TOTAL</strong><%=  @order.amount_cents %></li>
         </li>
       </ul>
-      <p>Estimated delivery in <strong>2 business days</strong></p>
+      <p>Thank you <%= @shopping_cart.user %></p>
+      <p>From your local producer, </p>
+       <% @shopping_cart.list_producers.each do |producer|%>
+        <%= producer %>
+       <% end %>
     </div>
   </div>
 </div>
