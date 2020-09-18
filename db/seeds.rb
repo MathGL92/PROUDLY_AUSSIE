@@ -36,7 +36,7 @@ producer_clarck= User.create!(email: "Clarck@user.com", password: "password", la
 
 puts "Created #{User.count} users"
 
-puts "Creating two producers"
+puts "Creating 9 producers"
 
 producer1 = Producer.new(name: "Kathy", address: "251 Upper King Valley Rd, Cheshunt", tagline: "Wine, olives, oranges for 20 years", introduction: "Boutique vineyard with delicious wine and great service. Wine tastings
 by appointment Thursdays to Sundays from 12 - 4pm. Also sells
@@ -55,6 +55,9 @@ producer2_bg_photo_file = URI.open('https://images.unsplash.com/photo-1573061750
 producer2.bg_photo.attach(io: producer2_bg_photo_file, filename: 'producer2.jpg', content_type: 'image/jpg')
 producer2.save!
 
+
+#### producer for our stroy ############
+
 producer3 = Producer.new(name: "Alan", address: "12 Laurel Street, Rockbank Victoria", tagline: "'Spread the Love' of honey since 2000", introduction: "We believe that our planet offers so much beauty and abundance, a living Garden of Eden...pure, natural and delicious. \n We are based in Melbourne's West and source our pure Australian honey from native flora away from genetically modified crops and pesticides. \n Our organic plant oils are sourced from the world's finest which are known for their therapeutic qualities to uplift, relax and renew. We then create a product that is both unique and delicious. \n In each individual jar we infuse very precise amounts of the world's finest organic plant oils. \n The result? A delicious flavour experience! We are sure you won’t be disappointed.", ABN: "525-456-709", company_name: "Bees of Eden Honey", approved: true, user_id: producer_alan.id)
 producer3_photo_file = URI.open('https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
 producer3.photo.attach(io: producer3_photo_file, filename: 'producer3.jpg', content_type: 'image/jpg')
@@ -62,26 +65,28 @@ producer3_bg_photo_file = URI.open('https://static.wixstatic.com/media/8faf1c_63
 producer3.bg_photo.attach(io: producer3_bg_photo_file, filename: 'producer3.jpg', content_type: 'image/jpg')
 producer3.save!
 
-# producer4 = Producer.new(name: "Josh", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_josh.id)
-# producer4_photo_file = URI.open('')
-# producer4.photo.attach(io: producer4_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
-# producer4_bg_photo_file = URI.open('')
-# producer4.bg_photo.attach(io: producer4_bg_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
-# producer4.save!
+###########################################
 
-# producer5 = Producer.new(name: "Mary", address: "", tagline: "", introduction: "", ABN: "321-156-799", company_name: "", approved: true, user_id: producer_mary.id)
-# producer5_photo_file = URI.open('')
-# producer5.photo.attach(io: producer5_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
-# producer5_bg_photo_file = URI.open('')
-# producer5.bg_photo.attach(io: producer5_bg_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
-# producer5.save!
+producer4 = Producer.new(name: "Josh", address: "Shop 1/ 8-10 FORREST AVENUE, NEWHAVEN VIC 3925", tagline: "ORGANIC products, for you and your home", introduction: "We are an Australian, family owned business, established in 2004. \n \n We manufacture and retail beautiful ORGANIC products, for you and your home, including hardwood furniture, bed linen, mattresses and futons, pillows, quilts, baby bedding, protectors, towels and clothing.", ABN: "521-156-709", company_name: "Organature", approved: true, user_id: producer_josh.id)
+producer4_photo_file = URI.open('https://images.unsplash.com/photo-1596193318541-2a6d89421dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80')
+producer4.photo.attach(io: producer4_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
+producer4_bg_photo_file = URI.open('https://images.unsplash.com/photo-1594526761005-4ccdbd608d2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer4.bg_photo.attach(io: producer4_bg_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
+producer4.save!
 
-# producer6 = Producer.new(name: "Lorna", address: "", tagline: "", introduction: "", ABN: "521-151-709", company_name: "", approved: true, user_id: producer_lorna.id)
-# producer6_photo_file = URI.open('')
-# producer6.photo.attach(io: producer6_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
-# producer6_bg_photo_file = URI.open('')
-# producer6.bg_photo.attach(io: producer6_bg_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
-# producer6.save!
+producer5 = Producer.new(name: "Mary", address: "", tagline: "Handcrafted Organic Australian Jewellery", introduction: "We are committed to 100% of our products being sourced and handcrafted with passion wholeheartedly in Australia. By supporting Elements Jewellery, you’re supporting Australian craftsmen. We aim to empower artisans, their families and their communities in the process.", ABN: "321-156-799", company_name: "Elements Jewellery", approved: true, user_id: producer_mary.id)
+producer5_photo_file = URI.open('https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80')
+producer5.photo.attach(io: producer5_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
+producer5_bg_photo_file = URI.open('https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer5.bg_photo.attach(io: producer5_bg_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
+producer5.save!
+
+producer6 = Producer.new(name: "Lorna", address: "", tagline: "the earth’s favourite little skincare", introduction: "Bubba Organics the earth’s favourite little skincare co, create Organic by Nature baby skincare ranges using the best Locally sourced natural ingredients to create beautiful products that you can trust and your baby will love. \n \n Our extra gentle pure organic formulation is perfect for everyday use for your growing family and for all with sensitive skin. Available in 250ml & 500ml pump bottles.", ABN: "521-151-709", company_name: "Bubba Organics", approved: true, user_id: producer_lorna.id)
+producer6_photo_file = URI.open('https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80')
+producer6.photo.attach(io: producer6_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
+producer6_bg_photo_file = URI.open('https://images.unsplash.com/photo-1489760176169-fd3d32805239?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer6.bg_photo.attach(io: producer6_bg_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
+producer6.save!
 
 # producer7 = Producer.new(name: "Francky", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_francky.id)
 # producer7_photo_file = URI.open('')
