@@ -102,12 +102,12 @@ producer8_bg_photo_file = URI.open('https://www.australianmade.com.au/Assets/314
 producer8.bg_photo.attach(io: producer8_bg_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
 producer8.save!
 
-producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-789", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
-producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
-producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
-producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80')
-producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
-producer9.save!
+# producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-789", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
+# producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
+# producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+# producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80')
+# producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+# producer9.save!
 
 
 puts "Created #{Producer.count} producers"
