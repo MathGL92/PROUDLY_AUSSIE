@@ -74,40 +74,40 @@ producer4_bg_photo_file = URI.open('https://images.unsplash.com/photo-1594526761
 producer4.bg_photo.attach(io: producer4_bg_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
 producer4.save!
 
-producer5 = Producer.new(name: "Mary", address: "", tagline: "Handcrafted Organic Australian Jewellery", introduction: "We are committed to 100% of our products being sourced and handcrafted with passion wholeheartedly in Australia. By supporting Elements Jewellery, you’re supporting Australian craftsmen. We aim to empower artisans, their families and their communities in the process.", ABN: "321-156-799", company_name: "Elements Jewellery", approved: true, user_id: producer_mary.id)
+producer5 = Producer.new(name: "Mary", address: "100 Hughes Rd, Bargara QLD 4670", tagline: "Handcrafted Organic Australian Jewellery", introduction: "We are committed to 100% of our products being sourced and handcrafted with passion wholeheartedly in Australia. By supporting Elements Jewellery, you’re supporting Australian craftsmen. We aim to empower artisans, their families and their communities in the process.", ABN: "321-156-799", company_name: "Elements Jewellery", approved: true, user_id: producer_mary.id)
 producer5_photo_file = URI.open('https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80')
 producer5.photo.attach(io: producer5_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
 producer5_bg_photo_file = URI.open('https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
 producer5.bg_photo.attach(io: producer5_bg_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
 producer5.save!
 
-producer6 = Producer.new(name: "Lorna", address: "", tagline: "the earth’s favourite little skincare", introduction: "Bubba Organics the earth’s favourite little skincare co, create Organic by Nature baby skincare ranges using the best Locally sourced natural ingredients to create beautiful products that you can trust and your baby will love. \n \n Our extra gentle pure organic formulation is perfect for everyday use for your growing family and for all with sensitive skin. Available in 250ml & 500ml pump bottles.", ABN: "521-151-709", company_name: "Bubba Organics", approved: true, user_id: producer_lorna.id)
+producer6 = Producer.new(name: "Lorna", address: "3/5 Cubitt Way Dandenong South, VIC 3175. 8/90 Collins St", tagline: "the earth’s favourite little skincare", introduction: "Bubba Organics the earth’s favourite little skincare co, create Organic by Nature baby skincare ranges using the best Locally sourced natural ingredients to create beautiful products that you can trust and your baby will love. \n \n Our extra gentle pure organic formulation is perfect for everyday use for your growing family and for all with sensitive skin. Available in 250ml & 500ml pump bottles.", ABN: "521-151-709", company_name: "Bubba Organics", approved: true, user_id: producer_lorna.id)
 producer6_photo_file = URI.open('https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80')
 producer6.photo.attach(io: producer6_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
 producer6_bg_photo_file = URI.open('https://images.unsplash.com/photo-1489760176169-fd3d32805239?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
 producer6.bg_photo.attach(io: producer6_bg_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
 producer6.save!
 
-# producer7 = Producer.new(name: "Francky", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_francky.id)
-# producer7_photo_file = URI.open('')
-# producer7.photo.attach(io: producer7_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
-# producer7_bg_photo_file = URI.open('')
-# producer7.bg_photo.attach(io: producer7_bg_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
-# producer7.save!
+producer7 = Producer.new(name: "Franky", address: "Hollyburton Farm, 1677 Melbourne-Lancefield Rd, Bolinda VIC 3432", tagline: "Happy, content and stress-free animals equate to far tastier organic meat and environmental care.", introduction: "Hollyburton is a NASAA certified Organic Farm in the Macedon Ranges just outside Melbourne spanning 440 acres, owned by the Scott family for 24 years.\n We produce Organic Beef, Organic Lamb, Organic Chicken, Organic Eggs, Free Range Pork , doonas made from our own wool and Wadding for patchwork quilting.", ABN: "521-156-709", company_name: "Hollyburton Farm", approved: true, user_id: producer_franky.id)
+producer7_photo_file = URI.open('https://images.unsplash.com/photo-1517705185975-b3301eaa9c8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1629&q=80')
+producer7.photo.attach(io: producer7_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
+producer7_bg_photo_file = URI.open('https://images.unsplash.com/photo-1516762167031-bc59fb134985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
+producer7.bg_photo.attach(io: producer7_bg_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
+producer7.save!
 
-# producer8 = Producer.new(name: "Phil", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_phil.id)
-# producer8_photo_file = URI.open('')
-# producer8.photo.attach(io: producer8_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
-# producer8_bg_photo_file = URI.open('')
-# producer8.bg_photo.attach(io: producer8_bg_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
-# producer8.save!
+producer8 = Producer.new(name: "Phil", address: "100 Hughes Rd, Bargara QLD 4670", tagline: "Passionate about creating with honest, ethical, sustainable natural materials sourced wholeheartedly in Australia", introduction: "These pure Organic Earrings are handmade from natural sustainable, Eco-friendly and ethically sourced materials. Made by hand in our small family studio in Bargara, QLD using traditional processes and committed to the environment.", ABN: "521-156-709", company_name: "Elements Jewellery", approved: true, user_id: producer_phil.id)
+producer8_photo_file = URI.open('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer8.photo.attach(io: producer8_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
+producer8_bg_photo_file = URI.open('https://www.australianmade.com.au/Assets/3141b911-b2d5-4b60-a863-a04af54b94fb.jpg?width=340&height=340')
+producer8.bg_photo.attach(io: producer8_bg_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
+producer8.save!
 
-# producer9 = Producer.new(name: "Clarck", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_clarck.id)
-# producer9_photo_file = URI.open('')
-# producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
-# producer9_bg_photo_file = URI.open('')
-# producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
-# producer9.save!
+producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-709", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
+producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
+producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80')
+producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+producer9.save!
 
 
 puts "Created #{Producer.count} producers"
@@ -138,6 +138,38 @@ product8_photo_file = URI.open('https://static.wixstatic.com/media/8faf1c_e64518
 product8.photo.attach(io: product8_photo_file, filename: 'product8.jpg', content_type: 'image/jpg')
 product8.save!
 
+##############
+
+product9 = Product.new(name: "Quilt – Winter Weight – Certified Organic Cotton" , price: 245.0 , producer_id: producer4.id, description: "Cosy Winter Weight Organic Cotton Quilt. Organature quilts (also known as Duvet, Comforter or Doona) are made with GOTS certified 100% organic cotton fabric and filling. No synthetic fibres to cause perspiration. Our quilts are light weight, cosy and comfortable. Winter weight, approx 460 grams per m2. ")
+product9_photo_file = URI.open('https://organature.com/wp-content/uploads/organic-cotton-winter-weight-quilt-doona-1-545x454.jpg')
+product9.photo.attach(io: product9_photo_file, filename: 'product9.jpg', content_type: 'image/jpg')
+product9.save!
+
+product10 = Product.new(name: "Natural Earrings" , price: 30.0 , producer_id: producer5.id, description: "These Natural Earrings are handmade from natural sustainable, Eco-friendly and ethically sourced materials. Made by hand in our family studio in QLD, Australia using traditional processes and committed to the environment.")
+product10_photo_file = URI.open('https://cdn.shopify.com/s/files/1/1804/2457/products/Natural_earrings_1024x1024.jpg?v=1586189071')
+product10.photo.attach(io: product10_photo_file, filename: 'product9.jpg', content_type: 'image/jpg')
+product10.save!
+
+product11 = Product.new(name: "GOATS MILK & MANUKA HONEY BABY MOISTURE LOTION 250ML" , price: 26.95, producer_id: producer6.id, description: "With Aloe vera, Sweet Almond Oil and a hint of Orange Blossom, this gentle formulation has been developed to hydrate and comfort bubba’s delicate skin whilst the antibacterial and anti-inflammatory properties help soften and support it. Pure, ethical baby skin care, the way nature intended.")
+product11_photo_file = URI.open('https://www.bubbaorganics.com.au/wp-content/uploads/2018/07/PROD-disney-pooh-bml.jpg')
+product11.photo.attach(io: product11_photo_file, filename: 'product11.jpg', content_type: 'image/jpg')
+product11.save!
+
+# product12 = Product.new(name: "" , price: , producer_id: producer7.id, description: "")
+# product12_photo_file = URI.open('')
+# product12.photo.attach(io: product12_photo_file, filename: 'product12.jpg', content_type: 'image/jpg')
+# product12.save!
+
+# product13 = Product.new(name: "" , price: , producer_id: producer8.id, description: "")
+# product13_photo_file = URI.open('')
+# product13.photo.attach(io: product13_photo_file, filename: 'product13.jpg', content_type: 'image/jpg')
+# product13.save!
+
+# product14 = Product.new(name: "" , price: , producer_id: producer9.id, description: "")
+# product14_photo_file = URI.open('')
+# product14.photo.attach(io: product14_photo_file, filename: 'product14.jpg', content_type: 'image/jpg')
+# product14.save!
+
 
 puts "Created #{Product.count} products"
 
@@ -159,6 +191,7 @@ tagging5 = Tagging.create!(product_id: product5.id , tag_id: category3.id)
 tagging6 = Tagging.create!(product_id: product6.id , tag_id: category3.id)
 tagging7 = Tagging.create!(product_id: product7.id , tag_id: category1.id)
 tagging8 = Tagging.create!(product_id: product8.id , tag_id: category2.id)
+
 
 puts "Added tags to Products."
 
