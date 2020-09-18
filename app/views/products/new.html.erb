@@ -6,6 +6,7 @@
       <%= f.input :name, label: "Your Product's Name:"%>
       <%= f.input :description, label: "Describe your product" %>
       <%= f.input :price, label: "Price" %>
+      <%= f.input :photo, as: :file, label: "Add a nice photo" %>
       <%= f.button :submit, class: "btn btn-primary"%>
     <% end %>
 
