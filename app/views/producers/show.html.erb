@@ -58,10 +58,10 @@
               <h5 class="modal-title text-center mb-3" id="ourProductsTitle"><%= product.name %></h5>
               <p class="text-justify"><%= product.description %>
               </p>
-              <a class="" href="#carouselExampleControls" role="button" data-slide="prev">
-                prev
+              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="prev">
+                <%= icon('fas', 'arrow-left') %>
               </a>
-              <a class="" href="#carouselExampleControls" role="button" data-slide="next">
+              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next">
                 <%= icon('fas', 'arrow-right') %>
               </a>
             </div>
@@ -70,7 +70,6 @@
               <div class="cart-icon"><%= link_to icon('fas', 'cart-plus'), shopping_cart_product_line_items_path(product), method: :post %></div>
             </div>
           </div>
-
 
           <% end %>
 
