@@ -1,22 +1,22 @@
 <!-- The overlay -->
 <div id="myNav" class="overlay">
-<!-- Button to close the overlay navigation -->
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<!-- Overlay content -->
-<div class="overlay-content">
-<% if user_signed_in? && current_user.producer %>
-        <li class="nav-item active">
-          <%= link_to "Dashboard", "/dashboard", class: "nav-link overlay" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Add Product", shopping_carts_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "View Profile", "/producers/#{current_user.producer.id}", class: "nav-link" %>
-        </li>
-         <li class="nav-item active">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
+  <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <% if user_signed_in? && current_user.producer %>
+      <li class="nav-item active">
+        <%= link_to "Dashboard", "/dashboard", class: "nav-link" %>
+      </li>
+      <li class="nav-item active">    
+        <%= link_to "Add Product", shopping_carts_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "View Profile", "/producers/#{current_user.producer.id}", class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
       <% elsif user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link" %>
@@ -39,14 +39,34 @@
   </div>
 </div>
 </div>
-<%= link_to icon('fas', 'shopping-cart'), shopping_carts_path, class: "icon-black" %>
-<!-- Use any element to open/show the overlay navigation menu -->
-<span onclick="openNav()">Menu</span>
-<script>/* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}</script>
+
+<div class="navbar d-flex justify-content-space-between">
+  
+  <%= link_to image_tag("Logo1.jpg", border: 0), {action: 'home', controller: 'pages'}, class: 'dock-item' %>
+
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <span onclick="openNav()">Menu</span>
+
+  <script>/* Open when someone clicks on the span element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }</script>
+
+  <%= link_to icon('fas', 'shopping-cart'), shopping_carts_path, class: "icon-black" %>
+  <%= link_to icon('fas', 'map-marked-alt'), shopping_carts_path, class: "icon-black" %>
+
+  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+    <div class="search-form-control form-group">
+      <input class="form-control string required p-2" type="text" name="search[query]" id="search_query" />
+      <button name="button" type="submit" class="btn btn-flat">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  <% end %>
+
+</div>
+
