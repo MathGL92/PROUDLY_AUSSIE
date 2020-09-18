@@ -23,6 +23,7 @@ require('channels');
 // External imports
 import 'bootstrap';
 import { initToggleMap } from '../components/init_toggle_map';
+import { initProducerMap } from '../components/init_producer_map';
 import { initMapbox } from '../plugins/init_mapbox';
 
 // Internal imports, e.g:
@@ -33,4 +34,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initToggleMap();
   initMapbox();
+  initProducerMap();
 });
