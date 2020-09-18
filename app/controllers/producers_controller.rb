@@ -34,13 +34,11 @@ class ProducersController < ApplicationController
   end
 
   def show
-    # @markers = @producers.geocoded.map do |producer|
-    #   {
-    #     lat: producer.latitude,
-    #     lng: producer.longitude,
-    #     infoWindow: render_to_string(partial: "info_window", locals: { producer: producer })
-    #   }
-    # end
+    @markers =[{
+        lat: @producer.latitude,
+        lng: @producer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { producer: @producer })
+      }]
   end
 
   private
