@@ -88,21 +88,21 @@ producer6_bg_photo_file = URI.open('https://images.unsplash.com/photo-1489760176
 producer6.bg_photo.attach(io: producer6_bg_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
 producer6.save!
 
-producer7 = Producer.new(name: "Franky", address: "Hollyburton Farm, 1677 Melbourne-Lancefield Rd, Bolinda VIC 3432", tagline: "Happy, content and stress-free animals equate to far tastier organic meat and environmental care.", introduction: "Hollyburton is a NASAA certified Organic Farm in the Macedon Ranges just outside Melbourne spanning 440 acres, owned by the Scott family for 24 years.\n We produce Organic Beef, Organic Lamb, Organic Chicken, Organic Eggs, Free Range Pork , doonas made from our own wool and Wadding for patchwork quilting.", ABN: "521-156-709", company_name: "Hollyburton Farm", approved: true, user_id: producer_franky.id)
+producer7 = Producer.new(name: "Francky", address: "Hollyburton Farm, 1677 Melbourne-Lancefield Rd, Bolinda VIC 3432", tagline: "Happy animals equate to far tastier organic meat and environmental care.", introduction: "Hollyburton is a NASAA certified Organic Farm in the Macedon Ranges just outside Melbourne spanning 440 acres, owned by the Scott family for 24 years.\n We produce Organic Beef, Organic Lamb, Organic Chicken, Organic Eggs, Free Range Pork , doonas made from our own wool and Wadding for patchwork quilting.", ABN: "251-156-709", company_name: "Hollyburton Farm", approved: true, user_id: producer_francky.id)
 producer7_photo_file = URI.open('https://images.unsplash.com/photo-1517705185975-b3301eaa9c8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1629&q=80')
 producer7.photo.attach(io: producer7_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
 producer7_bg_photo_file = URI.open('https://images.unsplash.com/photo-1516762167031-bc59fb134985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
 producer7.bg_photo.attach(io: producer7_bg_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
 producer7.save!
 
-producer8 = Producer.new(name: "Phil", address: "100 Hughes Rd, Bargara QLD 4670", tagline: "Passionate about creating with honest, ethical, sustainable natural materials sourced wholeheartedly in Australia", introduction: "These pure Organic Earrings are handmade from natural sustainable, Eco-friendly and ethically sourced materials. Made by hand in our small family studio in Bargara, QLD using traditional processes and committed to the environment.", ABN: "521-156-709", company_name: "Elements Jewellery", approved: true, user_id: producer_phil.id)
+producer8 = Producer.new(name: "Phil", address: "100 Hughes Rd, Bargara QLD 4670", tagline: "Passionate about creating with sustainable and natural materials", introduction: "These pure Organic Earrings are handmade from natural sustainable, Eco-friendly and ethically sourced materials. Made by hand in our small family studio in Bargara, QLD using traditional processes and committed to the environment.", ABN: "521-156-709", company_name: "Elements Jewellery", approved: true, user_id: producer_phil.id)
 producer8_photo_file = URI.open('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
 producer8.photo.attach(io: producer8_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
 producer8_bg_photo_file = URI.open('https://www.australianmade.com.au/Assets/3141b911-b2d5-4b60-a863-a04af54b94fb.jpg?width=340&height=340')
 producer8.bg_photo.attach(io: producer8_bg_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
 producer8.save!
 
-producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-709", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
+producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-789", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
 producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
 producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
 producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80')
@@ -112,7 +112,7 @@ producer9.save!
 
 puts "Created #{Producer.count} producers"
 
-puts "Creating 8 products"
+puts "Creating 14 products"
 
 product1 = Product.new(name: "Home made Honey" , price: 35, producer_id: producer1.id, description: "Manuka honey has medicinal bio-active properties and follows an NPA rating system, it has been proven to be effective for use in a large variety of health enhancing scenarios, when you buy from Australian Food Services you're buying from the beekeepers.")
 product1_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
@@ -155,15 +155,15 @@ product11_photo_file = URI.open('https://www.bubbaorganics.com.au/wp-content/upl
 product11.photo.attach(io: product11_photo_file, filename: 'product11.jpg', content_type: 'image/jpg')
 product11.save!
 
-# product12 = Product.new(name: "" , price: , producer_id: producer7.id, description: "")
-# product12_photo_file = URI.open('')
-# product12.photo.attach(io: product12_photo_file, filename: 'product12.jpg', content_type: 'image/jpg')
-# product12.save!
+product12 = Product.new(name: "Organic Winter Wool Doona" , price: 360, producer_id: producer7.id, description: "These doonas are the ultimate experience in warmth for those cold winter nights. They are 800gsm doonas which are equivalent to 4 blankets.\n Hollyburton doonas are thicker than most wool doonas on the market but because it is wool it is also breathable and can be used in a variety of night temperatures\n Experience the difference in your sleep now")
+product12_photo_file = URI.open('https://images.unsplash.com/photo-1517912181842-e5a9d4701a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1144&q=80')
+product12.photo.attach(io: product12_photo_file, filename: 'product12.jpg', content_type: 'image/jpg')
+product12.save!
 
-# product13 = Product.new(name: "" , price: , producer_id: producer8.id, description: "")
-# product13_photo_file = URI.open('')
-# product13.photo.attach(io: product13_photo_file, filename: 'product13.jpg', content_type: 'image/jpg')
-# product13.save!
+product13 = Product.new(name: "Stoneware Drop Earrings" , price: 25.0, producer_id: producer8.id, description: "Materials for Stoneware Drop Earrings:\n Australian Ceramic stoneware \n Colour off white and rustic brown - matte finish \n Hypoallergenic surgical stainless-steel studs, clasps, ring or Sterling silver studs, clasps, ring \n \n Dimensions: Approximately 45mm.")
+product13_photo_file = URI.open('https://images.unsplash.com/photo-1571487609887-b4ccacb26eaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80')
+product13.photo.attach(io: product13_photo_file, filename: 'product13.jpg', content_type: 'image/jpg')
+product13.save!
 
 # product14 = Product.new(name: "" , price: , producer_id: producer9.id, description: "")
 # product14_photo_file = URI.open('')
@@ -191,7 +191,12 @@ tagging5 = Tagging.create!(product_id: product5.id , tag_id: category3.id)
 tagging6 = Tagging.create!(product_id: product6.id , tag_id: category3.id)
 tagging7 = Tagging.create!(product_id: product7.id , tag_id: category1.id)
 tagging8 = Tagging.create!(product_id: product8.id , tag_id: category2.id)
-
+tagging9 = Tagging.create!(product_id: product9.id , tag_id: category2.id)
+tagging10 = Tagging.create!(product_id: product10.id , tag_id: category1.id)
+tagging11 = Tagging.create!(product_id: product11.id , tag_id: category1.id)
+tagging12 = Tagging.create!(product_id: product12.id , tag_id: category2.id)
+tagging13 = Tagging.create!(product_id: product13.id , tag_id: category2.id)
+# tagging14 = Tagging.create!(product_id: product14.id , tag_id: category2.id)
 
 puts "Added tags to Products."
 

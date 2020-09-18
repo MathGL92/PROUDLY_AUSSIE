@@ -4,7 +4,7 @@ class Producer < ApplicationRecord
   has_many :tags, -> { distinct }, through: :products
   has_one_attached :photo
   validates :name, :address, :tagline, :ABN, :company_name, presence: true
-  validates :ABN, uniqueness: true
+  # validates :ABN, uniqueness: true
 
   has_one_attached :photo
   has_one_attached :bg_photo
