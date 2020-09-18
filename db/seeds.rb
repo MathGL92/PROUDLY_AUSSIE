@@ -38,7 +38,7 @@ producer1.save!
 
 producer2 = Producer.create!(name: "Sharon", address: "74 Slaughterhouse Rd, Rutherglen", tagline: "premium wines since 2005", introduction: "Scion is a producer of artisan wines, handcrafted from vine to bottle. Our vision is to produce premium wines guided by the creative and modern interpretation of traditional Rutherglen varietals. We grow and handcraft wines in small batches – from aromatic whites to elegant reds and delicate dessert wines. Located just 2km south of Rutherglen on our estate vineyard, Scion’s cellar door is nestled in the natural landscape among grey box gums.", ABN: "987-654-321", company_name: "Scion Wine", approved: true, user_id: producer_sharon.id)
 
-producer3 = Producer.new(name: "Alan", address: "Bees of Eden Honey, Rockbank VIC 3335", tagline: "'Spread the Love' of honey since 2000", introduction: "We believe that our planet offers so much beauty and abundance, a living Garden of Eden...pure, natural and delicious. \n We are based in Melbourne's West and source our pure Australian honey from native flora away from genetically modified crops and pesticides. \n Our organic plant oils are sourced from the world's finest which are known for their therapeutic qualities to uplift, relax and renew. We then create a product that is both unique and delicious. \n In each individual jar we infuse very precise amounts of the world's finest organic plant oils. \n The result? A delicious flavour experience! We are sure you won’t be disappointed.", ABN: "525-456-709", company_name: "Bees of Eden Honey", approved: true, user_id: producer_alan.id)
+producer3 = Producer.new(name: "Alan", address: "12 Laurel Street, Rockbank Victoria", tagline: "'Spread the Love' of honey since 2000", introduction: "We believe that our planet offers so much beauty and abundance, a living Garden of Eden...pure, natural and delicious. \n We are based in Melbourne's West and source our pure Australian honey from native flora away from genetically modified crops and pesticides. \n Our organic plant oils are sourced from the world's finest which are known for their therapeutic qualities to uplift, relax and renew. We then create a product that is both unique and delicious. \n In each individual jar we infuse very precise amounts of the world's finest organic plant oils. \n The result? A delicious flavour experience! We are sure you won’t be disappointed.", ABN: "525-456-709", company_name: "Bees of Eden Honey", approved: true, user_id: producer_alan.id)
 producer3_photo_file = URI.open('https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
 producer3.photo.attach(io: producer3_photo_file, filename: 'producer3.jpg', content_type: 'image/jpg')
 producer3_bg_photo_file = URI.open('https://static.wixstatic.com/media/8faf1c_631d21caf4a744aa95815443d284e7e6.jpg/v1/fill/w_413,h_294,al_c,q_80,usm_0.66_1.00_0.01/8faf1c_631d21caf4a744aa95815443d284e7e6.webp')
@@ -70,7 +70,7 @@ product7.photo.attach(io: product7_photo_file, filename: 'product7.jpg', content
 product7.save!
 
 product8 = Product.new(name: "Peppermint Honey" , price: 14.95, producer_id: producer3.id, description: "Ingredients:﻿ \n Organic peppermint oil, pure Australian bush honey. \n \n This oil is from a chocolate peppermint variety, and is very popular with kids! \n Awake with the uplifting minty scent of pure peppermint oil.  A refreshing scent with a chocolate undertone that tastes like an after dinner mint when mixed with our honey. \n We love it first thing in the morning in our green tea. It also goes well over chocolate panacotta!")
-product8_photo_file = URI.open('https://static.wixstatic.com/media/789382_e1f2e4f172684f8194069d649e28f27b~mv2.png/v1/fill/w_294,h_400,al_c,q_85,usm_0.66_1.00_0.01/789382_e1f2e4f172684f8194069d649e28f27b~mv2.webp')
+product8_photo_file = URI.open('https://static.wixstatic.com/media/8faf1c_e645187ea8bd414a80d656fad8b10cc0.png/v1/fill/w_209,h_285,al_c,q_85,usm_0.66_1.00_0.01/8faf1c_e645187ea8bd414a80d656fad8b10cc0.webp')
 product8.photo.attach(io: product8_photo_file, filename: 'product8.jpg', content_type: 'image/jpg')
 product8.save!
 
@@ -93,6 +93,8 @@ tagging3 = Tagging.create!(product_id: product2.id , tag_id: category2.id)
 tagging4 = Tagging.create!(product_id: product4.id , tag_id: category2.id)
 tagging5 = Tagging.create!(product_id: product5.id , tag_id: category3.id)
 tagging6 = Tagging.create!(product_id: product6.id , tag_id: category3.id)
+tagging7 = Tagging.create!(product_id: product7.id , tag_id: category1.id)
+tagging8 = Tagging.create!(product_id: product8.id , tag_id: category2.id)
 
 puts "Added tags to Products."
 
