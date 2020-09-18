@@ -11,7 +11,7 @@ Product.destroy_all
 Producer.destroy_all
 User.destroy_all
 
-puts "Creating 3 users"
+puts "Creating 10 users"
 
 User.create!(email: "user@user.com", password: "password", last_name: "Green", first_name: "Steve")
 
@@ -20,6 +20,18 @@ producer_kathy = User.create!(email: "user2@user.com", password: "password", las
 producer_sharon = User.create!(email: "user3@user.com", password: "password", last_name: "Smith", first_name: "Sharon")
 
 producer_alan = User.create!(email: "alan@user.com", password: "password", last_name: "Turing", first_name: "Alan")
+
+producer_josh = User.create!(email: "josh@user.com", password: "password", last_name: "Turing", first_name: "Josh")
+
+producer_mary = User.create!(email: "mary@user.com", password: "password", last_name: "Jean", first_name: "Mary")
+
+producer_lorna= User.create!(email: "lorna@user.com", password: "password", last_name: "Bull", first_name: "Lorna")
+
+producer_francky= User.create!(email: "francky@user.com", password: "password", last_name: "Marte", first_name: "Francky")
+
+producer_phil= User.create!(email: "phil@user.com", password: "password", last_name: "Burton", first_name: "Phil")
+
+producer_clarck= User.create!(email: "Clarck@user.com", password: "password", last_name: "Trole", first_name: "Clarck")
 
 
 puts "Created #{User.count} users"
@@ -36,7 +48,12 @@ producer1_bg_photo_file = URI.open('https://images.unsplash.com/photo-1562601579
 producer1.bg_photo.attach(io: producer1_bg_photo_file, filename: 'producer1.jpg', content_type: 'image/jpg')
 producer1.save!
 
-producer2 = Producer.create!(name: "Sharon", address: "74 Slaughterhouse Rd, Rutherglen", tagline: "premium wines since 2005", introduction: "Scion is a producer of artisan wines, handcrafted from vine to bottle. Our vision is to produce premium wines guided by the creative and modern interpretation of traditional Rutherglen varietals. We grow and handcraft wines in small batches – from aromatic whites to elegant reds and delicate dessert wines. Located just 2km south of Rutherglen on our estate vineyard, Scion’s cellar door is nestled in the natural landscape among grey box gums.", ABN: "987-654-321", company_name: "Scion Wine", approved: true, user_id: producer_sharon.id)
+producer2 = Producer.new(name: "Sharon", address: "74 Slaughterhouse Rd, Rutherglen", tagline: "premium wines since 2005", introduction: "Scion is a producer of artisan wines, handcrafted from vine to bottle. Our vision is to produce premium wines guided by the creative and modern interpretation of traditional Rutherglen varietals. We grow and handcraft wines in small batches – from aromatic whites to elegant reds and delicate dessert wines. Located just 2km south of Rutherglen on our estate vineyard, Scion’s cellar door is nestled in the natural landscape among grey box gums.", ABN: "987-654-321", company_name: "Scion Wine", approved: true, user_id: producer_sharon.id)
+producer2_photo_file = URI.open('https://images.unsplash.com/photo-1592592851366-4ec8bffdb30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=970&q=80')
+producer2.photo.attach(io: producer2_photo_file, filename: 'producer2.jpg', content_type: 'image/jpg')
+producer2_bg_photo_file = URI.open('https://images.unsplash.com/photo-1573061750909-d2586d3fe8b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer2.bg_photo.attach(io: producer2_bg_photo_file, filename: 'producer2.jpg', content_type: 'image/jpg')
+producer2.save!
 
 producer3 = Producer.new(name: "Alan", address: "12 Laurel Street, Rockbank Victoria", tagline: "'Spread the Love' of honey since 2000", introduction: "We believe that our planet offers so much beauty and abundance, a living Garden of Eden...pure, natural and delicious. \n We are based in Melbourne's West and source our pure Australian honey from native flora away from genetically modified crops and pesticides. \n Our organic plant oils are sourced from the world's finest which are known for their therapeutic qualities to uplift, relax and renew. We then create a product that is both unique and delicious. \n In each individual jar we infuse very precise amounts of the world's finest organic plant oils. \n The result? A delicious flavour experience! We are sure you won’t be disappointed.", ABN: "525-456-709", company_name: "Bees of Eden Honey", approved: true, user_id: producer_alan.id)
 producer3_photo_file = URI.open('https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
@@ -44,6 +61,48 @@ producer3.photo.attach(io: producer3_photo_file, filename: 'producer3.jpg', cont
 producer3_bg_photo_file = URI.open('https://static.wixstatic.com/media/8faf1c_631d21caf4a744aa95815443d284e7e6.jpg/v1/fill/w_413,h_294,al_c,q_80,usm_0.66_1.00_0.01/8faf1c_631d21caf4a744aa95815443d284e7e6.webp')
 producer3.bg_photo.attach(io: producer3_bg_photo_file, filename: 'producer3.jpg', content_type: 'image/jpg')
 producer3.save!
+
+# producer4 = Producer.new(name: "Josh", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_josh.id)
+# producer4_photo_file = URI.open('')
+# producer4.photo.attach(io: producer4_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
+# producer4_bg_photo_file = URI.open('')
+# producer4.bg_photo.attach(io: producer4_bg_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
+# producer4.save!
+
+# producer5 = Producer.new(name: "Mary", address: "", tagline: "", introduction: "", ABN: "321-156-799", company_name: "", approved: true, user_id: producer_mary.id)
+# producer5_photo_file = URI.open('')
+# producer5.photo.attach(io: producer5_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
+# producer5_bg_photo_file = URI.open('')
+# producer5.bg_photo.attach(io: producer5_bg_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
+# producer5.save!
+
+# producer6 = Producer.new(name: "Lorna", address: "", tagline: "", introduction: "", ABN: "521-151-709", company_name: "", approved: true, user_id: producer_lorna.id)
+# producer6_photo_file = URI.open('')
+# producer6.photo.attach(io: producer6_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
+# producer6_bg_photo_file = URI.open('')
+# producer6.bg_photo.attach(io: producer6_bg_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
+# producer6.save!
+
+# producer7 = Producer.new(name: "Francky", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_francky.id)
+# producer7_photo_file = URI.open('')
+# producer7.photo.attach(io: producer7_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
+# producer7_bg_photo_file = URI.open('')
+# producer7.bg_photo.attach(io: producer7_bg_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
+# producer7.save!
+
+# producer8 = Producer.new(name: "Phil", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_phil.id)
+# producer8_photo_file = URI.open('')
+# producer8.photo.attach(io: producer8_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
+# producer8_bg_photo_file = URI.open('')
+# producer8.bg_photo.attach(io: producer8_bg_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
+# producer8.save!
+
+# producer9 = Producer.new(name: "Clarck", address: "", tagline: "", introduction: "", ABN: "521-156-709", company_name: "", approved: true, user_id: producer_clarck.id)
+# producer9_photo_file = URI.open('')
+# producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+# producer9_bg_photo_file = URI.open('')
+# producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+# producer9.save!
 
 
 puts "Created #{Producer.count} producers"
