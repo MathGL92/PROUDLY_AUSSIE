@@ -8,7 +8,7 @@
   <% else %>
     <% @shopping_cart.line_items.each do |item| %>
 
-      <div class="card-product-cart">
+      <div class="card-product-cart mx-2">
         <% if item.product.photo.attached? %>
           <%= cl_image_tag item.product.photo.key,crop: :fill %>
         <% else %>
@@ -18,14 +18,13 @@
           <h2><%= item.product.name.downcase.capitalize %></h2>
           <div class="figure">
             <div class="actions d-inline-block">
-              <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
-              <span id="counter" data-count="1">1</span>
+              a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
+              <span id="counter" data-count="1"><%= item.amount %></span>
               <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
             </div>
-            <!-- <p><%#= item.amount %></p> -->
-          <p><strong>$<%= item.price * item.amount %></strong></p>
+          <p><strong>$<%= item.product.price * item.amount %></strong></p>
           </div>
-          <span class="destroy-item"><%= link_to icon('fas', 'times'), shopping_cart_product_line_item_path(item, item.product), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <span class="destroy-item"><%= link_to icon('fas', 'times'), shopping_cart_line_item_path(item), method: :delete, data: { confirm: 'Are you sure?' } %></span>
         </div>
       </div>
     <% end %>
