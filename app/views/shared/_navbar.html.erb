@@ -58,7 +58,9 @@
 
   <span class="cart">
     <%= link_to icon('fas', 'shopping-cart'), shopping_carts_path, class: "icon-black" %>
-    <div class="badge_cart d-inline-block"><%= @shopping_cart.line_items.size %></div>
+    <% unless @shopping_cart.line_items.size == 0 %>
+      <div class="badge_cart d-inline-block"><%= @shopping_cart.line_items.size %></div>
+    <% end %>
   </span>
 
   <%= link_to icon('fas', 'map-marked-alt'), shopping_carts_path, class: "icon-black" %>
