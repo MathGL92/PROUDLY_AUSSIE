@@ -20,9 +20,11 @@
   right: 0px;
 }
 
-#modalproducts {
-  height: 100vh;
-}
+// #modalproducts {
+//   height: 100vh;
+// }
+
+
 
 .product-img {
   width: 100%;
@@ -49,6 +51,22 @@
   padding: 12px;
 }
 
+#modal-product-body {
+  position: relative;
+}
+
 .arrow-product-carousel {
   color: rgb(169,169,169);
+}
+
+#prev {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+#next {
+  position: absolute;
+  top: 20px;
+  right: 15px;
 }
