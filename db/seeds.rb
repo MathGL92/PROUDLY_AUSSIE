@@ -173,11 +173,20 @@ product13.save!
 
 puts "Created #{Product.count} products"
 
-puts "Creating 3 Categories..."
+puts "Creating 11 Categories..."
 
 category1 = Tag.create!(name: "Organic") #honey, dates
 category2 = Tag.create!(name: "Handmade") #purse, jerkey
 category3 = Tag.create!(name: "Condiments") #spread, Jam
+category4 = Tag.create!(name: "Vegan") #spread, Jam
+category5 = Tag.create!(name: "Meat") #spread, Jam
+category6 = Tag.create!(name: "Garment") #spread, Jam
+category7 = Tag.create!(name: "Bag") #spread, Jam
+category8 = Tag.create!(name: "Vintage") #spread, Jam
+category9 = Tag.create!(name: "Clothing") #spread, Jam
+category10 = Tag.create!(name: "Alcohol") #spread, Jam
+category11 = Tag.create!(name: "Fruit & Veg") #spread, Jam
+
 
 puts "Created #{Tag.count} categories"
 
