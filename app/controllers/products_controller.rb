@@ -1,12 +1,13 @@
 class ProductsController < ApplicationController
   def new
     @product = Product.new
-    @producer = Producer.find(current_user.producer.id)
+    @producer = Producer.find(params[:producer_id])
   end
 
   def create
     @product = Product.new(product_params)
-    @product.producer_id = current_user.producer.id
+    @producer = Producer.find(params[:producer_id]) 
+    @product.producer_id = @producer.id
     if @product.save
       redirect_to dashboard_index_path
     else
