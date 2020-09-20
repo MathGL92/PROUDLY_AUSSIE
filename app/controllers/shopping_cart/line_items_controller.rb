@@ -1,5 +1,6 @@
 class ShoppingCart::LineItemsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:create]
+  skip_before_action :authenticate_user!, only: [:create, :destroy]
+  before_action :set_line_item, only: [:destroy]
   def create
     @product = Product.find(params[:product_id])
     @line_item = LineItem.new
@@ -12,5 +13,16 @@ class ShoppingCart::LineItemsController < ApplicationController
     else
       raise
     end
+  end
+
+  def destroy
+    @line_item.destroy
+    redirect_to  shopping_carts_path
+  end
+
+  private
+
+  def set_line_item
+    @line_item = LineItem.find(params[:id])
   end
 end
