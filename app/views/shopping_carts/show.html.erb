@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Welcome to your shopping cart</h1>
+  <h1>Your shopping cart</h1>
   <p>Shopping Cart Id: <%= @shopping_cart.id %></p>
 
 
@@ -7,13 +7,32 @@
     <p>Your shopping cart is empty</p>
   <% else %>
     <% @shopping_cart.line_items.each do |item| %>
-      <li><%= item.product.name %> | Price: $<%= item.price %> | Quantity: <%= item.amount %></li>
+
+    <div class="card-product-cart">
+      <% if item.product.photo.attached? %>
+        <%= cl_image_tag item.product.photo.key,crop: :fill %>
+      <% else %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <% end %>
+      <div class="card-product-cart-infos">
+        <h2><%= item.product.name %></h2>
+        <div class="figure">
+          <div class="actions d-inline-block">
+            <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
+            <span id="counter" data-count="1">1</span>
+            <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+          </div>
+          <!-- <p><%#= item.amount %></p> -->
+        <p><strong>$<%= item.price * item.amount %></strong></p>
+        </div>
+      </div>
+    </div>
+
     <% end %>
+
     <%= form_tag orders_path do %>
         <%= hidden_field_tag 'shopping_cart_id', @shopping_cart.id %>
         <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
     <% end %>
   <% end %>
 </div>
-
-
