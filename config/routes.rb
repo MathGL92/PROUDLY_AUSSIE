@@ -21,9 +21,11 @@ Rails.application.routes.draw do
 
   get "/new_producer", to: "pages#new_producer"
   get "/producer_confirmation", to: "pages#producer_confirmation"
+
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
   resources :dashboard, only: [:index]
+
 end
 
