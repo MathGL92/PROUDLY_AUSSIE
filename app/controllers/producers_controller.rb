@@ -33,7 +33,13 @@ class ProducersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @markers =[{
+        lat: @producer.latitude,
+        lng: @producer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { producer: @producer })
+      }]
+  end
 
   private
 
