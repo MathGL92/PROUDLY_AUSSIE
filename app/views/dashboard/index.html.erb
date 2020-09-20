@@ -10,6 +10,7 @@
   <tr>
     <td><%= product.name %></td>
     <td>Click to Update</td>
+    <td><%= link_to 'Add tag', new_producer_product_tagging_path(@producer, product) %></td> 
   </tr>
 <% end %>
 </table>

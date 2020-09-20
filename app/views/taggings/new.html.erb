@@ -1,0 +1,8 @@
+<h1>Add new tag for <%= @product.name %></h1>
+
+<%= simple_form_for [ @producer, @product, @tagging ] do |f| %>
+  <% # We added multiple true to be able to select multiple elements at the time %>
+  <% # We added the class 'multiple-select' because that's the selector we will use with the select2 plugin %>
+  <%= f.association :tag, input_html: { class: 'multiple-select', multiple: true }, include_hidden: false %>
+  <%= f.submit 'Add tag', class: 'btn btn-primary' %>
+<% end %>
