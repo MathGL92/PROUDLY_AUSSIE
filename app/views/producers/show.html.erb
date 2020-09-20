@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  
+
   <button type="button" class="btn btn-primary btn-block mt-3 mb-1 btn-products" data-toggle="modal" data-target="#ourProducts">Our products</button>
 
 
@@ -67,10 +67,10 @@
               <h5 class="modal-title text-center mb-3" id="ourProductsTitle"><%= product.name %></h5>
               <p class="text-justify"><%= product.description %>
               </p>
-              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="prev">
+              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="prev" id="prev">
                 <%= icon('fas', 'arrow-left') %>
               </a>
-              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next">
+              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next" id="next">
                 <%= icon('fas', 'arrow-right') %>
               </a>
             </div>

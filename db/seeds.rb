@@ -102,12 +102,12 @@ producer8_bg_photo_file = URI.open('https://www.australianmade.com.au/Assets/314
 producer8.bg_photo.attach(io: producer8_bg_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
 producer8.save!
 
-# producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-789", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
-# producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
-# producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
-# producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80')
-# producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
-# producer9.save!
+producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-789", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
+producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
+producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80')
+producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
+producer9.save!
 
 
 puts "Created #{Producer.count} producers"
@@ -165,10 +165,10 @@ product13_photo_file = URI.open('https://images.unsplash.com/photo-1571487609887
 product13.photo.attach(io: product13_photo_file, filename: 'product13.jpg', content_type: 'image/jpg')
 product13.save!
 
-# product14 = Product.new(name: "" , price: , producer_id: producer9.id, description: "")
-# product14_photo_file = URI.open('')
-# product14.photo.attach(io: product14_photo_file, filename: 'product14.jpg', content_type: 'image/jpg')
-# product14.save!
+product14 = Product.new(name: "Wooden Salad Bowl" , price: 30 , producer_id: producer9.id, description: "Camphor Laurel's inherent qualities make it a perfect timber for a salad bowl - fine-grained, water-resistant, naturally anti-bacterial and with attractive colour and figure in the timber, it is widely used as timber for anything kitchen and food-related. The oils in the timber that give Camphor Laurel its characteristic smell quickly dissipate once it has been cut, kiln-dried and worked and will leave no residual taint on your chopping board or salad bowl. This particular design is a classic salad bowl shape with its wide rather than deep proportions and rolled rim, the sort of shape you might draw if asked to do a salad bowl! The 30cm size is very versatile, catering for up to 6 people and doubling happily as a fruit bowl if preferred. With its perfectly proportioned elegance, beautiful colour and classic simplicity it would accommodate all types of salad and suit any table setting.")
+product14_photo_file = URI.open('https://images.unsplash.com/photo-1485814439394-ca57872604ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
+product14.photo.attach(io: product14_photo_file, filename: 'product14.jpg', content_type: 'image/jpg')
+product14.save!
 
 
 puts "Created #{Product.count} products"
@@ -205,7 +205,7 @@ tagging10 = Tagging.create!(product_id: product10.id , tag_id: category1.id)
 tagging11 = Tagging.create!(product_id: product11.id , tag_id: category1.id)
 tagging12 = Tagging.create!(product_id: product12.id , tag_id: category2.id)
 tagging13 = Tagging.create!(product_id: product13.id , tag_id: category2.id)
-# tagging14 = Tagging.create!(product_id: product14.id , tag_id: category2.id)
+tagging14 = Tagging.create!(product_id: product14.id , tag_id: category2.id)
 
 puts "Added tags to Products."
 
