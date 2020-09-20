@@ -8,8 +8,9 @@ Rails.application.routes.draw do
 
   namespace :shopping_cart do
     resources :products, only: [] do
-      resources :line_items, only: :create
+      resources :line_items, only: [:create]
     end
+    resources :line_items, only: :destroy
   end
 
   resources :producers, only:[:index, :show, :new, :create] do

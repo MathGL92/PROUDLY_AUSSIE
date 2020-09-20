@@ -8,26 +8,25 @@
   <% else %>
     <% @shopping_cart.line_items.each do |item| %>
 
-    <div class="card-product-cart">
-      <% if item.product.photo.attached? %>
-        <%= cl_image_tag item.product.photo.key,crop: :fill %>
-      <% else %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <% end %>
-      <div class="card-product-cart-infos">
-        <h2><%= item.product.name %></h2>
-        <div class="figure">
-          <div class="actions d-inline-block">
-            <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
-            <span id="counter" data-count="1">1</span>
-            <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+      <div class="card-product-cart mx-2">
+        <% if item.product.photo.attached? %>
+          <%= cl_image_tag item.product.photo.key,crop: :fill %>
+        <% else %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <% end %>
+        <div class="card-product-cart-infos">
+          <h2><%= item.product.name.downcase.capitalize %></h2>
+          <div class="figure">
+            <div class="actions d-inline-block">
+              a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
+              <span id="counter" data-count="1"><%= item.amount %></span>
+              <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+            </div>
+          <p><strong>$<%= item.product.price * item.amount %></strong></p>
           </div>
-          <!-- <p><%#= item.amount %></p> -->
-        <p><strong>$<%= item.price * item.amount %></strong></p>
+          <span class="destroy-item"><%= link_to icon('fas', 'times'), shopping_cart_line_item_path(item), method: :delete, data: { confirm: 'Are you sure?' } %></span>
         </div>
       </div>
-    </div>
-
     <% end %>
 
     <%= form_tag orders_path do %>
