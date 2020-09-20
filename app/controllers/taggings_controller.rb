@@ -14,6 +14,6 @@ class TaggingsController < ApplicationController
       @tagging = Tagging.new(product: @product, tag: tag)
       @tagging.save
     end
-    redirect_to root_path
+    redirect_to "/dashboard"
   end
 end
