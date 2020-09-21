@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   end
 
   resources :producers, only:[:index, :show, :new, :create] do
-    resources :products, only: [:edit, :update, :destroy]
+    resources :products, only: [:destroy]
   end
 
-  resources :products, only: [:new, :create] do
+  resources :products, only: [:new, :create, :edit, :update] do
     resources :taggings, only: :create
   end
 

@@ -1,11 +1,12 @@
 <h1>Edit <%=@product.name%>:</h1>
-<%= simple_form_for [ @producer, @product ] do |f| %>
+<%= simple_form_for [ @product ] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <%= f.input :name, label: "Your Product's Name:"%>
   <%= f.input :description, label: "Describe your product" %>
   <%= f.input :price, label: "Price" %>
   <%= f.input :photo, as: :file, label: "Add a nice photo" %>
+  <%= f.input :tags, input_html: { class: 'multiple-select', multiple: true }, include_hidden: false, collection: Tag.all %>
   <%= f.button :submit, class: "btn btn-primary"%>
 <% end %>
 
