@@ -21,6 +21,7 @@ producer_sharon = User.create!(email: "user3@user.com", password: "password", la
 
 producer_james = User.create!(email: "user4@user.com", password: "password", last_name: "Young", first_name: "James (Producer)")
 
+producer_matt = User.create!(email: "user5@user.com", password: "password", last_name: "Smith", first_name: "Matt (Producer)")
 
 puts "Created #{User.count} users"
 
