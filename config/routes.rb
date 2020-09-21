@@ -17,10 +17,13 @@ Rails.application.routes.draw do
   end
 
   resources :producers, only:[:index, :show, :new, :create] do
-    resources :products, only: [:new, :create] do
-      resources :taggings, only: [:new, :create]
-    end
+    resources :products, only: [:destroy]
   end
+
+  resources :products, only: [:new, :create, :edit, :update] do
+    resources :taggings, only: :create
+  end
+
 
   get "/new_producer", to: "pages#new_producer"
   get "/producer_confirmation", to: "pages#producer_confirmation"
