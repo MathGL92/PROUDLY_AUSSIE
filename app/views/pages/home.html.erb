@@ -19,7 +19,7 @@
     <div class="carousel-inner">
         <% @tags.each_with_index do |tag, index| %>
             <div class="carousel-item <%= 'active' if index == 0 %>">
-                <%= link_to producers_path(tag_name: tag.name) do %>
+                <%= link_to producers_path(tag_name: tag.name), data:{turbolinks:"false"} do %>
                 <%= image_tag "photo1.jpg", class: "d-block w-100" %>
                 <div class="carousel-caption d-md-block">
                 <h2><%= tag.name %></h2>
