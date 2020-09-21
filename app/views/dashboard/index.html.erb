@@ -10,6 +10,10 @@
   <tr>
     <td><%= product.name %></td>
     <td>Click to Update</td>
+    <td>
+      <%= link_to ('<i class="fas fa-edit"></i>').html_safe, edit_producer_product_path(@producer, product)%>
+      <%= link_to ('<i class="far fa-trash-alt"></i>').html_safe, product_path(product), method: :delete, data: { confirm: "Are you sure?" } %>
+    </td>
     <td><%= link_to 'Add tag', new_producer_product_tagging_path(@producer, product) %></td> 
     <% product_tags = [] %>
     <% product.tags.each do |tag| %>

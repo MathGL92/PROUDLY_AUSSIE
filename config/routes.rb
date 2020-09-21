@@ -14,9 +14,13 @@ Rails.application.routes.draw do
   end
 
   resources :producers, only:[:index, :show, :new, :create] do
-    resources :products, only: [:new, :create] do
+    resources :products, only: [:new, :create, :edit, :update] do
       resources :taggings, only: [:new, :create]
     end
+  end
+
+  namespace :producer do
+    resources :products, only: :destroy
   end
 
   get "/new_producer", to: "pages#new_producer"
