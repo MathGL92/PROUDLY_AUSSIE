@@ -1,16 +1,17 @@
-const incrementBtns = document.querySelectorAll(".incrementer");
+const incrementBtns = document.querySelectorAll('.incrementer');
 
 const counterText = document.getElementById('counter');
-let counter = parseInt(counterText.dataset.count, 10);
+// let counter = parseInt(counterText.dataset.count, 10);
 
 const minusBtn = document.querySelector('.minus');
 
 const changeCartQty = () => {
   if (counterText) {
+    let counter = parseInt(counterText.dataset.count, 10);
     incrementBtns.forEach((btn) => {
       btn.addEventListener('click', (event) => {
         const update = parseInt(event.currentTarget.dataset.offset, 10);
-        if ((counter < 2 && event.currentTarget.dataset.offset === "-1")) {
+        if (counter < 2 && event.currentTarget.dataset.offset === '-1') {
           minusBtn.classList.add('disabled');
           // alert("The quantity must be at least 1");
         } else {
