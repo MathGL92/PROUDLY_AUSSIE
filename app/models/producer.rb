@@ -16,7 +16,8 @@ class Producer < ApplicationRecord
   pg_search_scope :global_search,
     against: [ :name ],
     associated_against: {
-      products: [ :name ]
+      products: [ :name ],
+      tags: [ :name ]
     },
     using: {
       tsearch: { prefix: true }
