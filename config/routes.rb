@@ -10,7 +10,10 @@ Rails.application.routes.draw do
     resources :products, only: [] do
       resources :line_items, only: [:create]
     end
-    resources :line_items, only: :destroy
+    resources :line_items, only: :destroy do
+      patch 'increase_line_item_amount', on: :member
+      patch 'decrease_line_item_amount', on: :member
+    end
   end
 
   resources :producers, only:[:index, :show, :new, :create] do
