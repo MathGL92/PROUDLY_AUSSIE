@@ -5,6 +5,10 @@ class ShoppingCart < ApplicationRecord
   has_many :producers, through: :products
 
   def list_producers
-    producers.uniq.map { |producer| producer.name }
+    producers.uniq.map { |producer| producer }
+  end
+
+  def list_items
+    line_items.uniq.map { |lineitem| lineitem.product.name}
   end
 end
