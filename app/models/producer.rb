@@ -12,8 +12,17 @@ class Producer < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :name ],
+    associated_against: {
+      products: [ :name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
   def self.with_tag(tag_name)
     Producer.joins(:tags).where(tags:{name: tag_name }).distinct
   end
-
 end
