@@ -16,4 +16,12 @@ class Producer < ApplicationRecord
     Producer.joins(:tags).where(tags:{name: tag_name }).distinct
   end
 
+  
+  def approve_and_notify!
+    if self.update(approved: true)
+      UserMailer.welcome(user).deliver_now
+    end
+  end
+  
 end
+# with(producer: self)

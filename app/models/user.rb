@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_one :producer, dependent: :destroy
   has_one :shopping_cart
 
-  after_create :send_welcome_email
+  after_create :send_approved_email
 
   private
 
