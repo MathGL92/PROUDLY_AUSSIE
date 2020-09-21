@@ -17,10 +17,20 @@ class ShoppingCart::LineItemsController < ApplicationController
 
   def increase_line_item_amount
     @line_item.amount += 1
+    if @line_item.save
+      redirect_to shopping_carts_path
+    else
+      raise
+    end
   end
 
   def decrease_line_item_amount
     @line_item.amount -= 1
+    if @line_item.save
+      redirect_to shopping_carts_path
+    else
+      raise
+    end
   end
 
   def destroy
