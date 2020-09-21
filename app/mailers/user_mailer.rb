@@ -1,9 +1,8 @@
 class UserMailer < ApplicationMailer
-    default :from => "application_name@domain.com"
-    
-    def registration_confirmation(user)
+    def welcome(user)
         @user = user
-        mail(:to => "#{user.name} <#{user.email}, :subject => "Approved Confirmation for Registration)  
+
+        mail to: user.email, subject: "Welcome to Proudly Aussie!"
     end
 end
 

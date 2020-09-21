@@ -9,6 +9,8 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'geocoder'
 gem 'money-rails'
 gem 'stripe'
+gem 'letter_opener', group: :development
+
 ##########################
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,5 +1,0 @@
- Hi <%= @user.name %>,
-
-Thanks for registering! You have been approved. To confirm your registration click the URL below.
-
-<%=  link_to "Confirm", confirm_email_url(@user.confirm_token, host: "http://lvh.me:3000")%>
