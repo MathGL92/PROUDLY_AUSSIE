@@ -1,28 +1,31 @@
-const incrementBtns = document.querySelectorAll(".incrementer");
-
-const counterText = document.getElementById('counter');
-let counter = parseInt(counterText.dataset.count, 10);
-
-const minusBtn = document.querySelector('.minus');
+// const minusBtn = document.querySelector('.minus');
 
 const changeCartQty = () => {
-  if (counterText) {
-    incrementBtns.forEach((btn) => {
-      btn.addEventListener('click', (event) => {
-        const update = parseInt(event.currentTarget.dataset.offset, 10);
-        if ((counter < 2 && event.currentTarget.dataset.offset === "-1")) {
-          minusBtn.classList.add('disabled');
-          // alert("The quantity must be at least 1");
-        } else {
-          minusBtn.classList.remove('disabled');
-          counter += parseInt(update, 10);
-          counterText.dataset.count = counter;
-          counterText.innerText = counter;
-          // const price = document.getElementById('price-input').value / 100;
-        }
-      });
+  const incrementBtns = document.querySelectorAll(".incrementer");
+  incrementBtns.forEach((btn) => {
+    const counterElement = btn.parentElement.querySelector('.counter');
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      const btn = event.currentTarget;
+      const isMinus = btn.classList.contains('minus');
+      const counter = parseInt(counterElement.innerText, 10);
+      const updateOffset = parseInt(btn.dataset.offset, 10);
+      if ((counter < 2 && isMinus)) {
+        btn.classList.add('disabled');
+        // alert("The quantity must be at least 1");
+      } else {
+        btn.classList.remove('disabled');
+        // counter += updateOffset;
+        // counterElement.dataset.count = counter + updateOffset;
+        counterElement.innerText = counter + updateOffset;
+        // Rails.ajax({
+        //   type: "PATCH",
+        //   url: btn.href,
+        // })
+        // const price = document.getElementById('price-input').value / 100;
+      }
     });
-  }
+  });
 };
 
 export { changeCartQty };
