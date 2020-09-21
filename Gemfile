@@ -9,6 +9,7 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'geocoder'
 gem 'money-rails'
 gem 'stripe'
+gem 'pg_search', '~> 2.3.0'
 ##########################
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

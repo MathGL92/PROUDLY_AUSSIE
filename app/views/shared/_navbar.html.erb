@@ -65,9 +65,10 @@
 
   <%= link_to icon('fas', 'map-marked-alt'), shopping_carts_path, class: "icon-black" %>
 
-  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-      <input class="form-control string required p-2" type="text" name="search[query]" id="search_query" />
+  <%= simple_form_for :search, url: producers_path, method: :get do |f| %>
+    <div class="search-form-control form-group form-inline">
+      <%= text_field_tag :query, params[:query], class: "form-control" %>
+      <!-- <input class="form-control string required p-2" type="text" name="search[query]" id="search_query" /> -->
       <button name="button" type="submit" class="btn btn-flat">
         <i class="fas fa-search"></i> Search
       </button>

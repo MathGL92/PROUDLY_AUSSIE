@@ -18,7 +18,9 @@ class ProducersController < ApplicationController
   end
 
   def index
-    if params[:tag_name].present?
+    if params[:query].present?
+      @producers = Producer.global_search("#{params[:query]}")
+    elsif params[:tag_name].present?
       @producers = Producer.with_tag(params[:tag_name])
     else
       @producers = Producer.all

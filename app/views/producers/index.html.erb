@@ -8,7 +8,7 @@
 
 <div class="" id="js-producers">
     <% @producers.each do |producer | %>
-     <%= link_to producer_path(producer) do %>
+     <%= link_to producer_path(producer), data:{turbolinks:"false"} do %>
         <div class="card-container m-3 ">
             <div class="card-producer">
             <div class="card-producer-infos">
