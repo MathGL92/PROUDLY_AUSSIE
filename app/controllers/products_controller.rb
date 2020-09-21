@@ -27,18 +27,10 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @product.producer_id = @producer.id
-    @taggings = @product.taggings
     @tags = Tag.where(id: params[:product][:tags])
-      @taggings.each do |tagging|
-        tagging.delete
-      end
-      @tags.each do |tag|
-        tagging = Tagging.new(product: @product, tag: tag)
-        tagging.save
-        # @taggings.delete_all
-      end
-      # raise
+    @tags.each do |tag|
+      tagging = Tagging.create!(product: @product, tag: tag)
+    end
     if @product.update(product_params)
       redirect_to dashboard_index_path
     else
