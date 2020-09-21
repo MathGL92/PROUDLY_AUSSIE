@@ -6,4 +6,5 @@ class Product < ApplicationRecord
   validates :name, :price, presence: true
   has_one_attached :photo
   monetize :price_cents
+  accepts_nested_attributes_for :taggings
 end
