@@ -14,14 +14,14 @@
       <%= link_to ('<i class="fas fa-edit"></i>').html_safe, edit_producer_product_path(@producer, product) %>
       <%= link_to ('<i class="far fa-trash-alt"></i>').html_safe, producer_product_path(@producer, product), method: :delete, data: { confirm: "Are you sure?" } %>
     </td>
-    <td><%= link_to 'Add tag', new_producer_product_tagging_path(@producer, product) %></td> 
-    <% product_tags = [] %>
-    <% product.tags.each do |tag| %>
-    <% product_tags << tag.name %>
-    <% end %>
-    <td> <%= product_tags %> </td>
+    <td><%# link_to 'Add tag', new_producer_product_tagging_path(@producer, product) %></td> 
+    <%# product_tags = [] %>
+    <%# product.tags.each do |tag| %>
+    <%# product_tags << tag.name %>
+    <%# end %>
+    <td> <%# product_tags %> </td>
   </tr>
 <% end %>
 </table>
 
-<%=link_to 'Add a new product', new_producer_product_path(@producer)%>
+<%=link_to 'Add a new product', new_product_path %>

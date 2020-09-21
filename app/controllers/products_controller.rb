@@ -4,17 +4,23 @@ class ProductsController < ApplicationController
   
   def new
     @product = Product.new
+    @tagging = Tagging.new
   end
 
   def create
     @product = Product.new(product_params)
     @product.producer_id = @producer.id
+    @tags = Tag.where(id: params[:product][:tags])
+      @tags.each do |tag|
+        tagging = Tagging.new(product: @product, tag: tag)
+        tagging.save
+      end
     if @product.save
       redirect_to dashboard_index_path
     else
       render :new
     end
-  end  
+  end
 
   def edit
     @product = Product.find(params[:id])
@@ -43,6 +49,6 @@ class ProductsController < ApplicationController
   end
 
   def set_producer
-    @producer = Producer.find(params[:producer_id])
+    @producer = current_user.producer
   end
 end
