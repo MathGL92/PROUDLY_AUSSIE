@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_producer, only: [:new, :create, :edit, :update, :destroy]
 
-  
   def new
     @product = Product.new
     @tagging = Tagging.new
@@ -24,12 +23,14 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-
   end
 
   def update
     @product = Product.find(params[:id])
-    @product.producer_id = @producer.id
+    @tags = Tag.where(id: params[:product][:tags])
+    @tags.each do |tag|
+      tagging = Tagging.create!(product: @product, tag: tag)
+    end
     if @product.update(product_params)
       redirect_to dashboard_index_path
     else
