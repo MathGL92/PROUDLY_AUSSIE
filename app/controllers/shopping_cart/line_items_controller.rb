@@ -20,7 +20,7 @@ class ShoppingCart::LineItemsController < ApplicationController
     if @line_item.save
       redirect_to shopping_carts_path
     else
-      binding.pry
+      raise
     end
   end
 
@@ -29,7 +29,7 @@ class ShoppingCart::LineItemsController < ApplicationController
     if @line_item.save
       redirect_to shopping_carts_path
     else
-      binding.pry
+      raise
     end
   end
 
