@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_18_020505) do
+
+ActiveRecord::Schema.define(version: 2020_09_21_002426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(version: 2020_09_18_020505) do
     t.bigint "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "producer_id"
     t.index ["product_id"], name: "index_taggings_on_product_id"
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
   end
@@ -117,6 +119,8 @@ ActiveRecord::Schema.define(version: 2020_09_18_020505) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name"
     t.string "last_name"
+    t.boolean "email_confirmed", default: false
+    t.string "confirm_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
