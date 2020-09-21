@@ -2,19 +2,34 @@
   <div class="row py-4">
     <div class="col-md-3"></div>
     <div class="col">
-      <h1>Order #<% @order.id %> <small><span class="badge badge-primary">State: <%= @order.state %></span></small></h1>
+      <h1>Order #<%=@order.id %> <small><span class="state badge badge-primary float-right">State: <%= @order.state %></span></small></h1>
 
       <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong><%= @order.created_at.to_date %></li>
-        <li><strong>PRODUCT</strong>
-        <% @order.shopping_cart.line_items.each do |lineitem| %>
-            <%= lineitem.product.name %>
+        <li><strong>Date of order:</strong><%= @order.created_at.to_date %></li>
+
+        <li><strong>Your purchases:</strong>
+  ]
+        <%@order.shopping_cart.line_items.each do |lineitem| %>
+           <li><%= lineitem.product.name %></li>
         <% end%>
+
         </li>
-        <li><strong>TOTAL</strong><%=  @order.amount_cents %></li>
+        <li><strong>TOTAL </strong><%= humanized_money_with_symbol @order.amount%></li>
         </li>
       </ul>
-      <p>Estimated delivery in <strong>2 business days</strong></p>
+      <p>Thank you for your support<%= @shopping_cart.user %></p>
+      <div class="d-flex justify-content-center">
+      <% @shopping_cart.list_producers.each do |producer|%>
+        <div class="mx-3 text-center">
+          <span class="text-center"><%= producer.name %></span>
+          <% if producer.photo.attached? %>
+            <div class="avatar-order" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path producer.photo.key%>')"></div>
+          <% else %>
+            <div class="avatar-order" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://placehold.it/120x120')"></div>
+          <% end %>
+        </div>
+        <% end  %>
+      </div>
     </div>
   </div>
 </div>

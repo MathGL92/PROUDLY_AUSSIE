@@ -1,7 +1,10 @@
 <div class="banner">
     <div class="banner-content text-center">
         <h1>Proudly Aussie</h1>
-        <p>Australian made, local produce!</p>
+        <p class="py-3">
+          <span id="banner-typed-text"></span>
+        </p>
+        <%= link_to "Buy Australian Made", producers_path, class: "btn btn-primary", data:{turbolinks:"false"} %>
     </div>
 </div>
 
@@ -16,7 +19,7 @@
     <div class="carousel-inner">
         <% @tags.each_with_index do |tag, index| %>
             <div class="carousel-item <%= 'active' if index == 0 %>">
-                <%= link_to producers_path(tag_name: tag.name) do %>
+                <%= link_to producers_path(tag_name: tag.name), data:{turbolinks:"false"} do %>
                 <%= image_tag "photo1.jpg", class: "d-block w-100" %>
                 <div class="carousel-caption d-md-block">
                 <h2><%= tag.name %></h2>

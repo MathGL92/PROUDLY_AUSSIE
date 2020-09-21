@@ -1,19 +1,44 @@
 <div class="container">
-  <h1>Welcome to your shopping cart</h1>
-  <p>Shopping Cart Id: <%= @shopping_cart.id %></p>
+  <h1 class="my-3 text-center">Shopping bag</h1>
+  <!-- <p>Shopping bag Id: <%#= @shopping_cart.id %></p> -->
 
 
   <% if @shopping_cart.line_items.blank? %>
     <p>Your shopping cart is empty</p>
   <% else %>
     <% @shopping_cart.line_items.each do |item| %>
-      <li><%= item.product.name %> | Price: $<%= item.price %> | Quantity: <%= item.amount %></li>
-    <% end %>
-    <%= form_tag orders_path do %>
-        <%= hidden_field_tag 'shopping_cart_id', @shopping_cart.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+
+      <div class="card-product-cart mx-2">
+        <% if item.product.photo.attached? %>
+          <%= cl_image_tag item.product.photo.key,crop: :fill %>
+        <% else %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <% end %>
+        <div class="card-product-cart-infos">
+          <h2><%= item.product.name.downcase.capitalize %></h2>
+          <div class="figure">
+            <div class="actions d-inline-block">
+              <!-- <a href="#" class="btn round-bordered incrementer minus" data-offset="-1">-</a> -->
+              <%= link_to "-", decrease_line_item_amount_shopping_cart_line_item_path(item), method: :patch, remote: true, class: "btn round-bordered incrementer", data: { offset: '-1' } %>
+              <span class="counter mx-2" data-count="1"><%= item.amount %></span>
+              <!-- <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a> -->
+              <%= link_to "+", increase_line_item_amount_shopping_cart_line_item_path(item), method: :patch, remote: true, class: "btn round-bordered incrementer", data: { offset: '1' } %>
+            </div>
+            <p><strong>$<%= item.product.price * item.amount %></strong></p>
+          </div>
+          <span class="destroy-item"><%= link_to icon('fas', 'times'), shopping_cart_line_item_path(item), method: :delete %></span>
+        </div>
+      </div>
     <% end %>
   <% end %>
+  <div class="text-center">
+    <%= link_to "Continue shopping", producers_path, class: "btn btn-outline-primary mb-3" %>
+    <% unless @shopping_cart.line_items.blank? %>
+      <%= form_tag orders_path do %>
+          <%= hidden_field_tag 'shopping_cart_id', @shopping_cart.id %>
+          <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>
-
-

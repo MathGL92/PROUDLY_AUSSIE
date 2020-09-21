@@ -15,7 +15,7 @@
   <% end %>
   <div class="text-center main-infos">
     <h2><%= @producer.name %></h2>
-    <p><%= @producer.introduction %></p>
+    <p><%= @producer.tagline %></p>
   </div>
   <hr>
   <div class="infos">
@@ -23,12 +23,19 @@
     <p><%= @producer.introduction %></p>
     <h3>Where to find us?</h3>
   </div>
-  <div class="map-placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1553290322-0440fe3b1ddd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')"></div>
+  <div id="js-map">
+    <div class="col-12 col-md-5 px-0 mx-0">
+      <div id="map" style="width: auto; height: 300px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+
   <button type="button" class="btn btn-primary btn-block mt-3 mb-1 btn-products" data-toggle="modal" data-target="#ourProducts">Our products</button>
 
+
 </div>
-
-
 
 
 <!-- Modal -->
@@ -42,7 +49,7 @@
           <div class="carousel-item <%= 'active' if index == 0 %>">
             <div class="modal-header" id="modal-header-product">
               <% if product.photo.attached? %>
-                <div class="product-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path product.photo.key%>')">
+                <div class="product-img" style="background-image: url('<%= cl_image_path product.photo.key%>')">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">  <span aria-hidden="true">&times;</span>
                   </button>
               </div>
@@ -58,10 +65,10 @@
               <h5 class="modal-title text-center mb-3" id="ourProductsTitle"><%= product.name %></h5>
               <p class="text-justify"><%= product.description %>
               </p>
-              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="prev">
+              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="prev" id="prev">
                 <%= icon('fas', 'arrow-left') %>
               </a>
-              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next">
+              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next" id="next">
                 <%= icon('fas', 'arrow-right') %>
               </a>
             </div>

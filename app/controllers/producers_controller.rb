@@ -18,7 +18,9 @@ class ProducersController < ApplicationController
   end
 
   def index
-    if params[:tag_name].present?
+    if params[:query].present?
+      @producers = Producer.global_search("#{params[:query]}")
+    elsif params[:tag_name].present?
       @producers = Producer.with_tag(params[:tag_name])
     else
       @producers = Producer.all
@@ -33,7 +35,13 @@ class ProducersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @markers =[{
+        lat: @producer.latitude,
+        lng: @producer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { producer: @producer })
+      }]
+  end
 
   private
 
@@ -42,6 +50,6 @@ class ProducersController < ApplicationController
   end
 
   def producer_params
-    params.require(:producer).permit(:name, :ABN, :address, :company_name, :photo, :bg_photo, :introduction)
+    params.require(:producer).permit(:name, :ABN, :address, :company_name, :photo, :bg_photo, :introduction, :tagline)
   end
 end

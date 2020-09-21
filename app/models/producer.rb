@@ -3,8 +3,8 @@ class Producer < ApplicationRecord
   has_many :products, dependent: :destroy
   has_many :tags, -> { distinct }, through: :products
   has_one_attached :photo
-  validates :name, :address, :ABN, :company_name, presence: true
-  validates :ABN, uniqueness: true
+  validates :name, :address, :tagline, :ABN, :company_name, presence: true
+  # validates :ABN, uniqueness: true
 
   has_one_attached :photo
   has_one_attached :bg_photo
@@ -12,16 +12,25 @@ class Producer < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :name ],
+    associated_against: {
+      products: [ :name ],
+      tags: [ :name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
   def self.with_tag(tag_name)
     Producer.joins(:tags).where(tags:{name: tag_name }).distinct
   end
-
   
   def approve_and_notify!
     if self.update(approved: true)
-      UserMailer.welcome(user).deliver_now
+      UserMailer.with(producer: self).welcome.deliver_now
     end
   end
   
 end
-# with(producer: self)

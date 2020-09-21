@@ -11,9 +11,8 @@ gem 'money-rails'
 gem 'stripe'
 gem 'letter_opener', group: :development
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'pg_search', '~> 2.3.0'
 
-
-##########################
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'

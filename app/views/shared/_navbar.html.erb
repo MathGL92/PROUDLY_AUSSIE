@@ -8,8 +8,8 @@
       <li class="nav-item active">
         <%= link_to "Dashboard", "/dashboard", class: "nav-link" %>
       </li>
-      <li class="nav-item active">    
-        <%= link_to "Add Product", shopping_carts_path, class: "nav-link" %>
+      <li class="nav-item active">
+        <%= link_to "Add Product", new_product_path, class: "nav-link" %>
       </li>
       <li class="nav-item active">
         <%= link_to "View Profile", "/producers/#{current_user.producer.id}", class: "nav-link" %>
@@ -41,11 +41,11 @@
 </div>
 
 <div class="navbar d-flex justify-content-space-between">
-  
+
   <%= link_to image_tag("Logo1.jpg"), root_path %>
 
   <!-- Use any element to open/show the overlay navigation menu -->
-  <span onclick="openNav()">Menu</span>
+  <span onclick="openNav()"><%= icon('fas', 'bars') %></span>
 
   <script>/* Open when someone clicks on the span element */
   function openNav() {
@@ -56,12 +56,19 @@
     document.getElementById("myNav").style.width = "0%";
   }</script>
 
-  <%= link_to icon('fas', 'shopping-cart'), shopping_carts_path, class: "icon-black" %>
+  <span class="cart">
+    <%= link_to icon('fas', 'shopping-bag'), shopping_carts_path, class: "icon-black" %>
+    <% unless @shopping_cart.line_items.size == 0 %>
+      <div class="badge_cart d-inline-block"><%= @shopping_cart.line_items.size %></div>
+    <% end %>
+  </span>
+
   <%= link_to icon('fas', 'map-marked-alt'), shopping_carts_path, class: "icon-black" %>
 
-  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-      <input class="form-control string required p-2" type="text" name="search[query]" id="search_query" />
+  <%= simple_form_for :search, url: producers_path, method: :get do |f| %>
+    <div class="search-form-control form-group form-inline">
+      <%= text_field_tag :query, params[:query], class: "form-control" %>
+      <!-- <input class="form-control string required p-2" type="text" name="search[query]" id="search_query" /> -->
       <button name="button" type="submit" class="btn btn-flat">
         <i class="fas fa-search"></i> Search
       </button>
