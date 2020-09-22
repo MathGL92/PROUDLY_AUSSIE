@@ -196,37 +196,37 @@ category4.photo.attach(io: category4_photo_file, filename: 'category4.jpg', cont
 category4.save!
 
 category5 = Tag.new(name: "Meat")
-category5_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+category5_photo_file = URI.open('https://images.unsplash.com/photo-1542901031-ec5eeb518e83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 category5.photo.attach(io: category5_photo_file, filename: 'category5.jpg', content_type: 'image/jpg')
 category5.save!
 
-category6 = Tag.new(name: "Garment")
-category6_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+category6 = Tag.new(name: "Accessories")
+category6_photo_file = URI.open('https://images.unsplash.com/photo-1519431458145-1ca3d5ccd68e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 category6.photo.attach(io: category6_photo_file, filename: 'category6.jpg', content_type: 'image/jpg')
 category6.save!
 
 category7 = Tag.new(name: "Bag")
-category7_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+category7_photo_file = URI.open('https://images.unsplash.com/photo-1564159133-48b801a0c6f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 category7.photo.attach(io: category7_photo_file, filename: 'category7.jpg', content_type: 'image/jpg')
 category7.save!
 
 category8 = Tag.new(name: "Vintage")
-category8_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+category8_photo_file = URI.open('https://images.unsplash.com/photo-1460776960860-7adc30a4e69d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 category8.photo.attach(io: category8_photo_file, filename: 'category8.jpg', content_type: 'image/jpg')
 category8.save!
 
 category9 = Tag.new(name: "Clothing")
-category9_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+category9_photo_file = URI.open('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')
 category9.photo.attach(io: category9_photo_file, filename: 'category9.jpg', content_type: 'image/jpg')
 category9.save!
 
 category10 = Tag.new(name: "Alcohol")
-category10_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+category10_photo_file = URI.open('https://images.unsplash.com/photo-1571323185405-d4c20ffd832d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 category10.photo.attach(io: category10_photo_file, filename: 'category10.jpg', content_type: 'image/jpg')
 category10.save!
 
 category11 = Tag.new(name: "Fruit & Veg")
-category11_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+category11_photo_file = URI.open('https://images.unsplash.com/photo-1489450278009-822e9be04dff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 category11.photo.attach(io: category11_photo_file, filename: 'category11.jpg', content_type: 'image/jpg')
 category11.save!
 
