@@ -1,7 +1,13 @@
 .map_box_container {
   position: relative;
   height: 100vh !important;
-  width: 100% !important;
+  width: 100vw !important;
+}
+
+.map_box_container_show {
+  position: relative;
+  height: 300px !important;
+  width: 100vw !important;
 }
 
 #map {

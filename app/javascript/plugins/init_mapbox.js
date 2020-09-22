@@ -31,8 +31,7 @@ const addMarkersToMap = (map, markers) => {
     .setLngLat([marker.lng, marker.lat])
     .setPopup(popup)
     .addTo(map);
-});
-
+  });
 };
 
 const fitMapToMarkers = (map, markers) => {
@@ -40,7 +39,7 @@ const fitMapToMarkers = (map, markers) => {
   markers.forEach((marker) => bounds.extend([marker.lng, marker.lat]));
   map.fitBounds(bounds, {
     padding: 70,
-    maxZoom: 15,
+    maxZoom: 20,
     duration: 0
   });
 };
@@ -53,9 +52,9 @@ const initMapbox = () => {
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: mapboxgl }));
-  //   map.on('load', function () {
-  //     map.resize();
-  // });
+    map.on('load', function () {
+      map.resize();
+    });
   }
 };
 
