@@ -36,3 +36,16 @@
   text-decoration: none;
   color: white;
 }
+
+.card-header {
+  background-color: transparent;
+  // border-bottom: none;
+}
+
+.card-header h5 {
+  font-family: 'Open Sans', 'Helvetica', 'sans-serif';
+  margin-top: 15px;
+  font-weight: 800;
+  color: $primary;
+  font-size: 23px;
+}
