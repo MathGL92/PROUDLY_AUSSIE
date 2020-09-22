@@ -19,6 +19,7 @@
     .state{
         border-radius: 30px;
         margin-top: 10px;
+        font-weight: 300;
     }
     h2{
         font-size: 25px;
@@ -42,5 +43,8 @@
     .change{
         display: flex;
         justify-content: flex-end;
+    }
+    .p{
+        font-weight: lighter;
     }
 }
