@@ -1,3 +1,9 @@
+.mapboxgl-marker{
+  width: 50px !important;
+  height: 50px !important;
+  background-size: cover !important;
+  border-radius: 50% !important;
+}
 .mapboxgl-popup {
   width: 200px;
   a {
