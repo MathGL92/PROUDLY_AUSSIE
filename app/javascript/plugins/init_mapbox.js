@@ -14,8 +14,8 @@ const buildMap = () => {
 const addMarkersToMap = (map, markers) => {
     markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
-
-    new mapboxgl.Marker().setLngLat([marker.lng, marker.lat]).setPopup(popup).addTo(map);
+    // DEFAULT MARKER
+    //new mapboxgl.Marker().setLngLat([marker.lng, marker.lat]).setPopup(popup).addTo(map);
     
     // CUSTOM MARKER (AVATAR)
       // Create a HTML element for your custom marker
@@ -26,7 +26,7 @@ const addMarkersToMap = (map, markers) => {
     element.style.width = '25px';
     element.style.height = '25px';
 
-  // Pass the element as an argument to the new marker
+  // Passing element as an argument to the new marker
     new mapboxgl.Marker(element)
     .setLngLat([marker.lng, marker.lat])
     .setPopup(popup)
