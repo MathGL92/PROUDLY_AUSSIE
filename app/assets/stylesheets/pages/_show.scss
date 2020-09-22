@@ -16,15 +16,13 @@
 
 .btn-products {
   position: sticky;
-  bottom: 0px;
-  right: 0px;
+  bottom: 20px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
-// #modalproducts {
-//   height: 100vh;
-// }
-
-
 
 .product-img {
   width: 100%;
