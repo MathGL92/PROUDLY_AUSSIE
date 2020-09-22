@@ -1,10 +1,21 @@
-<h1>Register your Australian Business on Proudly Aussie</h1>
-<p>To create an account on Proudly Aussie, your products must be certified by Australian Made.</p>
-<a href="https://australianmade.com.au/" target="_blank">Learn more about Australian Made Licence</a>
-<h5>The process</h5>
-<ul>
-<li>Enter your details</li>
-<li>Get Verified</li>
-<li>Your're ready to start selling</li>
-</ul>
-<%= link_to 'Create Your Account', "/producers/new", class:"btn btn-primary" %>
+
+<div class="container-producer mt-1 mb-3 b">
+<h1 class="text-center">Sign-On in 3 Steps</h1>
+<div class="content p-1 mb-2">
+    <p>Before being a Registered Producer, all accounts created must first be certified Australian Made!</p>
+    <a href="https://australianmade.com.au/" target="_blank">Find out more?</a>
+</div>
+    <h5>The Process...</h5>
+        <ol>
+            <li><h5>Sign-up As a Producer</li></h5>
+                <p>Once you have registered as a User, you then have the ability to Sign-up as a Producer</p>
+            <li><h5>Register Your Details</li></h5>
+                <p>Register your details with us and we will pass them onto the Australian Made registrar for confirmation</p>
+            <li><h5>Await Verification</li></h5>
+                <p>Once your details have been approved, you are free!</p>
+        </ol>
+    <div>
+        <%= link_to 'Create Your Account', "/producers/new", class:"btn btn-primary btn-producer m-2" %>
+    </div>
+</div>
+
