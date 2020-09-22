@@ -1,9 +1,24 @@
+.map_box_container {
+  position: relative;
+  height: 100vh !important;
+  width: 100% !important;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 .mapboxgl-marker{
   width: 50px !important;
   height: 50px !important;
   background-size: cover !important;
   border-radius: 50% !important;
+  border: solid 1px white
 }
+
 .mapboxgl-popup {
   width: 200px;
   a {

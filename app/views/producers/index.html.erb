@@ -1,8 +1,8 @@
 <!--  map button outside card  -->
 <div class="d-flex justify-content-center my-3">
     <div class="btn-group" role="group">
-        <button type="button" class="display-map btn btn-secondary far fa-map"> </button>
-        <button type="button" class="display-list active btn btn-secondary fas fa-list-ul"></button>
+      <button type="button" class="display-list active btn btn-secondary fas fa-list-ul"></button>
+      <button type="button" class="display-map btn btn-secondary far fa-map"> </button>
     </div>
 </div>
 
@@ -41,8 +41,8 @@
 </div>
 
 <div class="d-none" id="js-map"> <!--display none-->
-  <div class="col-12 col-md-5 px-0 mx-0">
-    <div id="map" style="width: auto; height: 100vh;"
+  <div class="map_box_container">
+    <div id="map" style="width: 100%; height: 100%;"
    data-markers="<%= @markers.to_json %>"
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
