@@ -10,7 +10,7 @@
     <% @producers.each do |producer | %>
      <%= link_to producer_path(producer), data:{turbolinks:"false"} do %>
         <div class="card-container m-3 ">
-            <div class="card-producer">
+            <div class="card-producer" data-aos="zoom-in">
               <% if producer.bg_photo.attached? %>
                 <%= cl_image_tag producer.bg_photo.key,crop: :fill %>
               <% else %>
