@@ -5,7 +5,8 @@
   box-shadow: 5px;
   justify-content: space-between;
   align-items: center;
-  padding-right: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
   .navbar-link {
     color: white;
     font-weight: bold;
@@ -16,14 +17,6 @@
   .fa-bars{
     font-size: 25px;
   }
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
 }
 
 .icon-black {
@@ -43,39 +36,42 @@
 }
 
 .navbar img {
-  width: 65px;
+  width: 52px;
   height: 100%;
 }
 
 .search-form-control {
   position: relative;
-  width: 150px;
+  width: 175px;
   margin-bottom: 0;
 }
 
 .search-form-control .btn {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-  // left: 8px;
+  top: 0px;
+  right: 2px;
+  color: $green;
 }
 
 .search-form-control .form-control {
-  height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+  height: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e7e7e7;
   border-radius: 35px;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
+  border: 1px solid #1edd88;
   outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  background-color: rgba(255,255,255,1.0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .icon-white {
   color: white;
+}
+
+.navbar .fas {
+  font-size: 25px;
 }

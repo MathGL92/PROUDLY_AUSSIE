@@ -10,8 +10,10 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 5px;
-  margin: 5px 5px;
+  margin: 15px 10px;
   padding: 0px 15px;
 }
 
@@ -23,4 +25,27 @@
 
 .carousel-container::-webkit-scrollbar {
   display: none;
+}
+
+.carousel-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-container a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.card-header {
+  background-color: transparent;
+  // border-bottom: none;
+}
+
+.card-header h5 {
+  font-family: 'Open Sans', 'Helvetica', 'sans-serif';
+  margin-top: 15px;
+  font-weight: 800;
+  color: $primary;
+  font-size: 23px;
 }
