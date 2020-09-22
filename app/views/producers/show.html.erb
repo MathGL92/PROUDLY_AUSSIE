@@ -46,37 +46,40 @@
         <div class="carousel-inner">
           <% @producer.products.each_with_index do |product, index| %>
 
-          <div class="carousel-item <%= 'active' if index == 0 %>">
-            <div class="modal-header" id="modal-header-product">
-              <% if product.photo.attached? %>
-                <div class="product-img" style="background-image: url('<%= cl_image_path product.photo.key%>')">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">  <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <% else %>
-                <div class="product-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1549301019-6013533c514d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1056&q=80')">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+            <div class="carousel-item <%= 'active' if index == 0 %>">
+              <div class="modal-header" id="modal-header-product">
+                <% if product.photo.attached? %>
+                  <div class="product-img" style="background-image: url('<%= cl_image_path product.photo.key%>')">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">  <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-              <% end %>
+                <% else %>
+                  <div class="product-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1549301019-6013533c514d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1056&q=80')">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                <% end %>
+              </div>
+              <div class="modal-body" id="modal-product-body">
+                <h5 class="modal-title mb-3" id="ourProductsTitle"><%= product.name %></h5>
+                <p class="text-justify"><%= product.description %>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="prev" id="prev">
+                  <%= icon('fas', 'arrow-left') %>
+                </a>
+                <div class="add-to-bag">
+                  <div class="product-price">$<%= product.price %></div>
+                  <div class="cart-icon"><%= link_to icon('fas', 'cart-plus'), shopping_cart_product_line_items_path(product), method: :post %></div>
+                </div>
+                <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next" id="next">
+                  <%= icon('fas', 'arrow-right') %>
+                </a>
+              </div>
+
             </div>
-            <div class="modal-body" id="modal-product-body">
-              <h5 class="modal-title text-center mb-3" id="ourProductsTitle"><%= product.name %></h5>
-              <p class="text-justify"><%= product.description %>
-              </p>
-              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="prev" id="prev">
-                <%= icon('fas', 'arrow-left') %>
-              </a>
-              <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next" id="next">
-                <%= icon('fas', 'arrow-right') %>
-              </a>
-            </div>
-            <div class="modal-footer d-flex justify-content-between">
-              <div class="product-price">$<%= product.price %></div>
-              <div class="cart-icon"><%= link_to icon('fas', 'cart-plus'), shopping_cart_product_line_items_path(product), method: :post %></div>
-            </div>
-          </div>
 
           <% end %>
 
