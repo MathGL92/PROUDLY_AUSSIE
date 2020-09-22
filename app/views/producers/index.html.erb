@@ -10,32 +10,19 @@
     <% @producers.each do |producer | %>
      <%= link_to producer_path(producer), data:{turbolinks:"false"} do %>
         <div class="card-container m-3 ">
-            <!-- <div class="card-producer">
-              <div class="card-producer-infos">
-                  <h2><%#= producer.name %></h2>
-                  <p><%#= producer.tagline  %></p>
-                  <%# producer.tags.each do |tag| %>
-                  <%# if params[:tag_name].presence == tag.name %>
-                  <span class="badge badge-success"><%#= tag.name %></span>
-                  <%# else %>
-                  <span class="badge badge-secondary"><%#= tag.name %></span>
-                  <%# end %>
-                  <%# end %>
-              </div>
-              <%# if producer.photo.attached? %>
-                <%#= cl_image_tag producer.photo.key,crop: :fill %>
-              <%# else %>
-                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-              <%# end %>
-            </div> -->
-            <div class="card-trip">
+            <div class="card-producer">
               <% if producer.bg_photo.attached? %>
                 <%= cl_image_tag producer.bg_photo.key,crop: :fill %>
               <% else %>
                 <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
               <% end %>
-              <div class="card-trip-infos">
-                <div>
+              <div class="card-producer-text">
+                <% if producer.photo.attached? %>
+                  <%= cl_image_tag producer.photo.key, crop: :fill, class: "card-producer-user avatar-bordered" %>
+                <% else %>
+                  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="card-producer-user avatar-bordered"/>
+                <% end %>
+                <div class="card-producer-infos">
                   <h2><%= producer.name %></h2>
                   <p><%= producer.tagline %></p>
                   <% producer.tags.each do |tag| %>
@@ -46,11 +33,6 @@
                     <% end %>
                 <% end %>
                 </div>
-                <% if producer.photo.attached? %>
-                  <%= cl_image_tag producer.photo.key, crop: :fill, class: "card-trip-user avatar-bordered" %>
-                <% else %>
-                  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="card-trip-user avatar-bordered"/>
-                <% end %>
               </div>
             </div>
         </div>
