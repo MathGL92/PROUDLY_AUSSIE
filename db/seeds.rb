@@ -175,18 +175,60 @@ puts "Created #{Product.count} products"
 
 puts "Creating 11 Categories..."
 
-category1 = Tag.create!(name: "Organic") #honey, dates
-category2 = Tag.create!(name: "Handmade") #purse, jerkey
-category3 = Tag.create!(name: "Condiments") #spread, Jam
-category4 = Tag.create!(name: "Vegan") #spread, Jam
-category5 = Tag.create!(name: "Meat") #spread, Jam
-category6 = Tag.create!(name: "Garment") #spread, Jam
-category7 = Tag.create!(name: "Bag") #spread, Jam
-category8 = Tag.create!(name: "Vintage") #spread, Jam
-category9 = Tag.create!(name: "Clothing") #spread, Jam
-category10 = Tag.create!(name: "Alcohol") #spread, Jam
-category11 = Tag.create!(name: "Fruit & Veg") #spread, Jam
+category1 = Tag.new(name: "Organic")
+category1_photo_file = URI.open('https://images.unsplash.com/photo-1533478583204-680d4ff74891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category1.photo.attach(io: category1_photo_file, filename: 'category1.jpg', content_type: 'image/jpg')
+category1.save!
 
+category2 = Tag.new(name: "Handmade")
+category2_photo_file = URI.open('https://images.unsplash.com/photo-1506806732259-39c2d0268443?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category2.photo.attach(io: category2_photo_file, filename: 'category2.jpg', content_type: 'image/jpg')
+category2.save!
+
+category3 = Tag.new(name: "Condiments")
+category3_photo_file = URI.open('https://images.unsplash.com/photo-1563599175592-c58dc214deff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category3.photo.attach(io: category3_photo_file, filename: 'category3.jpg', content_type: 'image/jpg')
+category3.save!
+
+category4 = Tag.new(name: "Vegan")
+category4_photo_file = URI.open('https://images.unsplash.com/photo-1540914124281-342587941389?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category4.photo.attach(io: category4_photo_file, filename: 'category4.jpg', content_type: 'image/jpg')
+category4.save!
+
+category5 = Tag.new(name: "Meat")
+category5_photo_file = URI.open('https://images.unsplash.com/photo-1542901031-ec5eeb518e83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category5.photo.attach(io: category5_photo_file, filename: 'category5.jpg', content_type: 'image/jpg')
+category5.save!
+
+category6 = Tag.new(name: "Accessories")
+category6_photo_file = URI.open('https://images.unsplash.com/photo-1519431458145-1ca3d5ccd68e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category6.photo.attach(io: category6_photo_file, filename: 'category6.jpg', content_type: 'image/jpg')
+category6.save!
+
+category7 = Tag.new(name: "Bag")
+category7_photo_file = URI.open('https://images.unsplash.com/photo-1564159133-48b801a0c6f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category7.photo.attach(io: category7_photo_file, filename: 'category7.jpg', content_type: 'image/jpg')
+category7.save!
+
+category8 = Tag.new(name: "Vintage")
+category8_photo_file = URI.open('https://images.unsplash.com/photo-1460776960860-7adc30a4e69d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category8.photo.attach(io: category8_photo_file, filename: 'category8.jpg', content_type: 'image/jpg')
+category8.save!
+
+category9 = Tag.new(name: "Clothing")
+category9_photo_file = URI.open('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')
+category9.photo.attach(io: category9_photo_file, filename: 'category9.jpg', content_type: 'image/jpg')
+category9.save!
+
+category10 = Tag.new(name: "Alcohol")
+category10_photo_file = URI.open('https://images.unsplash.com/photo-1571323185405-d4c20ffd832d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category10.photo.attach(io: category10_photo_file, filename: 'category10.jpg', content_type: 'image/jpg')
+category10.save!
+
+category11 = Tag.new(name: "Fruit & Veg")
+category11_photo_file = URI.open('https://images.unsplash.com/photo-1489450278009-822e9be04dff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+category11.photo.attach(io: category11_photo_file, filename: 'category11.jpg', content_type: 'image/jpg')
+category11.save!
 
 puts "Created #{Tag.count} categories"
 
