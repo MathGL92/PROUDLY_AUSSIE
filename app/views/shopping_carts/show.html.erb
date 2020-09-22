@@ -2,9 +2,8 @@
   <h1 class="my-3 text-center">Shopping bag</h1>
   <!-- <p>Shopping bag Id: <%#= @shopping_cart.id %></p> -->
 
-
   <% if @shopping_cart.line_items.blank? %>
-    <p>Your shopping cart is empty</p>
+    <p>Your shopping bag is empty</p>
   <% else %>
     <% @shopping_cart.line_items.each do |item| %>
 
