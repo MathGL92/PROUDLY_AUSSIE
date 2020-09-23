@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="my-3 text-center">Shopping bag</h1>
+  <h2 class="my-4 text-center" id="title-bag">Shopping bag</h2>
   <!-- <p>Shopping bag Id: <%#= @shopping_cart.id %></p> -->
 
   <% if @shopping_cart.line_items.blank? %>
@@ -31,13 +31,14 @@
     <% end %>
   <% end %>
   <div class="text-center">
-    <%= link_to "Continue shopping", producers_path, class: "btn btn-outline-primary mb-3" %>
-    <% unless @shopping_cart.line_items.blank? %>
-      <%= form_tag orders_path do %>
-          <%= hidden_field_tag 'shopping_cart_id', @shopping_cart.id %>
-          <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>
-    <% end %>
+    <%= link_to "Continue shopping", producers_path, class: "btn btn-outline-primary mt-3", id: "continue-shopping" %>
   </div>
+
+  <% unless @shopping_cart.line_items.blank? %>
+    <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'shopping_cart_id', @shopping_cart.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-primary bottom-btn' %>
+    <% end %>
+  <% end %>
 
 </div>

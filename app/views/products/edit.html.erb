@@ -4,9 +4,9 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <%= f.input :name, label: "Your Product's Name:"%>
   <%= f.input :description, label: "Describe your product" %>
+  <%= f.select :tags, Tag.all.pluck(:name, :id), {}, { multiple: true, id: "tag-field" }  %>
   <%= f.input :price, label: "Price" %>
   <%= f.input :photo, as: :file, label: "Add a nice photo" %>
-  <%= f.input :tags, input_html: { class: 'multiple-select', multiple: true }, include_hidden: false, collection: Tag.all %>
   <%= f.button :submit, class: "btn btn-primary"%>
 <% end %>
 

@@ -25,8 +25,9 @@ import 'bootstrap';
 import { initToggleMap } from '../components/init_toggle_map';
 import { changeCartQty } from '../components/change_cart_qty';
 import { initMapbox } from '../plugins/init_mapbox';
-import { loadDynamicBannerText } from "../plugins/banner";
+import { loadDynamicBannerText } from '../plugins/banner';
 import { aos } from '../components/aos';
+import { initTagging } from '../components/selectize';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -39,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   aos();
   changeCartQty();
+  initTagging();
 });

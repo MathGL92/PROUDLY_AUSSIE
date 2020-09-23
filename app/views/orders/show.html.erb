@@ -1,8 +1,11 @@
-<div class="container">
-  <div class="row py-4">
+<div class="container-order">
+  <div class="row">
     <div class="col-md-3"></div>
-    <div class="col">
-      <h1>Order #<%=@order.id %> <small><span class="state badge badge-primary float-right">State: <%= @order.state %></span></small></h1>
+      <div class="order-confirmation">
+
+      <h2>Congratulations! Your order is on its way</h2>
+      <h3>order number #<%=@order.id %><span class="state badge badge-primary float-right">State: <%= @order.state %></span></h3>
+
 
       <ul class="list-unstyled">
         <li><strong>Date of order:</strong><%= @order.created_at.to_date %></li>
@@ -17,9 +20,9 @@
         <li><strong>TOTAL </strong><%= humanized_money_with_symbol @order.amount%></li>
         </li>
       </ul>
-      <p>Thank you for your support<%= @shopping_cart.user %></p>
+      <p>Thank you for your support <%= current_user.first_name %> !</p>
       <div class="d-flex justify-content-center">
-      <% @shopping_cart.list_producers.each do |producer|%>
+      <% current_user.shopping_cart.list_producers.each do |producer|%>
         <div class="mx-3 text-center">
           <span class="text-center"><%= producer.name %></span>
           <% if producer.photo.attached? %>
