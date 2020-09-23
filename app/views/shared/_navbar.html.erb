@@ -4,6 +4,9 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <!-- Overlay content -->
   <div class="overlay-content">
+
+    <%= link_to image_tag("PA1.png"), root_path, data:{turbolinks:"false"}, class: "overlay-img" %>
+
     <% if user_signed_in? && current_user.producer %>
     <ul>
       <li class="nav-item active">
@@ -19,6 +22,9 @@
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
       </li>
       <% elsif user_signed_in? %>
+
+      <%= link_to image_tag("PA1.png"), root_path, data:{turbolinks:"false"} %>
+
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
@@ -29,7 +35,7 @@
           <%= link_to "Producer Sign-up", "/new_producer", class: "nav-link" %>
         </li>
          <li class="nav-item active">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       <% else %>
         <li class="nav-item">
@@ -37,6 +43,9 @@
         </li>
       <% end %>
     </ul>
+      <%# <div class="links">
+        <%= link_to icon('fab fa-instagram', class: 'icon-white') %> <%= link_to icon('fab fa-twitter', class: 'icon-white') %> <%= link_to icon('fab fa-facebook', class: 'icon-white') %>
+      <%# </div> %> %>
   </div>
 </div>
 </div>
