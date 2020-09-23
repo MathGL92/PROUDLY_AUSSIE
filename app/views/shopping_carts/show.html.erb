@@ -3,7 +3,7 @@
   <!-- <p>Shopping bag Id: <%#= @shopping_cart.id %></p> -->
 
   <% if @shopping_cart.line_items.blank? %>
-    <p>Your shopping bag is empty</p>
+    <p style="text-align: left">Your shopping bag is empty. Let's look around!</p>
   <% else %>
     <% @shopping_cart.line_items.each do |item| %>
 
