@@ -1,5 +1,5 @@
 import 'selectize/dist/js/selectize.min.js';
-import 'selectize/dist/css/selectize.default.css';
+import 'selectize/dist/css/selectize.css';
 
 const initTagging = () => {
   if (document.getElementById('tag-field')) {
@@ -7,12 +7,8 @@ const initTagging = () => {
       plugins: ['remove_button'],
       delimiter: ',',
       persist: false,
-      create: function (input) {
-        return {
-          value: input,
-          text: input,
-        };
-      },
+      create: false,
+      maxItems: 3,
     });
   }
 };
