@@ -6,7 +6,7 @@
   <%= f.input :description, label: "Describe your product" %>
   <%= f.input :price, label: "Price" %>
   <%= f.input :photo, as: :file, label: "Add a nice photo" %>
-  <%= f.input :tags, input_html: { id: 'tag-field', class: 'multiple-select', multiple: true }, include_hidden: false, collection: Tag.all %>
+  <%= f.select :tags, Tag.all.pluck(:name, :id), {}, { multiple: true, id: "tag-field" }  %>
   <%= f.button :submit, class: "btn btn-primary"%>
 <% end %>
 

@@ -1,5 +1,5 @@
 import 'selectize/dist/js/selectize.min.js';
-import 'selectize/dist/css/selectize.css';
+import 'selectize/dist/css/selectize.default.css';
 
 const initTagging = () => {
   if (document.getElementById('tag-field')) {
