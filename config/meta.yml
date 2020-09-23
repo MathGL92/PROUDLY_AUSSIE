@@ -1,0 +1,5 @@
+meta_product_name: "Proudly Aussie"
+meta_title: "Proudly Aussie - Buy Australian Made, help your local community!"
+meta_description: "Proudly Aussie is the only web application that connects directly australian local producers to anyone living in Australia. What makes this platform unique is that the human is at the forefront."
+meta_image: "landing.jpg" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards

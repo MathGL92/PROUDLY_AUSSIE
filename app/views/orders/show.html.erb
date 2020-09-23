@@ -11,7 +11,7 @@
         <li><strong>Date of order:</strong><%= @order.created_at.to_date %></li>
 
         <li><strong>Your purchases:</strong>
-  
+
         <%@order.shopping_cart.line_items.each do |lineitem| %>
            <li><%= lineitem.product.name %></li>
         <% end%>
