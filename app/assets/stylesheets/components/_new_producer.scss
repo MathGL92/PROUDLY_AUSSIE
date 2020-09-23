@@ -1,5 +1,5 @@
 .container-producer {
-    height: 100vh;
+    height: auto;
     position: relative;
     padding: 25px;
     background-color: #f6f1ee;
@@ -13,5 +13,11 @@
     border-radius: 30px;
     margin: auto;
     display: block;
+}
 
+.container-producer-confirm {
+    height: 100vh;
+    position: relative;
+    padding: 25px;
+    background-color: #f6f1ee;
 }
