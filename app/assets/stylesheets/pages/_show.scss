@@ -32,7 +32,11 @@
   border-radius: 40px;
   font-weight: bold;
   font-size: 20px;
+<<<<<<< HEAD
   z-index: 999;
+=======
+  z-index: 1000;
+>>>>>>> master
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -62,12 +66,13 @@
 
 #modal-header-product {
   padding: 12px;
+  width: 95%;
+  border-bottom: 0 none;
 }
 
 #modal-product-body {
   position: relative;
   width: 95%;
-  margin: 0 auto;
   padding-bottom: 80px;
 }
 
@@ -86,10 +91,11 @@
   align-items: center;
   position: fixed;
   bottom: 33px;
-  width: 100%;
+  width: 95%;
   height: 60px;
   z-index: 500;
   background-color: black;
+  border-top: 0 none;
 }
 
 .add-to-bag {

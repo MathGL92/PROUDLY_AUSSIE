@@ -10,7 +10,8 @@
       <th>My Products</th>
       <th>Update</th>
     </tr>
-    <% @producer.products.each do |product| %>
+    <% products_ordered = @producer.products.order(updated_at: :desc) %>
+    <% products_ordered.each do |product| %>
     <tr>
      <td><%= link_to "#{product.name}", edit_product_path(product) %></td>
       <td>
