@@ -7,8 +7,8 @@
   z-index: 1000; /* Sit on top */
   left: 0;
   top: 0;
-  background-color: rgb(0, 0, 0); /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  background-color: #6E9156; /* Black fallback color */
+  background-color: #6E9156; /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -16,6 +16,7 @@
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
+  justify-content: center;
   top: 25%; /* 25% from the top */
   width: 100%; /* 100% width */
   text-align: center; /* Centered text/links */
@@ -27,7 +28,7 @@
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: white;
   display: block; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -41,9 +42,10 @@
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  color: white;
+  top: -11px;
+  right: 5px;
+  font-size: 50px;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -53,6 +55,6 @@
   }
 }
 
-.nav-item li {
+.nav-item.active {
   list-style: none;
 }
