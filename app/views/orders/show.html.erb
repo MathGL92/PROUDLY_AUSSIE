@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-3"></div>
       <div class="order-confirmation">
-      
+
       <h2>Congratulations! Your order is on its way</h2>
       <h3>order number #<%=@order.id %><span class="state badge badge-primary float-right">State: <%= @order.state %></span></h3>
 
@@ -28,9 +28,9 @@
         <li><strong>shipping</strong><p>free</p></li>
         </li>
       </ul>
-      <p>Thank you for your support<%= @shopping_cart.user %></p>
+      <p>Thank you for your support <%= current_user.first_name %> !</p>
       <div class="d-flex justify-content-center">
-      <% @shopping_cart.list_producers.each do |producer|%>
+      <% current_user.shopping_cart.list_producers.each do |producer|%>
         <div class="mx-3 text-center">
           <span class="text-center"><%= producer.name %></span>
           <% if producer.photo.attached? %>
