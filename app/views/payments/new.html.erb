@@ -1,17 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4"></div>
-    <div class="col">
-      <h1>Checkout summary</h1>
-        <strong>Your items:</strong>
-        <ul class="item-list list-unstyled">
-          <% @order.shopping_cart.line_items.each do |item| %>
-        <li><%= item.product.name %><span> - qty: <%= item.amount %> </span></li>
-          <% end %>
-        </ul>
-      <button id="pay" class="btn btn-primary d-block">Proceed to checkout</button>
+    <div class="col-xs-12 col-sm-4"></div>
+      <div class="order-summary">
+        <h2 id="order-sum-title">Order summary</h2>
+          <h3>Your items:</h3>
+          <ul class="item-list list-unstyled">
+            <% @order.shopping_cart.line_items.each do |item| %>
+          <li><%= item.product.name %><span> - qty: <%= item.amount %> </span></li>
+            <% end %>
+          </ul>
+          <hr>
+            <p>TOTAL:<%= humanized_money_with_symbol @order.amount%><p>
+        <button class=" btn btn-outline-primary short-translucent-btn">Continue Shopping</button>
+        <button id="pay" class="bottom-btn btn btn-primary">Proceed to payment</button>
 
-      <script src="https://js.stripe.com/v3/"></script>
+            <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
         paymentButton.addEventListener('click', () => {
@@ -21,6 +24,10 @@
           });
         });
       </script>
+      </div>
+      
+
+
     </div>
   </div>
 </div>

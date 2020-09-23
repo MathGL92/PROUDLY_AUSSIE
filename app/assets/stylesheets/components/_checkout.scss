@@ -1,4 +1,5 @@
 .container-order {
+    margin: 20px 10px 20px 10px;
     .item-list{
         width: 300px;
         margin: 0 auto;
@@ -13,6 +14,36 @@
         margin-top: 20px;
         border-radius: 15px;
     }
+    .msg-end{
+        color: black;
+        text-align: center;
+    }
+    .quote{
+        font-weight: bold;
+        font-size: 2rem;
+        color: $green;
+    }
+
+}
+.order-summary{
+    margin: 40px auto;
+    padding-top: 30px;
+    h2{
+        font-size: 25px;
+        text-align: center;
+        font-weight: lighter;
+        color: $green;
+    }
+    h3{
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .btn-go-pay{
+        border-radius: 30px;
+        margin-bottom: 70px;
+      }
+      
 
 }
 .order-confirmation{
@@ -47,5 +78,15 @@
     }
     .p{
         font-weight: lighter;
+    }
+    .bottom-btn{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        width: 330px;
+        border-radius: 30px;
+        margin: auto;
+        display: block;
     }
 }
