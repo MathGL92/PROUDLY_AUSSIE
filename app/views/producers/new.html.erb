@@ -1,17 +1,25 @@
-<h1>Enter your business details</h1>
-<p>Please note: you must hold an <a href="https://www.australianmade.com.au/" target="_blank">Australian Made License</a> to register on Proudly Aussie</p>
-   <%= simple_form_for(@producer) do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <%= f.input :name, label: "Your Seller name:"%>
-      <%= f.input :company_name, label: "Your Company's Name" %>
-      <%= f.input :ABN, label: "ABN" %>
-      <%= f.input :address, label: "Your Address" %>
-      <%= f.input :introduction, label: "Tell us about your Business.", placeholder: "Your story as an Australian producer...What you're selling on Proudly Aussie..."%>
-      <%= f.input :tagline, placeholder: "something snappy and short (30 characters max)"%>
-      <%= f.input :photo, as: :file, label: "Upload Your Profile Picture" %>
-      <%= f.input :bg_photo, as: :file, label: "Upload Your Background Photo" %>
-      <%= f.button :submit, class: "btn btn-primary"%>
-    <% end %>
 
-<%= link_to 'Back', new_producer_path, class:"btn btn-primary" %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-offset-4">
+      <div class="form-login">
+        <h2>Business Details</h2>
+            <%= simple_form_for(@producer) do |f| %>
+               <%= f.error_notification %>
+               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+               <%= f.input :name, label: "Full Name:" %>
+               <%= f.input :company_name, label: "Company Name:" %>
+               <%= f.input :ABN, label: "ABN:" %>
+               <%= f.input :address, label: "Business Address" %>
+               <%= f.input :introduction, label: "A little bit about you:", placeholder: "Tell us about your Australian Story..."%>
+               <%= f.input :tagline, placeholder: "Short description / Tagline (Max 30 Characters)"%>
+               <%= f.input :photo, as: :file, label: "Profile Picture:" %>
+               <%= f.input :bg_photo, as: :file, label: "Background Photo:" %>
+               <%= f.button :submit, class: "btn btn-primary"%>
+            <% end %>
+            <%= link_to 'Back', "/new_producer", class:"btn btn-primary" %>
+            
+      </div>
+    </div>
+  </div>
+</div>
