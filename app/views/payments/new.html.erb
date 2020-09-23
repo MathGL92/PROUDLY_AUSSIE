@@ -2,14 +2,15 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-sm-offset-4"></div>
     <div class="col">
-      <h1>Checkout summary</h1>
+      <h2>Order summary</h2>
         <strong>Your items:</strong>
         <ul class="item-list list-unstyled">
           <% @order.shopping_cart.line_items.each do |item| %>
         <li><%= item.product.name %><span> - qty: <%= item.amount %> </span></li>
           <% end %>
         </ul>
-      <button id="pay" class="btn btn-primary d-block">Proceed to checkout</button>
+      <button class="bottom-btn btn btn-primary d-block">Continue Shopping</button>
+      <button id="pay" class="btn btn-primary d-block">Proceed to payment</button>
 
       <script src="https://js.stripe.com/v3/"></script>
       <script>
