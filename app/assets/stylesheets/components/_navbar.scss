@@ -1,6 +1,6 @@
 .navbar {
   // position: absolute;
-  width: 100vw;
+  width: 100%;
   background: $primary;
   box-shadow: 5px;
   justify-content: space-between;
@@ -11,10 +11,10 @@
     color: white;
     font-weight: bold;
   }
-  .fa-shopping-bag{
+  .fa-shopping-bag {
     font-size: 30px;
   }
-  .fa-bars{
+  .fa-bars {
     font-size: 25px;
   }
 }
