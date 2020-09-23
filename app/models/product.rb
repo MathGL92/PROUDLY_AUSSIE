@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_many :line_items
-  validates :name, :price, presence: true
+  validates :name, :price, :photo, presence: true
   has_one_attached :photo
   monetize :price_cents
   accepts_nested_attributes_for :taggings
