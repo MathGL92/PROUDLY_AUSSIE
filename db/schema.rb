@@ -97,7 +97,6 @@ ActiveRecord::Schema.define(version: 2020_09_21_002426) do
     t.bigint "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "producer_id"
     t.index ["product_id"], name: "index_taggings_on_product_id"
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
   end
