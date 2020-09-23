@@ -1,3 +1,4 @@
+// BTN BOTTOM FULL WIDTH
 .bottom-btn {
   position: fixed;
   bottom: 10px;
@@ -11,4 +12,9 @@
   &:hover {
     background-color: rgba(110,145,86,0.6);
   }
+}
+// SHORT BTN
+.short-translucent-btn{
+  border-radius: 30px;
+  margin-bottom: 70px;
 }

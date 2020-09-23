@@ -119,14 +119,33 @@ product1_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-
 product1.photo.attach(io: product1_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
 product1.save!
 
-product2 = Product.create!(name: "Handmade Purse" , price: 25.5, producer_id: producer1.id, description: "All of In Blue Handmade's leathers are second source, eco-tanned and full grain. Full grain means that the top of the hide will show the wear of the animal. We love the look, we believe that distress adds character and style to each piece!" )
-product3 = Product.create!(name: "Dried Dates" , price: 10, producer_id: producer1.id, description: "It is used primarily as a shade tree that also bears fruit.
+product2 = Product.new(name: "Handmade Purse" , price: 25.5, producer_id: producer1.id, description: "All of In Blue Handmade's leathers are second source, eco-tanned and full grain. Full grain means that the top of the hide will show the wear of the animal. We love the look, we believe that distress adds character and style to each piece!" )
+product2_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+product2.photo.attach(io: product2_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
+product2.save!
+
+product3 = Product.new(name: "Dried Dates" , price: 10, producer_id: producer1.id, description: "It is used primarily as a shade tree that also bears fruit.
 Its precise natural distribution is uncertain due to extensive cultivation, but is thought to be in southern Asia, between Lebanon, northern India, and southern and central China, and possibly also southeastern Europe though more likely introduced there.
 This plant has been introduced in Madagascar and grows as an invasive species in the western part of the island.")
-product4 = Product.create!(name: "Beef jerky" , price: 75.8, producer_id: producer2.id, description:"Where are my Teriyaki lovers???? My sweet tender Sweet Teriyaki Jerky is soooooooooooo good! Marinated to perfection and baked fresh for you to enjoy. You will literally say Oh my GOD! while licking your fingers! Get ready to lick those fingers!!!")
-product5 = Product.create!(name: "Organic Orange Jam" , price: 15, producer_id: producer2.id, description: "Handmade Orange Jam, Natural Handmade, Organic Dessert***CONTENT***Orange, granulated sugar, cinnamon stick, anise, clove, lemon. We offer you jams prepared with delicious oranges of the Mediterranean region.")
-product6 = Product.create!(name: "Sweet Red pepper and Goats Cheese Spread" , price: 20, producer_id: producer2.id, description: "Sweet Red Peppers & Goat Cheese is ideal as a sauce for meat, especially pork or chicken. Try it instead of ketchup with hamburgers. Toss with pasta or rice. Spread on sandwiches or pizzas. A superb dip with Greek rusk, crackers or vegetables.
+product3_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+product3.photo.attach(io: product3_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
+product3.save!
+
+product4 = Product.new(name: "Beef jerky" , price: 75.8, producer_id: producer2.id, description:"Where are my Teriyaki lovers???? My sweet tender Sweet Teriyaki Jerky is soooooooooooo good! Marinated to perfection and baked fresh for you to enjoy. You will literally say Oh my GOD! while licking your fingers! Get ready to lick those fingers!!!")
+product4_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+product4.photo.attach(io: product4_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
+product4.save!
+
+product5 = Product.new(name: "Organic Orange Jam" , price: 15, producer_id: producer2.id, description: "Handmade Orange Jam, Natural Handmade, Organic Dessert***CONTENT***Orange, granulated sugar, cinnamon stick, anise, clove, lemon. We offer you jams prepared with delicious oranges of the Mediterranean region.")
+product5_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+product5.photo.attach(io: product5_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
+product5.save!
+
+product6 = Product.new(name: "Sweet Red pepper and Goats Cheese Spread" , price: 20, producer_id: producer2.id, description: "Sweet Red Peppers & Goat Cheese is ideal as a sauce for meat, especially pork or chicken. Try it instead of ketchup with hamburgers. Toss with pasta or rice. Spread on sandwiches or pizzas. A superb dip with Greek rusk, crackers or vegetables.
 ")
+product6_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+product6.photo.attach(io: product6_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
+product6.save!
 
 product7 = Product.new(name: "Pure Bush honey" , price: 13.95, producer_id: producer3.id, description: "Ingredients:﻿ \n 100% Australian bush honey. \n \n A delicious bush honey naturally produced from Victorian wildflowers. Like all our honey blends, our honey begins raw. Pure Bush Honey is harvested with care, extracted without artificially heating beyond hive temperatures and using a single, simple filtration that allows pollen and enzymes to remain intact providing all the health benefits that honey is famous for. If the honey crystallizes, simply sit the jar in warm water; this is a sign that you have quality living honey! We care for our honey and our bees! \n \nSpread the love! ")
 product7_photo_file = URI.open('https://static.wixstatic.com/media/789382_2e5552748a364784b17f12c0ea844015~mv2.png/v1/fill/w_292,h_400,al_c,q_85,usm_0.66_1.00_0.01/789382_2e5552748a364784b17f12c0ea844015~mv2.webp')

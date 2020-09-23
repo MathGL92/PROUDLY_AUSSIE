@@ -1,0 +1,35 @@
+.dashboard-container {
+  height: 75vh;
+  margin: 11px 15px;
+  padding: 21px 7px;
+  background: white;
+  border-radius: 12px;
+  overflow: scroll;
+}
+
+.dashboard-container h3 {
+  color: $green;
+  margin-bottom: 30px;
+  margin-left: 7px;
+  // margin-left: 7px;
+}
+
+.dashboard-container a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 7px;
+}
+tr {
+  border-bottom: solid thin rgba($color: #dcdcdc, $alpha: 0.2);
+}
+
+td {
+  text-align: left;
+}
+
+td .fas {
+  margin: 10px 8px;
+}
