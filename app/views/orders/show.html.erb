@@ -6,26 +6,18 @@
       <h2>Congratulations! Your order is on its way</h2>
       <h3>order number #<%=@order.id %><span class="state badge badge-primary float-right">State: <%= @order.state %></span></h3>
 
-      <ul class="mt list-unstyled">
-        <h3>Date of purchase:</h3>
-        <p><%= @order.created_at.to_date %><p>
 
-        <h3>Your purchases:</h3>
+      <ul class="list-unstyled">
+        <li><strong>Date of order:</strong><%= @order.created_at.to_date %></li>
+
+        <li><strong>Your purchases:</strong>
+  
         <%@order.shopping_cart.line_items.each do |lineitem| %>
-           <li><p><%= lineitem.product.name %><p></li>
+           <li><%= lineitem.product.name %></li>
         <% end%>
 
-        <h3>Shipping Address<span class="change"><%= link_to "Change" %></span></h4>
-          <p>Samantha, 57 Flinders Lane<br>Melbourne, Victoria, 3000<br>Australia</p>
-
-        <h3>Delivery Details<span class="change"><%= link_to "Change" %></span></h3>
-          <p>Standard Delivery<br>Saturday 27 - Tuesday 30</p>
-
-        <hr>
-
-        </li><strong>subtotal</strong><p><%= humanized_money_with_symbol @order.amount%><p></li>
-        <hr>
-        <li><strong>shipping</strong><p>free</p></li>
+        </li>
+        <li><strong>TOTAL </strong><%= humanized_money_with_symbol @order.amount%></li>
         </li>
       </ul>
       <p>Thank you for your support <%= current_user.first_name %> !</p>
@@ -41,7 +33,6 @@
         </div>
         <% end  %>
       </div>
-    <%= link_to "Back to Home", producers_path, class:"btn btn-primary d-bk" %>
     </div>
   </div>
 </div>
