@@ -7,7 +7,7 @@
               <%= f.error_notification %>
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
               <%= f.input :name, label: false, placeholder: "What is it?"%>
-              <%= f.input :description, label: false, input_html: { rows: 8 }, placeholder: "Tell your customers more! How is it made? Why is it unique? Why should people love it?... ❤️" %>
+              <%= f.input :description, label: false, input_html: { rows: 8 }, placeholder: "Tell your customers more! How is it made? Why is it unique? Why will people love it?... ❤️" %>
               <%= f.select :tags, Tag.all.pluck(:name, :id), {}, { multiple: true, id: "tag-field" } %>
               <%= f.input :price, label: false, placeholder: "$", input_html: {value: '$'} %>
               <%= f.input :photo, as: :file, label: "Add a nice photo" %>
