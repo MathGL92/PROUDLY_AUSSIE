@@ -9,6 +9,7 @@ const initTagging = () => {
       persist: false,
       create: false,
       maxItems: 3,
+      placeholder: 'Add your categories...',
     });
   }
 };

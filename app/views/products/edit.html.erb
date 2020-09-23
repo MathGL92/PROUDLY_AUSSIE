@@ -1,13 +1,21 @@
-<h1>Edit <%=@product.name%>:</h1>
-<%= simple_form_for [ @product ] do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <%= f.input :name, label: "Your Product's Name:"%>
-  <%= f.input :description, label: "Describe your product" %>
-  <%= f.select :tags, Tag.all.pluck(:name, :id), {}, { multiple: true, id: "tag-field" }  %>
-  <%= f.input :price, label: "Price" %>
-  <%= f.input :photo, as: :file, label: "Add a nice photo" %>
-  <%= f.button :submit, class: "btn btn-primary"%>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-offset-4">
+      <div class="form-login">
+        <h3>Edit <%=@product.name%>:</h3>
+        <%= simple_form_for [ @product ] do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <%= f.input :name, label: "Your Product's Name:"%>
+          <%= f.input :description, label: "Describe your product", input_html: { rows: 8}  %>
+          <%= f.select :tags, Tag.all.pluck(:name, :id), {}, { multiple: true, id: "tag-field" }  %>
+          <%= f.input :price, label: "Price" %>
+          <%= f.input :photo, as: :file, label: "Add a nice photo" %>
+          <%= f.button :submit, class: "btn btn-primary"%>
+        <% end %>
 
-<%= link_to 'Back', "/dashboard", class:"btn btn-primary" %>
+        <%= link_to 'Back', "/dashboard", class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
