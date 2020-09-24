@@ -22,16 +22,18 @@
                 <% else %>
                   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="card-producer-user avatar-bordered"/>
                 <% end %>
-                <div class="card-producer-infos">
+                <div class="card-producer-infos my-auto">
                   <h2><%= producer.name %></h2>
                   <p><%= producer.tagline %></p>
-                  <% producer.tags.each do |tag| %>
-                    <% if params[:tag_name].presence == tag.name %>
-                    <span class="badge badge-success"><%= tag.name %></span>
-                    <% else %>
-                    <span class="badge badge-secondary"><%= tag.name %></span>
+                  <div class="d-flex flex-column producer-badge-div">
+                    <% producer.tags.each do |tag| %>
+                      <% if params[:tag_name].presence == tag.name %>
+                        <span class="badge badge-success producer-badge" style="background-color: #ffbe46"><%= tag.name %></span>
+                      <% else %>
+                        <span class="badge badge-secondary producer-badge" style="background-color: #6E9156"><%= tag.name %></span>
+                      <% end %>
                     <% end %>
-                <% end %>
+                  </div>
                 </div>
               </div>
             </div>

@@ -4,15 +4,13 @@
     <div class="col-xs-12 col-sm-4 col-offset-4">
       <div class="form-login">
         <h2 style="color:#6E9156;font-weight: 500">Business Details</h2>
-              <input type="text" class="mapboxgl-ctrl-geocoder--input" placeholder="Search" aria-label="Search">
             <%= simple_form_for(@producer) do |f| %>
                <%= f.error_notification %>
                <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
                <%= f.input :name,label: false, placeholder: "Your Full Name" %>
                <%= f.input :company_name, label: false, placeholder: "Your Company's name" %>
                <%= f.input :ABN,label: false, placeholder: "ABN" %>
-               <%# f.input :address, label: false, placeholder: "Where are you located?" %>
-               <%= f.input :address, id:"geocoder-field", class:"geocoder-field", label: false, placeholder: "Where are you located?" %>
+               <%= f.input :address, label: false, placeholder: "Where are you located?" %>
                <%= f.input :introduction, label: false, placeholder: "Tell us about your Australian Story and what makes your business unique. \nCustomers love to hear about why you're selling your products and how you make them 🐨. ", input_html: { rows: 8 }%>
                <%= f.input :tagline, label: false, placeholder: "What is your catchy tagline?"%>
                <%= f.input :photo, as: :file, label: "Profile Picture:" %>
@@ -20,7 +18,6 @@
                <%= f.button :submit, class: "btn btn-primary"%>
             <% end %>
             <%= link_to 'Back', "/new_producer", class:"btn btn-outline-primary" %>
-            
       </div>
     </div>
   </div>
