@@ -28,9 +28,9 @@
                   <div class="d-flex flex-column producer-badge-div">
                     <% producer.tags.each do |tag| %>
                       <% if params[:tag_name].presence == tag.name %>
-                        <span class="badge badge-success producer-badge"><%= tag.name %></span>
+                        <span class="badge badge-success producer-badge" style="background-color: #ffbe46"><%= tag.name %></span>
                       <% else %>
-                        <span class="badge badge-secondary producer-badge"><%= tag.name %></span>
+                        <span class="badge badge-secondary producer-badge" style="background-color: #6E9156"><%= tag.name %></span>
                       <% end %>
                     <% end %>
                   </div>
