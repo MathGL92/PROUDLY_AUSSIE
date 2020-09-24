@@ -1,12 +1,12 @@
-// import places from 'places.js';
+import places from 'places.js';
 
-// const initAutocomplete = () => {
-//   if (document.getElementById('geocoder-field')) {
-//     const addressInput = document.getElementById('geocoder-field');
-//     if (addressInput) {
-//       places({ container: addressInput });
-//     }
-//   }
-// };
+const initAutocomplete = () => {
+  // if (document.getElementById('geocoder-field')) {
+  const addressInput = document.getElementById('producer_address');
+  if (addressInput) {
+    places({ container: addressInput });
+  }
+  // }
+};
 
-// export { initAutocomplete };
+export { initAutocomplete };

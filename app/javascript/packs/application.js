@@ -42,5 +42,5 @@ document.addEventListener('turbolinks:load', () => {
   aos();
   changeCartQty();
   initTagging();
-  // initAutocomplete();
+  initAutocomplete();
 });
