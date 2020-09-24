@@ -13,20 +13,20 @@
           <ul class="item-list list-unstyled">
           
             <% @order.shopping_cart.line_items.each do |item| %>
-          <td><%= item.product.name %></td>
-          <td><%= item.amount %></td>
-          <td><%= item.amount*@order.amount %></td> 
+          <tr><td><%= item.product.name %></td><td><%= item.amount %></td><td><%= item.amount*@order.amount %></td> <tr>
             <% end %>
+            <td>
+            <p class="total-right">TOTAL:  <%= humanized_money_with_symbol @order.amount%><p>
+           </td>
+            <tr>
+            </tr>
+          
           </ul>
         </tr> 
-          <td>
-            <p class="total-right">TOTAL:  <%= humanized_money_with_symbol @order.amount%><p>
-          </td>
         </table>
-          <hr>
-         
-            
-        <button class=" btn btn-outline-primary short-translucent-btn">Continue Shopping</button>
+         <div class="btn-cont">
+        <button class="btn-cont-shop btn btn-outline-primary short-translucent-btn mx-auto">Continue Shopping</button>
+         </div>
         <button id="pay" class="bottom-btn btn btn-primary">Proceed to payment</button>
 
             <script src="https://js.stripe.com/v3/"></script>
