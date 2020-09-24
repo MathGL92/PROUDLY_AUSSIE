@@ -3,14 +3,29 @@
     <div class="col-xs-12 col-sm-4"></div>
       <div class="order-summary">
         <h2 id="order-sum-title">Order summary</h2>
-          <h3>Your items:</h3>
+        <table width=300px>
+        <tr>
+          <th>item</th>
+          <th>qty</th>
+          <th>price</th>
+        </tr>
+        <tr>
           <ul class="item-list list-unstyled">
+          
             <% @order.shopping_cart.line_items.each do |item| %>
-          <li><%= item.product.name %><span> - qty: <%= item.amount %> </span></li>
+          <td><%= item.product.name %></td>
+          <td><%= item.amount %></td>
+          <td><%= item.amount*@order.amount %></td> 
             <% end %>
           </ul>
+        </tr> 
+          <td>
+            <p class="total-right">TOTAL:  <%= humanized_money_with_symbol @order.amount%><p>
+          </td>
+        </table>
           <hr>
-            <p>TOTAL:<%= humanized_money_with_symbol @order.amount%><p>
+         
+            
         <button class=" btn btn-outline-primary short-translucent-btn">Continue Shopping</button>
         <button id="pay" class="bottom-btn btn btn-primary">Proceed to payment</button>
 

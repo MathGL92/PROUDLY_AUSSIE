@@ -33,7 +33,7 @@ class ProducersController < ApplicationController
         #image_url: helpers.asset_url("logo.png") # asset_url must be in rails code base not DB
         # get cloudinary URL for producer
 
-        image_url: url_for(producer.photo)
+        image_url: producer.photo.service_url
       }
     end
   end
@@ -43,7 +43,7 @@ class ProducersController < ApplicationController
         lat: @producer.latitude,
         lng: @producer.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { producer: @producer }),
-        image_url: url_for(@producer.photo)
+        image_url: @producer.photo.service_url
       }]
   end
 
