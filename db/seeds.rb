@@ -11,7 +11,7 @@ Product.destroy_all
 Producer.destroy_all
 User.destroy_all
 
-puts "Creating 10 users"
+puts "Creating 22 users"
 
 User.create!(email: "user@user.com", password: "password", last_name: "Green", first_name: "Steve")
 
@@ -35,10 +35,32 @@ producer_clarck= User.create!(email: "clarck@user.com", password: "password", la
 
 producer_lloyd = User.create!(email: "lloyd@user.com", password: "password", last_name: "Morely", first_name: "Lloyd")
 
+producer_david= User.create!(email: "david@user.com", password: "password", last_name: "Satire", first_name: "David")
+
+producer_henrik= User.create!(email: "henrik@user.com", password: "password", last_name: "Sanson", first_name: "Henrik")
+
+producer_warren= User.create!(email: "warren@user.com", password: "password", last_name: "Marley", first_name: "Warren")
+
+producer_wendy= User.create!(email: "wendy@user.com", password: "password", last_name: "Johnsson", first_name: "Wendy")
+
+producer_marlon= User.create!(email: "marlon@user.com", password: "password", last_name: "Flirt", first_name: "Marlon")
+
+producer_elizabeth= User.create!(email: "elizabeth@user.com", password: "password", last_name: "Miear", first_name: "Elizabeth")
+
+producer_cherry= User.create!(email: "cherry@user.com", password: "password", last_name: "Crystal", first_name: "Cherry")
+
+producer_scott = User.create!(email: "scott@user.com", password: "password", last_name: "McFlurry", first_name: "Scott")
+
+user_16 = User.create!(email: "user16@user.com", password: "password", last_name: "Brown", first_name: "Sheila")
+
+user_17 = User.create!(email: "user17@user.com", password: "password", last_name: "Smith", first_name: "Kyle")
+
+user_18 = User.create!(email: "user18@user.com", password: "password", last_name: "Albright", first_name: "Madeline")
+
 
 puts "Created #{User.count} users"
 
-puts "Creating 9 producers"
+puts "Creating 21 producers"
 
 producer1 = Producer.new(name: "Kathy", address: "251 Upper King Valley Rd, Cheshunt", tagline: "Wine, olives, oranges for 20 years", introduction: "Boutique vineyard with delicious wine and great service. Wine tastings
 by appointment Thursdays to Sundays from 12 - 4pm. Also sells
@@ -84,39 +106,125 @@ producer5.bg_photo.attach(io: producer5_bg_photo_file, filename: 'producer5.jpg'
 producer5.save!
 
 producer6 = Producer.new(name: "Lorna", address: "3/5 Cubitt Way Dandenong South, VIC 3175. 8/90 Collins St", tagline: "the earth’s favourite little skincare", introduction: "Bubba Organics the earth’s favourite little skincare co, create Organic by Nature baby skincare ranges using the best Locally sourced natural ingredients to create beautiful products that you can trust and your baby will love. \n \n Our extra gentle pure organic formulation is perfect for everyday use for your growing family and for all with sensitive skin. Available in 250ml & 500ml pump bottles.", ABN: "521-151-709", company_name: "Bubba Organics", approved: true, user_id: producer_lorna.id)
-producer6_photo_file = URI.open('https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80')
+producer6_photo_file = URI.open('https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer6.photo.attach(io: producer6_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
-producer6_bg_photo_file = URI.open('https://images.unsplash.com/photo-1489760176169-fd3d32805239?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer6_bg_photo_file = URI.open('https://images.unsplash.com/photo-1489760176169-fd3d32805239?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer6.bg_photo.attach(io: producer6_bg_photo_file, filename: 'producer6.jpg', content_type: 'image/jpg')
 producer6.save!
 
 producer7 = Producer.new(name: "Francky", address: "Hollyburton Farm, 1677 Melbourne-Lancefield Rd, Bolinda VIC 3432", tagline: "Happy animals equate to far tastier organic meat and environmental care.", introduction: "Hollyburton is a NASAA certified Organic Farm in the Macedon Ranges just outside Melbourne spanning 440 acres, owned by the Scott family for 24 years.\n We produce Organic Beef, Organic Lamb, Organic Chicken, Organic Eggs, Free Range Pork , doonas made from our own wool and Wadding for patchwork quilting.", ABN: "251-156-709", company_name: "Hollyburton Farm", approved: true, user_id: producer_francky.id)
-producer7_photo_file = URI.open('https://images.unsplash.com/photo-1517705185975-b3301eaa9c8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1629&q=80')
+producer7_photo_file = URI.open('https://images.unsplash.com/photo-1517705185975-b3301eaa9c8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer7.photo.attach(io: producer7_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
 producer7_bg_photo_file = URI.open('https://images.unsplash.com/photo-1516762167031-bc59fb134985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
 producer7.bg_photo.attach(io: producer7_bg_photo_file, filename: 'producer7.jpg', content_type: 'image/jpg')
 producer7.save!
 
 producer8 = Producer.new(name: "Phil", address: "100 Hughes Rd, Bargara QLD 4670", tagline: "Passionate about creating with sustainable and natural materials", introduction: "These pure Organic Earrings are handmade from natural sustainable, Eco-friendly and ethically sourced materials. Made by hand in our small family studio in Bargara, QLD using traditional processes and committed to the environment.", ABN: "521-156-709", company_name: "Elements Jewellery", approved: true, user_id: producer_phil.id)
-producer8_photo_file = URI.open('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer8_photo_file = URI.open('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer8.photo.attach(io: producer8_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
 producer8_bg_photo_file = URI.open('https://www.australianmade.com.au/Assets/3141b911-b2d5-4b60-a863-a04af54b94fb.jpg?width=340&height=340')
 producer8.bg_photo.attach(io: producer8_bg_photo_file, filename: 'producer8.jpg', content_type: 'image/jpg')
 producer8.save!
 
 producer9 = Producer.new(name: "Clarck", address: "45B Wharf St, Maclean, New South Wales, 2463", tagline: "You will see quality workmanship and design in every piece.", introduction: "", ABN: "521-156-789", company_name: "Australian Woodwork", approved: true, user_id: producer_clarck.id)
-producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
+producer9_photo_file = URI.open('https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
 producer9.photo.attach(io: producer9_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
-producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80')
+producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308491-6380b6a9936f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
 producer9.save!
 
-producer10 = Producer.new(name: "Lloyd", address: "430 Treeton Rd, Cowaramup, Western Australia 6284 Australia", tagline: "family owned and operated winery", introduction: "Brookwood Estate is a family owned and operated winery which enjoys an elevated position in the pristine Margaret River wine region. Our family were pioneer farmers of the region when the Mann family established the original Brookwood just south of Margaret River in 1910. This pioneering spirit has been at our core since we established Brookwood Estate in 1996 from a bare paddock. We grow our grapes using healthy and sustainable practices and craft our wines with as little intervention as possible. It is our love of farming, respect for mother nature and commitment to excellence that ensures we consistently deliver great wines for you to enjoy.", ABN: "511-156-789", company_name: "Brookwood Estate Winery", approved: true, user_id: producer_lloyd.id)
-producer10_photo_file = URI.open('https://images.unsplash.com/photo-1590086782792-42dd2350140d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+producer10 = Producer.new(name: "Lloyd", address: "430 Treeton Rd, Cowaramup, Western Australia 6284 Australia", tagline: "One wine a day keeps the doctor away", introduction: "Brookwood Estate is a family owned and operated winery which enjoys an elevated position in the pristine Margaret River wine region. Our family were pioneer farmers of the region when the Mann family established the original Brookwood just south of Margaret River in 1910. This pioneering spirit has been at our core since we established Brookwood Estate in 1996 from a bare paddock. We grow our grapes using healthy and sustainable practices and craft our wines with as little intervention as possible. It is our love of farming, respect for mother nature and commitment to excellence that ensures we consistently deliver great wines for you to enjoy.", ABN: "511-156-789", company_name: "Brookwood Estate Winery", approved: true, user_id: producer_lloyd.id)
+producer10_photo_file = URI.open('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')
 producer10.photo.attach(io: producer10_photo_file, filename: 'producer10.jpg', content_type: 'image/jpg')
-producer10_bg_photo_file = URI.open('https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer10_bg_photo_file = URI.open('https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer10.bg_photo.attach(io: producer10_bg_photo_file, filename: 'producer10.jpg', content_type: 'image/jpg')
 producer10.save!
+
+
+producer11 = Producer.new(name: "David", address: "482 Kilby Rd, Kew East VIC 3102", tagline: "French Wine from France to Aussie", introduction: "Producing the best French wine ever made in Australia. Crossing the product of dry land, low-yielding Coonawarra Cabernet Sauvignon and Barossa Valley Shiraz.", ABN: "521-156-789", company_name: "French Australian Wine", approved: true, user_id: producer_david.id)
+producer11_photo_file = URI.open('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer11.photo.attach(io: producer11_photo_file, filename: 'producer11.jpg', content_type: 'image/jpg')
+producer11_bg_photo_file = URI.open('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer11.bg_photo.attach(io: producer11_bg_photo_file, filename: 'producer11.jpg', content_type: 'image/jpg')
+producer11.save!
+
+producer12 = Producer.new(name: "Henrik", address: "482 Kilby Rd, Kew East VIC 3102", tagline: "Making wine since 1990s.", introduction: "A passion for fine wines drives all operations at Pyramids Road Wines. Our focus is on the production of high quality low volume hand made wines. All our wines are hand crafted on the premises.", ABN: "521-156-789", company_name: "Decanter", approved: true, user_id: producer_henrik.id)
+producer12_photo_file = URI.open('https://images.unsplash.com/photo-1573007974656-b958089e9f7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')
+producer12.photo.attach(io: producer12_photo_file, filename: 'producer12.jpg', content_type: 'image/jpg')
+producer12_bg_photo_file = URI.open('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer12.bg_photo.attach(io: producer12_bg_photo_file, filename: 'producer12.jpg', content_type: 'image/jpg')
+producer12.save!
+
+
+producer13 = Producer.new(name: "Warren", address: "25 Wyberba Lane, off Pyramids Road, Wyberba Q 4382", tagline: "As small winery owners, we do everything! No staff! But we love it.", introduction: "A passion for fine wines drives all operations at Pyramids Road Wines. Our focus is on the production of high quality low volume hand made wines. All our wines are hand crafted on the premises. Small scale production means most operations are hands-on – from pruning, training, picking in the vineyard to basket pressing, bottling and labeling in the winery.", ABN: "521-156-789", company_name: "Pyramids Road Wines", approved: true, user_id: producer_warren.id)
+producer13_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600944007/Capture_d_e%CC%81cran_2020-09-24_a%CC%80_20.39.48_vrieag.png')
+producer13.photo.attach(io: producer13_photo_file, filename: 'producer13.jpg', content_type: 'image/jpg')
+producer13_bg_photo_file = URI.open('https://images.unsplash.com/photo-1526137630052-dc2c4693f0d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer13.bg_photo.attach(io: producer13_bg_photo_file, filename: 'producer13.jpg', content_type: 'image/jpg')
+producer13.save!
+
+producer14 = Producer.new(name: "Wendy", address: "194 Krondorf Road, Krondorf, Barossa, South Australia, 5352", tagline: "Awarded the Barossa's 'Best Small Cellar Door' in 2016", introduction: "Charles Melton has specialised in the production of limited release, premium red wines made from Barossa grapes since 1984. This small Barossa Valley winery located on the famous Krondorf Road, has since gained worldwide recognition for its premium red table wines. The wine portfolio now ranges from an iconic full bodied Rosé, the ‘Rose of Virginia’, to premium single vineyard Shiraz and Cabernet wines, through to Australia’s premier Rhone-style blend, the ‘Nine Popes’ GSM.", ABN: "521-156-719", company_name: "CHARLES MELTON WINES", approved: true, user_id: producer_wendy.id)
+producer14_photo_file = URI.open('https://images.unsplash.com/photo-1551832717-1d4cff3e1834?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer14.photo.attach(io: producer14_photo_file, filename: 'producer14.jpg', content_type: 'image/jpg')
+producer14_bg_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600944771/Capture_d_e%CC%81cran_2020-09-24_a%CC%80_20.52.20_yhs3v1.png')
+producer14.bg_photo.attach(io: producer14_bg_photo_file, filename: 'producer14.jpg', content_type: 'image/jpg')
+producer14.save!
+
+producer15 = Producer.new(name: "Marlon", address: "23 Old Bittern Dromana Road, Merricks North 3926, Mornington Peninsula, Victoria, Australia", tagline: "Passion for wine is in the Scorpo blood.", introduction: "oday, the Scorpo family vineyard in Merricks North, on Australia’s Mornington Peninsula combines old world practices with new world flavours. Scorpo Wines combines the family heritage with expertise in growing premium grapes, meticulous attention to site selection, and a best practice approach to vineyard management and processes, trusting the old axiom that great fruit makes great wine.", ABN: "521-121-789", company_name: "Scorpo", approved: true, user_id: producer_marlon.id)
+producer15_photo_file = URI.open('https://images.unsplash.com/photo-1581629774175-42f704962488?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+producer15.photo.attach(io: producer15_photo_file, filename: 'producer15.jpg', content_type: 'image/jpg')
+producer15_bg_photo_file = URI.open('https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')
+producer15.bg_photo.attach(io: producer15_bg_photo_file, filename: 'producer15.jpg', content_type: 'image/jpg')
+producer15.save!
+
+producer_16 = Producer.new(name: "Sheila", address: "41 Sydney St, Mackay QLD 4740", tagline: "Amazing wine from the Sunshine State", introduction: "Sirromet is a family owned and run winery situated at picturesque Mount Cotton, just a short drive from Brisbane and the Gold Coast, Sirromet’s state of the art facilities offers food and wine lovers the ultimate winery experience. Our story began when Terry Morris, Queensland entrepreneur and businessman, was in Victoria attending a dinner party with friends.", ABN: "521-156-789", company_name: "Sunshine Cove Winery ", approved: true, user_id: user_16.id)
+producer_16_photo_file = URI.open('https://images.unsplash.com/photo-1534945773093-1119ae5684ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer_16.photo.attach(io: producer_16_photo_file, filename: 'producer16.jpg', content_type: 'image/jpg')
+producer_16_bg_photo_file = URI.open('https://images.unsplash.com/photo-1573574635896-36753f4e38bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer_16.bg_photo.attach(io: producer_16_bg_photo_file, filename: 'producer16.jpg', content_type: 'image/jpg')
+producer_16.save!
+
+producer_17 = Producer.new(name: "Kyle", address: "111C College Rd, Sevenhill SA 5453", tagline: "Only the best of SA!", introduction: "Sevenhill's celebrated old stone winery and cellar door, stately St Aloysius' Church, the College building, spacious gardens and the surrounding vineyards provide visitors with a memorable experience of a welcoming and tranquil place.", ABN: "521-156-789", company_name: "Oasis Estate Winery", approved: true, user_id: user_17.id)
+producer_17_photo_file = URI.open('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80')
+producer_17.photo.attach(io: producer_17_photo_file, filename: 'producer17.jpg', content_type: 'image/jpg')
+producer_17_bg_photo_file = URI.open('https://images.unsplash.com/photo-1515779122185-2390ccdf060b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer_17.bg_photo.attach(io: producer_17_bg_photo_file, filename: 'producer17.jpg', content_type: 'image/jpg')
+producer_17.save!
+
+producer_18 = Producer.new(name: "Madeline", address: "290 Fletcher Rd, Karnup WA 6176", tagline: "The BEST from the WEST", introduction: "The Peel region with its close proximity to the Indian Ocean is the ideal location to grow wine grapes as it combines unique coastal limestone soils and a Mediterranean climate, ensuring wines with fruit intensity along with specific regional characteristics.", ABN: "521-156-789", company_name: "West Valley Wines", approved: true, user_id: user_18.id)
+producer_18_photo_file = URI.open('https://images.unsplash.com/photo-1486302913014-862923f5fd48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer_18.photo.attach(io: producer_18_photo_file, filename: 'producer_18.jpg', content_type: 'image/jpg')
+producer_18_bg_photo_file = URI.open('https://images.unsplash.com/photo-1600333859091-e3cab71c2adc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+producer_18.bg_photo.attach(io: producer_18_bg_photo_file, filename: 'producer_18.jpg', content_type: 'image/jpg')
+producer_18.save!
+
+producer19= Producer.new(name: "Elizabeth", address: "265 Brunswick St, Fitzroy", tagline: "one of the oldest commercial urban vineyards in the world.", introduction: "20 minutes from the city is Patritti Wine Cellars, established in 1926 and still entirely family owned. Located in Dover Gardens, the winery received five stars from James Halliday and is one of the oldest commercial urban vineyards in the world.", ABN: "521-156-789", company_name: "Patritti Wine Cellars", approved: true, user_id: producer_elizabeth.id)
+producer19_photo_file = URI.open('https://images.unsplash.com/photo-1514448553123-ddc6ee76fd52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60')
+producer19.photo.attach(io: producer19_photo_file, filename: 'producer19.jpg', content_type: 'image/jpg')
+producer19_bg_photo_file = URI.open('https://images.unsplash.com/photo-1529877612930-6e7df7e2b02f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer19.bg_photo.attach(io: producer19_bg_photo_file, filename: 'producer19.jpg', content_type: 'image/jpg')
+producer19.save!
+
+producer20= Producer.new(name: "Cherry",
+ address: "78 Penfolds Road, Adelaide, Adelaide, South Australia, 5072",
+tagline: "Our focus is on producing world class wines and beef using controlled yields.",
+introduction: "Boutique, handcrafted wines, the reds distinguished by intense rich colours and full earthy, white pepper, mulberry & blackberry flavours. The whites have the distinctive characters of the terroir of the Adelaide Hills, flinty aromatic and complex.", ABN: "521-156-789", company_name: "Bendbrook Wines & Beef", approved: true, user_id: producer_cherry.id)
+producer20_photo_file = URI.open('https://images.unsplash.com/photo-1534945773093-1119ae5684ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer20.photo.attach(io: producer20_photo_file, filename: 'producer20.jpg', content_type: 'image/jpg')
+producer20_bg_photo_file = URI.open('https://images.unsplash.com/photo-1579366948929-444eb79881eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer20.bg_photo.attach(io: producer20_bg_photo_file, filename: 'producer20.jpg', content_type: 'image/jpg')
+producer20.save!
+
+producer21= Producer.new(name: "Scott",
+ address: "150 Baroona Rd, Paddington QLD 4064",
+tagline: "Combining simple and traditional winemaking technology.",
+introduction: "Adelina is perfectly situated right next door to legendary Australian stalwart winery Wendouree just south of the township of Clare in South Australia.", ABN: "521-156-789", company_name: "Adelina Wines", approved: true, user_id: producer_scott.id)
+producer21_photo_file = URI.open('https://images.unsplash.com/photo-1493752603190-08d8b5d1781d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer21.photo.attach(io: producer21_photo_file, filename: 'producer21.jpg', content_type: 'image/jpg')
+producer21_bg_photo_file = URI.open('https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')
+producer21.bg_photo.attach(io: producer21_bg_photo_file, filename: 'producer21.jpg', content_type: 'image/jpg')
+producer21.save!
+
 
 
 puts "Created #{Producer.count} producers"
@@ -124,7 +232,7 @@ puts "Created #{Producer.count} producers"
 
 ###############################################
 
-puts "Creating 14 products"
+puts "Creating 28 products"
 
 product1 = Product.new(name: "Home made Honey" , price: 35, producer_id: producer1.id, description: "Manuka honey has medicinal bio-active properties and follows an NPA rating system, it has been proven to be effective for use in a large variety of health enhancing scenarios, when you buy from Australian Food Services you're buying from the beekeepers.")
 product1_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
@@ -144,7 +252,7 @@ product3.photo.attach(io: product3_photo_file, filename: 'product1.jpg', content
 product3.save!
 
 product4 = Product.new(name: "Beef jerky" , price: 75.8, producer_id: producer2.id, description:"Where are my Teriyaki lovers???? My sweet tender Sweet Teriyaki Jerky is soooooooooooo good! Marinated to perfection and baked fresh for you to enjoy. You will literally say Oh my GOD! while licking your fingers! Get ready to lick those fingers!!!")
-product4_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+product4_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 product4.photo.attach(io: product4_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
 product4.save!
 
@@ -155,7 +263,7 @@ product5.save!
 
 product6 = Product.new(name: "Sweet Red pepper and Goats Cheese Spread" , price: 20, producer_id: producer2.id, description: "Sweet Red Peppers & Goat Cheese is ideal as a sauce for meat, especially pork or chicken. Try it instead of ketchup with hamburgers. Toss with pasta or rice. Spread on sandwiches or pizzas. A superb dip with Greek rusk, crackers or vegetables.
 ")
-product6_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+product6_photo_file = URI.open('https://images.unsplash.com/photo-1471943311424-646960669fbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 product6.photo.attach(io: product6_photo_file, filename: 'product1.jpg', content_type: 'image/jpg')
 product6.save!
 
@@ -187,37 +295,96 @@ product11.photo.attach(io: product11_photo_file, filename: 'product11.jpg', cont
 product11.save!
 
 product12 = Product.new(name: "Organic Winter Wool Doona" , price: 360, producer_id: producer7.id, description: "These doonas are the ultimate experience in warmth for those cold winter nights. They are 800gsm doonas which are equivalent to 4 blankets.\n Hollyburton doonas are thicker than most wool doonas on the market but because it is wool it is also breathable and can be used in a variety of night temperatures\n Experience the difference in your sleep now")
-product12_photo_file = URI.open('https://images.unsplash.com/photo-1517912181842-e5a9d4701a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1144&q=80')
+product12_photo_file = URI.open('https://images.unsplash.com/photo-1517912181842-e5a9d4701a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 product12.photo.attach(io: product12_photo_file, filename: 'product12.jpg', content_type: 'image/jpg')
 product12.save!
 
 product13 = Product.new(name: "Stoneware Drop Earrings" , price: 25.0, producer_id: producer8.id, description: "Materials for Stoneware Drop Earrings:\n Australian Ceramic stoneware \n Colour off white and rustic brown - matte finish \n Hypoallergenic surgical stainless-steel studs, clasps, ring or Sterling silver studs, clasps, ring \n \n Dimensions: Approximately 45mm.")
-product13_photo_file = URI.open('https://images.unsplash.com/photo-1571487609887-b4ccacb26eaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80')
+product13_photo_file = URI.open('https://images.unsplash.com/photo-1571487609887-b4ccacb26eaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 product13.photo.attach(io: product13_photo_file, filename: 'product13.jpg', content_type: 'image/jpg')
 product13.save!
 
 product14 = Product.new(name: "Wooden Salad Bowl" , price: 30 , producer_id: producer9.id, description: "Camphor Laurel's inherent qualities make it a perfect timber for a salad bowl - fine-grained, water-resistant, naturally anti-bacterial and with attractive colour and figure in the timber, it is widely used as timber for anything kitchen and food-related. The oils in the timber that give Camphor Laurel its characteristic smell quickly dissipate once it has been cut, kiln-dried and worked and will leave no residual taint on your chopping board or salad bowl. This particular design is a classic salad bowl shape with its wide rather than deep proportions and rolled rim, the sort of shape you might draw if asked to do a salad bowl! The 30cm size is very versatile, catering for up to 6 people and doubling happily as a fruit bowl if preferred. With its perfectly proportioned elegance, beautiful colour and classic simplicity it would accommodate all types of salad and suit any table setting.")
-product14_photo_file = URI.open('https://images.unsplash.com/photo-1485814439394-ca57872604ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
+product14_photo_file = URI.open('https://images.unsplash.com/photo-1485814439394-ca57872604ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
 product14.photo.attach(io: product14_photo_file, filename: 'product14.jpg', content_type: 'image/jpg')
 product14.save!
 
-product15 = Product.new(name: "2019 SSauvignon Blanc" , price: 25 , producer_id: producer10.id, description: "Fresh and delicate, bursting with flavours of gooseberry, white peach and nectarine with hints of cut straw. A crisp, dry aromatic white best enjoyed as a refreshing accompaniment to risotto, seafood and salads. ")
+product15 = Product.new(name: "2019 Sauvignon Blanc" , price: 25 , producer_id: producer10.id, description: "Fresh and delicate, bursting with flavours of gooseberry, white peach and nectarine with hints of cut straw. A crisp, dry aromatic white best enjoyed as a refreshing accompaniment to risotto, seafood and salads. \n \n Offering beautifully lifted aromas of green apple and lemon pith with subtle herbal infusion, the wine is pristine and juicy with an impressively long crisp finish. It’s bright and flavoursome with excellent balance and lively mouthfeel. At its best: now to 2024. ")
 product15_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600935693/sauvignon_blanc_bawiub.png')
 product15.photo.attach(io: product15_photo_file, filename: 'product15.jpg', content_type: 'image/jpg')
 product15.save!
 
-product16 = Product.new(name: "2019 Rosé" , price: 25 , producer_id: producer10.id, description: "Pink and fun with flavours Medium dry, red berries, rhubarb, rosewater, Shiraz based. A light bodied wine best enjoyed tapas, pasta dishes, Asian cuisine or anything BBQ’d.")
+product16 = Product.new(name: "2019 Rosé" , price: 25 , producer_id: producer10.id, description: "Pink and fun with flavours Medium dry, red berries, rhubarb, rosewater, Shiraz based. A light bodied wine best enjoyed tapas, pasta dishes, Asian cuisine or anything BBQ’d. \n \n It’s instantly appealing on the nose showing watermelon, apple, strawberry and lemon peel characters, followed by a delightfully refreshing palate that’s light, crisp and lingering. A gorgeous anytime wine. At its best: now to 2021.")
 product16_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600935548/rose_t5pqob.png')
 product16.photo.attach(io: product16_photo_file, filename: 'product16.jpg', content_type: 'image/jpg')
 product16.save!
 
-product17 = Product.new(name: "2016 Shiraz Cabernet" , price: 28 , producer_id: producer10.id, description: "This classic blend is full bodied. Its hand crafted to be juicy and abundant with rich flavours of raspberry and forest fruits with a hint of spice. Smooth tannins lead to lingering flavours of spicy black fruits.")
+product17 = Product.new(name: "2016 Shiraz Cabernet" , price: 28 , producer_id: producer10.id, description: "This classic blend is full bodied. Its hand crafted to be juicy and abundant with rich flavours of raspberry and forest fruits with a hint of spice. Smooth tannins lead to lingering flavours of spicy black fruits. \n \n The palate delivers excellent depth and intensity with wonderfully ripe flavours backed by fine texture and silky tannins, finishing gorgeously long and expansive. At its best: now to 2025.")
 product17_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600930957/Capture_d_e%CC%81cran_2020-09-24_a%CC%80_16.57.39_k0dcwk.png')
 product17.photo.attach(io: product17_photo_file, filename: 'product17.jpg', content_type: 'image/jpg')
 product17.save!
 
 
+product18 = Product.new(name: "Cabernet Shiraz" , price: 32 , producer_id: producer11.id, description: "The great Australian red blend is alive, kicking and boomeranging back. David takes us through the six best examples of this definitive Aussie style...")
+product18_photo_file = URI.open('https://images.unsplash.com/photo-1569231993169-fe176108ac96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product18.photo.attach(io: product18_photo_file, filename: 'product18.jpg', content_type: 'image/jpg')
+product18.save!
+
+product19 = Product.new(name: "2019 Shiraz" , price: 26 , producer_id: producer12.id, description: "It’s the kind of red you want on the wine rack all year round because it over-delivers and gets better and better. Expect a firm palate with soft tannins, nestled in a medium-body of fruit and spice. There’s dark plums, bright cherries and spicy cloves, drinking well now and only getting better.")
+product19_photo_file = URI.open('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product19.photo.attach(io: product19_photo_file, filename: 'product19.jpg', content_type: 'image/jpg')
+product19.save!
+
+product20 = Product.new(name: "2018 Shiraz" , price: 35 , producer_id: producer13.id, description: "An elegant Shiraz showing distinct varietal black pepper and spice characters with 12 months maturation in a mix of American and French oak.")
+product20_photo_file = URI.open('https://images.unsplash.com/photo-1547151100-830d1991a064?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product20.photo.attach(io: product20_photo_file, filename: 'product20.jpg', content_type: 'image/jpg')
+product20.save!
+
+
+product21 = Product.new(name: "2016 Shiraz" , price: 35 , producer_id: producer14.id, description: "An elegant Shiraz showing distinct varietal black pepper and spice characters with 12 months maturation in a mix of American and French oak.")
+product21_photo_file = URI.open('https://images.unsplash.com/photo-1558150052-fddeedcf27d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product21.photo.attach(io: product21_photo_file, filename: 'product21.jpg', content_type: 'image/jpg')
+product21.save!
+
+product22 = Product.new(name: "2018 Shiraz" , price: 45 , producer_id: producer15.id, description: "Deep red/purple in colour.  An enchanting nose of rich dark berries with pepper, liquorice spiciness and earth.  Wonderfully structured with savoury notes and silky persistent tannins.  This is an elegant example of cool climate shiraz.")
+product22_photo_file = URI.open('https://images.unsplash.com/photo-1558150052-fddeedcf27d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product22.photo.attach(io: product22_photo_file, filename: 'product22.jpg', content_type: 'image/jpg')
+product22.save!
+
+product23 = Product.new(name: "Semi Dry Shiraz" , price: 25 , producer_id: producer_16.id, description: "Shiraz creates wines with medium to full-bodied character and varying flavour profiles and structure depending on region, climate and techniques.")
+product23_photo_file = URI.open('https://images.unsplash.com/photo-1534735714471-c5ea63cbe1cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product23.photo.attach(io: product23_photo_file, filename: 'product23.jpg', content_type: 'image/jpg')
+product23.save!
+
+product24 = Product.new(name: "Reserve Shiraz" , price: 31 , producer_id: producer_17.id, description: "The Reserve Release Shiraz was harvested in the cool of the morning on March 14, 2014. It was then crushed and destemmed into one of Sevenhill’s historic, five-tonne open slate fermenters, where it was gently plunged and pumped-over twice a day for 14 days.")
+product24_photo_file = URI.open('https://images.unsplash.com/photo-1490344948579-6632f4807a6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')
+product24.photo.attach(io: product24_photo_file, filename: 'product24.jpg', content_type: 'image/jpg')
+product24.save!
+
+product25 = Product.new(name: "Organic Cabernet Shiraz" , price: 32 , producer_id: producer_18.id, description: "Medium cherry red in colour. Honest red fruit nose. There are fragrant berry aromas with some leafy notes, presumably from the cabernet franc. Soft, harmonious, easy drinking red style.")
+product25_photo_file = URI.open('https://images.unsplash.com/photo-1553514460-59632be5ddfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product25.photo.attach(io: product25_photo_file, filename: 'product25.jpg', content_type: 'image/jpg')
+product25.save!
+
+product26= Product.new(name: "Fat Cat Shiraz" , price: 30, producer_id: producer19.id, description: "Tucked away in the cellar of many budding wine collectors, Patritti Wine Cellars has all the structure and pedigree of some of its higher priced brothers and sisters.")
+product26_photo_file = URI.open('https://images.unsplash.com/photo-1546944517-4f38480ff03c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+product26.photo.attach(io: product26_photo_file, filename: 'product26.jpg', content_type: 'image/jpg')
+product26.save!
+
+product27= Product.new(name: "Organic Shiraz" , price: 25, producer_id: producer20.id, description: "Grape-fed by our own award winning wine grapes! The great Australian red blend is alive, kicking and boomeranging back. David takes us through the six best examples of this definitive Aussie style...")
+product27_photo_file = URI.open('https://images.unsplash.com/photo-1508471608746-b7f6b8a5b0b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+product27.photo.attach(io: product27_photo_file, filename: 'product27.jpg', content_type: 'image/jpg')
+product27.save!
+
+product28= Product.new(name: "Adelina Dolcetto Barbera Rosato Shiraz" , price: 25, producer_id: producer21.id, description: "Adelina's latest Rosato, a blend of Dolcetto and Barbera taken from the Ceravolo vineyard, comprises 100% hand-picked, destemmed and crushed fruit filled directly into a concrete fermenter by gravity. Three barriques worth of juice is bled off after 30 hours, which is then naturally fermented and left to sit quietly in the same neutral barriques they started their life out in, for six months, before a light filtration and bottling. Only 780 bottles produced.")
+product28_photo_file = URI.open('https://wineexperience.com.au/cms/assets/products/Adelina-Dolcetto-Barbera-Rosato_1585194948-200.jpg')
+product28.photo.attach(io: product28_photo_file, filename: 'product28.jpg', content_type: 'image/jpg')
+product28.save!
+
 puts "Created #{Product.count} products"
+
+
+#########################################
 
 puts "Creating 11 Categories..."
 
@@ -295,8 +462,19 @@ tagging12 = Tagging.create!(product_id: product12.id , tag_id: category2.id)
 tagging13 = Tagging.create!(product_id: product13.id , tag_id: category2.id)
 tagging14 = Tagging.create!(product_id: product14.id , tag_id: category2.id)
 tagging15 = Tagging.create!(product_id: product15.id , tag_id: category10.id)
-tagging15 = Tagging.create!(product_id: product16.id , tag_id: category10.id)
-tagging15 = Tagging.create!(product_id: product17.id , tag_id: category10.id)
+tagging16 = Tagging.create!(product_id: product16.id , tag_id: category10.id)
+tagging17 = Tagging.create!(product_id: product17.id , tag_id: category10.id)
+tagging18 = Tagging.create!(product_id: product18.id , tag_id: category10.id)
+tagging19 = Tagging.create!(product_id: product19.id , tag_id: category10.id)
+tagging20 = Tagging.create!(product_id: product20.id , tag_id: category10.id)
+tagging21 = Tagging.create!(product_id: product21.id , tag_id: category10.id)
+tagging22 = Tagging.create!(product_id: product22.id , tag_id: category10.id)
+tagging23 = Tagging.create!(product_id: product23.id , tag_id: category10.id)
+tagging24 = Tagging.create!(product_id: product24.id , tag_id: category10.id)
+tagging25 = Tagging.create!(product_id: product25.id , tag_id: category10.id)
+tagging26 = Tagging.create!(product_id: product26.id , tag_id: category10.id)
+tagging27 = Tagging.create!(product_id: product27.id , tag_id: category10.id)
+tagging28 = Tagging.create!(product_id: product28.id , tag_id: category10.id)
 
 puts "Added tags to Products."
 
