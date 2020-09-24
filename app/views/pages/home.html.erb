@@ -4,11 +4,12 @@
         <p class="py-3">
           <span id="banner-typed-text"></span>
         </p>
-        <%= link_to "Buy Australian Made", producers_path, class: "btn btn-primary", data:{turbolinks:"false"} %>
+        <%= link_to "Buy Australian Made", producers_path, class: "btn btn-search", data:{turbolinks:"false"} %>
+        
     </div>
 </div>
 <div class="card-header">
-  <h5>Our most popular products</h5>
+  <h5>Our most popular products...</h5>
 </div>
 <div class="carousel-container d-flex">
   <%= link_to producers_path(tag_name: "Organic"), data:{turbolinks:"false"}, class: "card-category col-10 col-md-3", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1533478583204-680d4ff74891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80)" do %>
@@ -34,7 +35,7 @@
   <% end %>
 </div>
 <div class="card-header">
-  <h5>Weekly specials</h5>
+  <h5>Explore something new...</h5>
 </div>
 <div class="carousel-container d-flex">
   <%= link_to producers_path(tag_name: "Meat"), data:{turbolinks:"false"}, class: "card-category col-10 col-md-3", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1542901031-ec5eeb518e83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80)" do %>
