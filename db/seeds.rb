@@ -46,14 +46,14 @@ chemical free olives and oranges/lemons in season. Contact Jeff for
 more info and bookings.", ABN: "123-456-789", company_name: "Roselea Vineyard", approved: true, user_id: producer_kathy.id)
 producer1_photo_file = URI.open('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
 producer1.photo.attach(io: producer1_photo_file, filename: 'producer1.jpg', content_type: 'image/jpg')
-producer1_bg_photo_file = URI.open('https://images.unsplash.com/photo-1562601579-599dec564e06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer1_bg_photo_file = URI.open('https://images.unsplash.com/photo-1562601579-599dec564e06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer1.bg_photo.attach(io: producer1_bg_photo_file, filename: 'producer1.jpg', content_type: 'image/jpg')
 producer1.save!
 
 producer2 = Producer.new(name: "Sharon", address: "74 Slaughterhouse Rd, Rutherglen", tagline: "premium wines since 2005", introduction: "Scion is a producer of artisan wines, handcrafted from vine to bottle. Our vision is to produce premium wines guided by the creative and modern interpretation of traditional Rutherglen varietals. We grow and handcraft wines in small batches – from aromatic whites to elegant reds and delicate dessert wines. Located just 2km south of Rutherglen on our estate vineyard, Scion’s cellar door is nestled in the natural landscape among grey box gums.", ABN: "987-654-321", company_name: "Scion Wine", approved: true, user_id: producer_sharon.id)
-producer2_photo_file = URI.open('https://images.unsplash.com/photo-1592592851366-4ec8bffdb30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=970&q=80')
+producer2_photo_file = URI.open('https://images.unsplash.com/photo-1592592851366-4ec8bffdb30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer2.photo.attach(io: producer2_photo_file, filename: 'producer2.jpg', content_type: 'image/jpg')
-producer2_bg_photo_file = URI.open('https://images.unsplash.com/photo-1573061750909-d2586d3fe8b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer2_bg_photo_file = URI.open('https://images.unsplash.com/photo-1573061750909-d2586d3fe8b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer2.bg_photo.attach(io: producer2_bg_photo_file, filename: 'producer2.jpg', content_type: 'image/jpg')
 producer2.save!
 
@@ -61,7 +61,7 @@ producer2.save!
 #### producer for our stroy ############
 
 producer3 = Producer.new(name: "Alan", address: "12 Laurel Street, Rockbank Victoria", tagline: "'Spread the Love' of honey since 2000", introduction: "We believe that our planet offers so much beauty and abundance, a living Garden of Eden...pure, natural and delicious. \n We are based in Melbourne's West and source our pure Australian honey from native flora away from genetically modified crops and pesticides. \n Our organic plant oils are sourced from the world's finest which are known for their therapeutic qualities to uplift, relax and renew. We then create a product that is both unique and delicious. \n In each individual jar we infuse very precise amounts of the world's finest organic plant oils. \n The result? A delicious flavour experience! We are sure you won’t be disappointed.", ABN: "525-456-709", company_name: "Bees of Eden Honey", approved: true, user_id: producer_alan.id)
-producer3_photo_file = URI.open('https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+producer3_photo_file = URI.open('https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80')
 producer3.photo.attach(io: producer3_photo_file, filename: 'producer3.jpg', content_type: 'image/jpg')
 producer3_bg_photo_file = URI.open('https://static.wixstatic.com/media/8faf1c_631d21caf4a744aa95815443d284e7e6.jpg/v1/fill/w_413,h_294,al_c,q_80,usm_0.66_1.00_0.01/8faf1c_631d21caf4a744aa95815443d284e7e6.webp')
 producer3.bg_photo.attach(io: producer3_bg_photo_file, filename: 'producer3.jpg', content_type: 'image/jpg')
@@ -70,16 +70,16 @@ producer3.save!
 ###########################################
 
 producer4 = Producer.new(name: "Josh", address: "Shop 1/ 8-10 FORREST AVENUE, NEWHAVEN VIC 3925", tagline: "ORGANIC products, for you and your home", introduction: "We are an Australian, family owned business, established in 2004. \n \n We manufacture and retail beautiful ORGANIC products, for you and your home, including hardwood furniture, bed linen, mattresses and futons, pillows, quilts, baby bedding, protectors, towels and clothing.", ABN: "521-156-709", company_name: "Organature", approved: true, user_id: producer_josh.id)
-producer4_photo_file = URI.open('https://images.unsplash.com/photo-1596193318541-2a6d89421dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80')
+producer4_photo_file = URI.open('https://images.unsplash.com/photo-1596193318541-2a6d89421dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer4.photo.attach(io: producer4_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
-producer4_bg_photo_file = URI.open('https://images.unsplash.com/photo-1594526761005-4ccdbd608d2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer4_bg_photo_file = URI.open('https://images.unsplash.com/photo-1594526761005-4ccdbd608d2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer4.bg_photo.attach(io: producer4_bg_photo_file, filename: 'producer4.jpg', content_type: 'image/jpg')
 producer4.save!
 
 producer5 = Producer.new(name: "Mary", address: "100 Hughes Rd, Bargara QLD 4670", tagline: "Handcrafted Organic Australian Jewellery", introduction: "We are committed to 100% of our products being sourced and handcrafted with passion wholeheartedly in Australia. By supporting Elements Jewellery, you’re supporting Australian craftsmen. We aim to empower artisans, their families and their communities in the process.", ABN: "321-156-799", company_name: "Elements Jewellery", approved: true, user_id: producer_mary.id)
-producer5_photo_file = URI.open('https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80')
+producer5_photo_file = URI.open('https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=450&q=80')
 producer5.photo.attach(io: producer5_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
-producer5_bg_photo_file = URI.open('https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer5_bg_photo_file = URI.open('https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer5.bg_photo.attach(io: producer5_bg_photo_file, filename: 'producer5.jpg', content_type: 'image/jpg')
 producer5.save!
 
@@ -201,10 +201,20 @@ product14_photo_file = URI.open('https://images.unsplash.com/photo-1485814439394
 product14.photo.attach(io: product14_photo_file, filename: 'product14.jpg', content_type: 'image/jpg')
 product14.save!
 
-product15 = Product.new(name: "2018 Shiraz Cabernet" , price: 28 , producer_id: producer10.id, description: "This classic blend is full bodied yet easy drinking. Its hand crafted to be juicy and abundant with rich flavours of raspberry and forest fruits with a hint of spice. Smooth tannins lead to lingering flavours of spicy black fruits.")
-product15_photo_file = URI.open('https://res-console.cloudinary.com/dnqhwb9dm/thumbnails/v1/image/upload/v1600930957/Q2FwdHVyZV9kX2XMgWNyYW5fMjAyMC0wOS0yNF9hzIBfMTYuNTcuMzlfazBkY3dr/preview')
+product15 = Product.new(name: "2019 SSauvignon Blanc" , price: 25 , producer_id: producer10.id, description: "Fresh and delicate, bursting with flavours of gooseberry, white peach and nectarine with hints of cut straw. A crisp, dry aromatic white best enjoyed as a refreshing accompaniment to risotto, seafood and salads. ")
+product15_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600935693/sauvignon_blanc_bawiub.png')
 product15.photo.attach(io: product15_photo_file, filename: 'product15.jpg', content_type: 'image/jpg')
 product15.save!
+
+product16 = Product.new(name: "2019 Rosé" , price: 25 , producer_id: producer10.id, description: "Pink and fun with flavours Medium dry, red berries, rhubarb, rosewater, Shiraz based. A light bodied wine best enjoyed tapas, pasta dishes, Asian cuisine or anything BBQ’d.")
+product16_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600935548/rose_t5pqob.png')
+product16.photo.attach(io: product16_photo_file, filename: 'product16.jpg', content_type: 'image/jpg')
+product16.save!
+
+product17 = Product.new(name: "2016 Shiraz Cabernet" , price: 28 , producer_id: producer10.id, description: "This classic blend is full bodied. Its hand crafted to be juicy and abundant with rich flavours of raspberry and forest fruits with a hint of spice. Smooth tannins lead to lingering flavours of spicy black fruits.")
+product17_photo_file = URI.open('https://res.cloudinary.com/dnqhwb9dm/image/upload/v1600930957/Capture_d_e%CC%81cran_2020-09-24_a%CC%80_16.57.39_k0dcwk.png')
+product17.photo.attach(io: product17_photo_file, filename: 'product17.jpg', content_type: 'image/jpg')
+product17.save!
 
 
 puts "Created #{Product.count} products"
@@ -285,6 +295,8 @@ tagging12 = Tagging.create!(product_id: product12.id , tag_id: category2.id)
 tagging13 = Tagging.create!(product_id: product13.id , tag_id: category2.id)
 tagging14 = Tagging.create!(product_id: product14.id , tag_id: category2.id)
 tagging15 = Tagging.create!(product_id: product15.id , tag_id: category10.id)
+tagging15 = Tagging.create!(product_id: product16.id , tag_id: category10.id)
+tagging15 = Tagging.create!(product_id: product17.id , tag_id: category10.id)
 
 puts "Added tags to Products."
 
