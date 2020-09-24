@@ -18,14 +18,13 @@
     <div class="avatar-profile" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://placehold.it/120x120')"></div>
   <% end %>
   <div class="text-center main-infos">
-    <h2><%= @producer.name %></h2>
+    <h2 class="mb-0 name-producer">Meet <strong><%= @producer.name %></strong>...</h2>
     <p><%= @producer.tagline %></p>
   </div>
-  <hr>
   <div class="infos">
-    <h5>Who are we?</h5>
+    <h5>Who we are...</h5>
     <p><%= @producer.introduction %></p>
-    <h5>Where to find us?</h5>
+    <h5>Where to find us...</h5>
   </div>
   <div id="js-map">
     <div class="map_box_container_show">
@@ -36,7 +35,7 @@
     </div>
   </div>
 
-  <button type="button" class="btn btn-primary btn-block mt-3 mb-1 btn-products" data-toggle="modal" data-target="#ourProducts">Our products</button>
+  <button type="button" class="btn btn-primary btn-block mt-3 mb-1 btn-products" data-toggle="modal" data-target="#ourProducts">Let's shop</button>
 
 
 </div>
@@ -66,7 +65,7 @@
                 <% end %>
               </div>
               <div class="modal-body" id="modal-product-body">
-                <h5 class="modal-title mb-3" id="ourProductsTitle"><%= product.name %></h5>
+                <h5 class="modal-title mb-1" id="ourProductsTitle"><%= product.name %></h5>
                 <p class="text-justify"><%= product.description %>
                 </p>
               </div>
@@ -76,7 +75,11 @@
                 </a>
                 <div class="add-to-bag">
                   <div class="product-price">$<%= product.price %></div>
-                  <div class="cart-icon"><%= link_to icon('fas', 'cart-plus'), shopping_cart_product_line_items_path(product), method: :post %></div>
+                  <% if user_signed_in? %>
+                    <div class="cart-icon"><%= link_to icon('fas', 'shopping-bag'), shopping_cart_product_line_items_path(product), method: :post %></div>
+                  <% else %>
+                    <% link_to  new_user_session_path %>
+                  <% end %>
                 </div>
                 <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next" id="next">
                   <%= icon('fas', 'arrow-right') %>
