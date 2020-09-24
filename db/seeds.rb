@@ -15,6 +15,8 @@ puts "Creating 22 users"
 
 User.create!(email: "user@user.com", password: "password", last_name: "Green", first_name: "Steve")
 
+user_mathieu = User.create!(email: "fbence90@gmail.com", password: "password", last_name: "Longe", first_name: "Mathieu")
+
 producer_kathy = User.create!(email: "user2@user.com", password: "password", last_name: "Taylor", first_name: "Kathy")
 
 producer_sharon = User.create!(email: "user3@user.com", password: "password", last_name: "Smith", first_name: "Sharon")
