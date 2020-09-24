@@ -12,7 +12,7 @@
                <%= f.input :ABN,label: false, placeholder: "ABN" %>
                <%= f.input :address, label: false, placeholder: "Where are you located?" %>
                <%= f.input :introduction, label: false, placeholder: "Tell us about your Australian Story and what makes your business unique. \nCustomers love to hear about why you're selling your products and how you make them 🐨. ", input_html: { rows: 8 }%>
-               <%= f.input :tagline, placeholder: "What is your catchy tagline?"%>
+               <%= f.input :tagline, label: false, placeholder: "What is your catchy tagline?"%>
                <%= f.input :photo, as: :file, label: "Profile Picture:" %>
                <%= f.input :bg_photo, as: :file, label: "Background Photo:" %>
                <%= f.button :submit, class: "btn btn-primary"%>
