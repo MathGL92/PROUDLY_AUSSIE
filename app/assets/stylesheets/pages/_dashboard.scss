@@ -1,7 +1,7 @@
 .dashboard-container {
   height: 75vh;
   margin: 11px 15px;
-  padding: 21px 7px;
+  padding: 11px 7px;
   background: white;
   border-radius: 12px;
   overflow: scroll;
@@ -9,9 +9,8 @@
 
 .dashboard-container h3 {
   color: $green;
-  margin-bottom: 30px;
-  margin-left: 7px;
-  // margin-left: 7px;
+  margin-top: 20px;
+  margin-bottom: 27px;
 }
 
 .dashboard-container a {
@@ -23,7 +22,7 @@ table {
   margin: 7px;
 }
 tr {
-  border-bottom: solid thin rgba($color: #dcdcdc, $alpha: 0.2);
+  border-bottom: solid thin rgba($color: #dcdcdc, $alpha: 0.7);
 }
 
 td {

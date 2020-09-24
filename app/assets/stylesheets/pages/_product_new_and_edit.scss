@@ -1,7 +1,16 @@
+.bg-picture-product {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 15px;
+  border-radius: 20px;
+}
+
 .form-login {
   background: white;
   padding: 10px 20px;
-  margin-top: 50px;
+  margin-top: 25px;
   border-radius: 15px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   h2 {
@@ -20,8 +29,4 @@
     margin-bottom: 10px;
     border-radius: 20px;
   }
-}
-
-#producer-name {
-  border-radius: 15px;
 }
