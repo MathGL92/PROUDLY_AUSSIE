@@ -78,8 +78,9 @@
                   <% if user_signed_in? %>
                     <div class="cart-icon"><%= link_to icon('fas', 'shopping-bag'), shopping_cart_product_line_items_path(product), method: :post %></div>
                   <% else %>
-                    <% link_to  new_user_session_path %>
+                    <div class="cart-icon"><%= link_to icon('fas', 'shopping-bag'), new_user_session_path %></div>
                   <% end %>
+
                 </div>
                 <a class="arrow-product-carousel" href="#carouselExampleControls" role="button" data-slide="next" id="next">
                   <%= icon('fas', 'arrow-right') %>
