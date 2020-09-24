@@ -31,7 +31,9 @@ producer_francky= User.create!(email: "francky@user.com", password: "password", 
 
 producer_phil= User.create!(email: "phil@user.com", password: "password", last_name: "Burton", first_name: "Phil")
 
-producer_clarck= User.create!(email: "Clarck@user.com", password: "password", last_name: "Trole", first_name: "Clarck")
+producer_clarck= User.create!(email: "clarck@user.com", password: "password", last_name: "Trole", first_name: "Clarck")
+
+producer_lloyd = User.create!(email: "lloyd@user.com", password: "password", last_name: "Morely", first_name: "Lloyd")
 
 
 puts "Created #{User.count} users"
@@ -109,8 +111,18 @@ producer9_bg_photo_file = URI.open('https://images.unsplash.com/photo-1426927308
 producer9.bg_photo.attach(io: producer9_bg_photo_file, filename: 'producer9.jpg', content_type: 'image/jpg')
 producer9.save!
 
+producer10 = Producer.new(name: "Lloyd", address: "430 Treeton Rd, Cowaramup, Western Australia 6284 Australia", tagline: "family owned and operated winery", introduction: "Brookwood Estate is a family owned and operated winery which enjoys an elevated position in the pristine Margaret River wine region. Our family were pioneer farmers of the region when the Mann family established the original Brookwood just south of Margaret River in 1910. This pioneering spirit has been at our core since we established Brookwood Estate in 1996 from a bare paddock. We grow our grapes using healthy and sustainable practices and craft our wines with as little intervention as possible. It is our love of farming, respect for mother nature and commitment to excellence that ensures we consistently deliver great wines for you to enjoy.", ABN: "511-156-789", company_name: "Brookwood Estate Winery", approved: true, user_id: producer_lloyd.id)
+producer10_photo_file = URI.open('https://images.unsplash.com/photo-1590086782792-42dd2350140d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
+producer10.photo.attach(io: producer10_photo_file, filename: 'producer10.jpg', content_type: 'image/jpg')
+producer10_bg_photo_file = URI.open('https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+producer10.bg_photo.attach(io: producer10_bg_photo_file, filename: 'producer10.jpg', content_type: 'image/jpg')
+producer10.save!
+
 
 puts "Created #{Producer.count} producers"
+
+
+###############################################
 
 puts "Creating 14 products"
 
@@ -188,6 +200,11 @@ product14 = Product.new(name: "Wooden Salad Bowl" , price: 30 , producer_id: pro
 product14_photo_file = URI.open('https://images.unsplash.com/photo-1485814439394-ca57872604ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60')
 product14.photo.attach(io: product14_photo_file, filename: 'product14.jpg', content_type: 'image/jpg')
 product14.save!
+
+product15 = Product.new(name: "2018 Shiraz Cabernet" , price: 28 , producer_id: producer10.id, description: "This classic blend is full bodied yet easy drinking. Its hand crafted to be juicy and abundant with rich flavours of raspberry and forest fruits with a hint of spice. Smooth tannins lead to lingering flavours of spicy black fruits.")
+product15_photo_file = URI.open('https://res-console.cloudinary.com/dnqhwb9dm/thumbnails/v1/image/upload/v1600930957/Q2FwdHVyZV9kX2XMgWNyYW5fMjAyMC0wOS0yNF9hzIBfMTYuNTcuMzlfazBkY3dr/preview')
+product15.photo.attach(io: product15_photo_file, filename: 'product15.jpg', content_type: 'image/jpg')
+product15.save!
 
 
 puts "Created #{Product.count} products"
@@ -267,6 +284,7 @@ tagging11 = Tagging.create!(product_id: product11.id , tag_id: category1.id)
 tagging12 = Tagging.create!(product_id: product12.id , tag_id: category2.id)
 tagging13 = Tagging.create!(product_id: product13.id , tag_id: category2.id)
 tagging14 = Tagging.create!(product_id: product14.id , tag_id: category2.id)
+tagging15 = Tagging.create!(product_id: product15.id , tag_id: category10.id)
 
 puts "Added tags to Products."
 
