@@ -211,7 +211,7 @@ tagline: "Our focus is on producing world class wines and beef using controlled 
 introduction: "Boutique, handcrafted wines, the reds distinguished by intense rich colours and full earthy, white pepper, mulberry & blackberry flavours. The whites have the distinctive characters of the terroir of the Adelaide Hills, flinty aromatic and complex.", ABN: "521-156-789", company_name: "Bendbrook Wines & Beef", approved: true, user_id: producer_cherry.id)
 producer20_photo_file = URI.open('https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
 producer20.photo.attach(io: producer20_photo_file, filename: 'producer20.jpg', content_type: 'image/jpg')
-producer20_bg_photo_file = URI.open('https://images.unsplash.com/photo-1579366948929-444eb79881eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer20_bg_photo_file = URI.open('https://images.unsplash.com/photo-1593535388526-a6b8556c5351?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer20.bg_photo.attach(io: producer20_bg_photo_file, filename: 'producer20.jpg', content_type: 'image/jpg')
 producer20.save!
 
