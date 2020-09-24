@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-offset-4">
       <div class="form-login">
-        <h2>Business Details</h2>
+        <h2 style="color:#6E9156">Business Details</h2>
             <%= simple_form_for(@producer) do |f| %>
                <%= f.error_notification %>
                <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -17,9 +17,10 @@
                <%= f.input :bg_photo, as: :file, label: "Background Photo:" %>
                <%= f.button :submit, class: "btn btn-primary"%>
             <% end %>
-            <%= link_to 'Back', "/new_producer", class:"btn btn-primary" %>
+            <%= link_to 'Back', "/new_producer", class:"btn btn-outline-primary" %>
             
       </div>
     </div>
   </div>
 </div>
+
