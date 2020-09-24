@@ -25,6 +25,7 @@ import 'bootstrap';
 import { initToggleMap } from '../components/init_toggle_map';
 import { changeCartQty } from '../components/change_cart_qty';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 import { loadDynamicBannerText } from '../plugins/banner';
 import { aos } from '../components/aos';
 import { initTagging } from '../components/selectize';
@@ -41,4 +42,5 @@ document.addEventListener('turbolinks:load', () => {
   aos();
   changeCartQty();
   initTagging();
+  // initAutocomplete();
 });
