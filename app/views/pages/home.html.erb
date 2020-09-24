@@ -4,8 +4,10 @@
         <p class="py-3">
           <span id="banner-typed-text"></span>
         </p>
-        <%= link_to "Buy Australian Made", producers_path, class: "btn btn-search", data:{turbolinks:"false"} %>
-        
+        <%= link_to producers_path, class: "btn btn-search", data:{turbolinks:"false"} do %>
+          <span>Buy Australian Made</span>
+          <span class=" ml-1 fas fa-angle-right"></span>
+        <% end %>
     </div>
 </div>
 <div class="card-header">
