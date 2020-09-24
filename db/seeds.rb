@@ -185,7 +185,7 @@ producer_16.bg_photo.attach(io: producer_16_bg_photo_file, filename: 'producer16
 producer_16.save!
 
 producer_17 = Producer.new(name: "Kyle", address: "111C College Rd, Sevenhill SA 5453", tagline: "Only the best of SA!", introduction: "Sevenhill's celebrated old stone winery and cellar door, stately St Aloysius' Church, the College building, spacious gardens and the surrounding vineyards provide visitors with a memorable experience of a welcoming and tranquil place.", ABN: "521-156-789", company_name: "Oasis Estate Winery", approved: true, user_id: user_17.id)
-producer_17_photo_file = URI.open('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80')
+producer_17_photo_file = URI.open('https://images.unsplash.com/photo-1600603406200-5b2a104684ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
 producer_17.photo.attach(io: producer_17_photo_file, filename: 'producer17.jpg', content_type: 'image/jpg')
 producer_17_bg_photo_file = URI.open('https://images.unsplash.com/photo-1515779122185-2390ccdf060b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 producer_17.bg_photo.attach(io: producer_17_bg_photo_file, filename: 'producer17.jpg', content_type: 'image/jpg')
@@ -209,7 +209,7 @@ producer20= Producer.new(name: "Cherry",
  address: "78 Penfolds Road, Adelaide, Adelaide, South Australia, 5072",
 tagline: "Our focus is on producing world class wines and beef using controlled yields.",
 introduction: "Boutique, handcrafted wines, the reds distinguished by intense rich colours and full earthy, white pepper, mulberry & blackberry flavours. The whites have the distinctive characters of the terroir of the Adelaide Hills, flinty aromatic and complex.", ABN: "521-156-789", company_name: "Bendbrook Wines & Beef", approved: true, user_id: producer_cherry.id)
-producer20_photo_file = URI.open('https://images.unsplash.com/photo-1534945773093-1119ae5684ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
+producer20_photo_file = URI.open('https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')
 producer20.photo.attach(io: producer20_photo_file, filename: 'producer20.jpg', content_type: 'image/jpg')
 producer20_bg_photo_file = URI.open('https://images.unsplash.com/photo-1579366948929-444eb79881eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
 producer20.bg_photo.attach(io: producer20_bg_photo_file, filename: 'producer20.jpg', content_type: 'image/jpg')
@@ -221,7 +221,7 @@ tagline: "Combining simple and traditional winemaking technology.",
 introduction: "Adelina is perfectly situated right next door to legendary Australian stalwart winery Wendouree just south of the township of Clare in South Australia.", ABN: "521-156-789", company_name: "Adelina Wines", approved: true, user_id: producer_scott.id)
 producer21_photo_file = URI.open('https://images.unsplash.com/photo-1493752603190-08d8b5d1781d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')
 producer21.photo.attach(io: producer21_photo_file, filename: 'producer21.jpg', content_type: 'image/jpg')
-producer21_bg_photo_file = URI.open('https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')
+producer21_bg_photo_file = URI.open('https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80')
 producer21.bg_photo.attach(io: producer21_bg_photo_file, filename: 'producer21.jpg', content_type: 'image/jpg')
 producer21.save!
 
