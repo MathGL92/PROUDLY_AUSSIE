@@ -65,7 +65,7 @@
                 <% end %>
               </div>
               <div class="modal-body" id="modal-product-body">
-                <h5 class="modal-title mb-3" id="ourProductsTitle"><%= product.name %></h5>
+                <h5 class="modal-title mb-1" id="ourProductsTitle"><%= product.name %></h5>
                 <p class="text-justify"><%= product.description %>
                 </p>
               </div>
@@ -76,7 +76,7 @@
                 <div class="add-to-bag">
                   <div class="product-price">$<%= product.price %></div>
                   <% if user_signed_in? %>
-                    <div class="cart-icon"><%= link_to icon('fas', 'cart-plus'), shopping_cart_product_line_items_path(product), method: :post %></div>
+                    <div class="cart-icon"><%= link_to icon('fas', 'shopping-bag'), shopping_cart_product_line_items_path(product), method: :post %></div>
                   <% else %>
                     <% link_to  new_user_session_path %>
                   <% end %>
