@@ -3,7 +3,7 @@ class Producer < ApplicationRecord
   has_many :products, dependent: :destroy
   has_many :tags, -> { distinct }, through: :products
   has_one_attached :photo
-  validates :name, :address, :tagline, :ABN, :company_name, presence: true
+  validates :name, :address, :tagline, :photo, :bg_photo, :ABN, :company_name, presence: true
   # validates :ABN, uniqueness: true
 
   has_one_attached :photo

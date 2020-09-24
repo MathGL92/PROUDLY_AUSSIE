@@ -5,7 +5,7 @@
   <!-- Overlay content -->
 
     <%= link_to image_tag("PA1.png"), root_path, data:{turbolinks:"false"}, class: "overlay-img" %>
-  
+
   <div class="overlay-content">
     <% if user_signed_in? && current_user.producer %>
     <ul class="p-0">
