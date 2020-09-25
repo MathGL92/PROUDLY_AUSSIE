@@ -12,11 +12,12 @@
            <li><p><%= lineitem.product.name %><p></li>
         <% end%>
         <h3>Shipping Address<span class="change"><%= link_to "Change" %></span></h4>
-          <p>57 Flinders Lane<br>Melbourne, Victoria, 3000<br>Australia</p>
+          <p>12 Laurel Street<br>Rockbank, Victoria<br>Australia</p>
         <h3>Delivery Details<span class="change"><%= link_to "Change" %></span></h3>
           <p>Standard Delivery<br>Saturday 27 - Tuesday 30</p>
         <hr>
-        </li><strong>subtotal</strong><p><%= humanized_money_with_symbol @order.amount%><p></li>
+        <!-- </li><strong>subtotal</strong><p><%#= humanized_money_with_symbol @order.amount%><p></li> -->
+        </li><strong>subtotal</strong><p><%= humanized_money_with_symbol %> 196<p></li>
         <hr>
         <li><strong>shipping</strong><p>free</p></li>
         </li>
