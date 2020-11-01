@@ -1,5 +1,5 @@
 # Proudly Aussie
-Proudly Aussie is a **Ruby in Rails** market place that enables everyone living in Australia to connect with local producers and buy their products. What makes Proudly Aussie different is that the human is at the forefront: we try to recreate the experience when shopping at a local market.
+> Proudly Aussie is a **Ruby in Rails** market place that enables everyone living in Australia to connect with local producers and buy their products. What makes > Proudly Aussie different is that the human is at the forefront: we try to recreate the experience when shopping at a local market.
 
 Project homepage: https://proudly-aussie.com
 
