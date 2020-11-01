@@ -1,28 +1,34 @@
 # Proudly Aussie
-> Proudly Aussie is a **Ruby in Rails** market place that enables everyone living in Australia to connect with local producers and buy their products. What makes > Proudly Aussie different is that the human is at the forefront: we try to recreate the experience when shopping at a local market.
+> Proudly Aussie is a **Ruby in Rails** market place that enables everyone living in Australia to connect with local producers and buy their products. What makes Proudly Aussie different is that the human is at the forefront: we try to recreate the experience when shopping at a local market.
 
 Project homepage: https://proudly-aussie.com
 
 ## Features
 What can you do with Proudly Aussie?
 * If you  are a producer, you can:
-  * create an account. After making sure you are producing in Australia, the Proudly Aussie team will actviate it and you could:
+  * create an account. After making sure you are producing in Australia, the Proudly Aussie team will activate it and you could:
   * update your personnal page,
-  * add some products to your personnal boutique
+  * add some products to your personnal e-boutique
 * If you are living in Australia, you can:
   * look for producers (search bar, category cards or straight in the list or on the map),
-  * visit their page and get to know our producers,
+  * visit their page and "meet" our producers,
   * add some products in your shopping bag,
   * update the quantities straight from your shopping bag
   * purchase the products 
 
 ## Tech/framework used
 * Proudly Aussie is buil on Ruby on Rails and PostgreSQL for backend; JS, HTML and CSS for frontend.
-We are using Mapbox API and Stripe.
+
+* We are using Mapbox API and Stripe.
+
 * Ruby 2.6.6
+
 * Rails 6.0.3.2
+
 * RubyGems used: devise, autoprefixer, font-awesome, simple_form, etc.
+
 * Database: postgreSQL & Active Record Storage, Cloudinary for photo cloud storage
+
 * Deployment: Heroku
 
 ## Process - Agile
